@@ -1,0 +1,117 @@
+.events {
+  &__event {
+    background: #f5f5f5;
+    margin: 1.5rem 0;
+    padding: 2rem;
+    position: relative;
+  }
+
+  &__event::after {
+    content: "";
+    position: absolute;
+    bottom: -0.2rem;
+    right: -0.85rem;
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 20px solid $YellowWalk;
+    clear: both;
+    transform: rotate(135deg);
+  }
+
+  &__event--canceled {
+    background: #ffe3e3;
+  }
+
+  &__event--canceled::after {
+    border-bottom: 20px solid #ff7676;
+  }
+
+  &__event--featured {
+    background: $YellowWalk;
+  }
+
+  &__event--featured::after {
+    border-bottom: 20px solid #000;
+  }
+
+  &__event .row {
+    align-items: center;
+  }
+
+  &__event-day {
+    font-weight: bold;
+    font-size: 2rem;
+    line-height: 1.5rem;
+    text-align: center;
+  }
+
+  &__event-num {
+    font-weight: bold;
+    font-size: 3.75rem;
+    line-height: 1.5rem;
+    text-align: center;
+  }
+
+  &__event-month {
+    font-weight: bold;
+    font-size: 2rem;
+    line-height: 1.5rem;
+    text-align: center;
+  }
+
+  &__event-title {
+    @media (min-width: $large) {
+      padding: 0 2rem;
+    }
+  }
+
+  &__event--featured .events__event-details {
+    border-top: 1px solid #d6b218;
+
+    @media (min-width: $large) {
+      border-top: 0;
+      border-left: 1px solid #d6b218;
+    }
+  }
+
+  &__event--canceled .events__event-details {
+    border-top: 1px solid #ebcccc;
+
+    @media (min-width: $large) {
+      border-top: 0;
+      border-left: 1px solid #ebcccc;
+    }
+  }
+
+  &__event-details {
+    margin-top: 1rem;
+    border-top: 1px solid #d4d4d4;
+    padding-top: 2rem;
+
+    @media (min-width: $large) {
+      margin-top: 0;
+      border-top: 0;
+      border-left: 1px solid #d4d4d4;
+      padding: 1rem 0 1rem 1rem;
+    }
+  }
+
+  &__event-canceled {
+    font-size: 2rem;
+    line-height: 1.5rem;
+    color: #ff0000;
+    font-weight: bold;
+  }
+
+  &__event-location {
+    font-size: 2rem;
+    line-height: 1.5rem;
+  }
+
+  &__event-time {
+    font-size: 2rem;
+    line-height: 1.5rem;
+  }
+}

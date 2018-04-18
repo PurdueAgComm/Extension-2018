@@ -1,0 +1,97 @@
+{
+  "name": "ng-project-starter",
+  "version": "1.0.0",
+  "description": "A project Starter for my projects",
+  "main": "index.js",
+  "scripts": {
+    "test": "./tasks/subtasks/lint.sh",
+    "deploy": "./tasks/deploy.sh",
+    "start": "./tasks/watch.sh",
+    "build": "./tasks/build.sh",
+    "dev": "npm start"
+  },
+  "author": "Angeline Tra",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^8.1.0",
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.6.0",
+    "browser-sync": "^2.23.6",
+    "clean-css-cli": "^4.1.11",
+    "globby": "^6.1.0",
+    "imagemin": "5.1.2",
+    "imagemin-jpegtran": "^5.0.2",
+    "imagemin-pngquant": "^5.0.1",
+    "imagemin-svgo": "^6.0.0",
+    "node-version-assets": "^1.2.0",
+    "postcss-cli": "^5.0.0",
+    "postcss-color-function": "^4.0.0",
+    "postcss-easy-import": "^3.0.0",
+    "postcss-hexrgba": "^1.0.0",
+    "postcss-mixins": "^6.0.1",
+    "postcss-nested": "^3.0.0",
+    "postcss-simple-vars": "^4.0.0",
+    "stylelint": "^9.1.1",
+    "stylelint-bem-no-element-nesting": "1.0.6",
+    "stylelint-em-media-query": "1.0.2",
+    "stylelint-no-mismatching-module-file": "1.0.3",
+    "stylelint-no-multiple-top-level-modules": "1.0.1",
+    "webpack": "^3.3.0",
+    "xo": "^0.18.2"
+  },
+  "dependencies": {
+    "bootstrap": "^4.1.0",
+    "jquery": "^3.3.1",
+    "normalize.css": "^8.0.0",
+    "picturefill": "^3.0.2",
+    "popper.js": "^1.14.3",
+    "promise-polyfill": "^7.0.0"
+  },
+  "babel": {
+    "presets": [
+      "env"
+    ]
+  },
+  "xo": {
+    "space": true,
+    "envs": [
+      "browser"
+    ],
+    "globals": [
+      "picturefill",
+      "$"
+    ],
+    "rules": {
+      "new-cap": [
+        "error",
+        {
+          "properties": false
+        }
+      ],
+      "no-new": 0,
+      "no-useless-constructor": 0,
+      "no-return-assign": 0,
+      "no-negated-condition": 0,
+      "unicorn/filename-case": 0,
+      "unicorn/explicit-length-check": 0,
+      "import/no-unassigned-import": 0,
+      "quotes": [
+        "error",
+        "double",
+        {
+          "allowTemplateLiterals": true
+        }
+      ],
+      "space-before-function-paren": [
+        "error",
+        {
+          "anonymous": "never",
+          "named": "never",
+          "asyncArrow": "always"
+        }
+      ],
+      "no-alert": 0
+    }
+  }
+}

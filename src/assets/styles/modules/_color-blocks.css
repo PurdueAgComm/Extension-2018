@@ -1,0 +1,43 @@
+.color-blocks {
+  margin-top: 3rem;
+  margin-bottom: 10rem;
+
+  img {
+    filter: opacity(.4) grayscale(100%) contrast(150%);
+  }
+
+  &--teal {
+    background: #61a7b3;
+  }
+
+  &--brown {
+    background: #bb5c00;
+  }
+
+  &--yellow {
+    background: #e7c800;
+  }
+
+  &--green {
+    background: #00a037;
+  }
+
+  &__content {
+    padding: 3rem 3rem 0 !important;
+
+    @media (min-width: $xlarge) {
+      padding: 3rem 3rem 0 !important;
+    }
+  }
+
+  &__title {
+    color: #fff;
+    font-size: 2.125rem;
+  }
+
+  &__text {
+    color: #fff;
+    font-size: 1.375rem;
+  }
+
+}

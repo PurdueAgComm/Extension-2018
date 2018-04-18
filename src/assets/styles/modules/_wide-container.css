@@ -1,0 +1,8 @@
+.wide-container {
+  position: relative;
+  margin: auto;
+
+  img {
+    width: 100%;
+  }
+}

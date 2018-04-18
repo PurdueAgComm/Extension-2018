@@ -1,0 +1,46 @@
+.navbar {
+  background: #fafafa;
+  padding: 0 1rem;
+
+  .navbar-nav .nav-link {
+    @media (min-width: $large) {
+      font-size: 1.2rem;
+      padding: 1rem 0;
+      margin: 0 .75rem;
+      color: #000;
+    }
+  }
+
+  .navbar-nav .nav-link:first-of-type {
+    @media (min-width: $large) {
+      padding-left: 0;
+      padding-right: 0;
+      margin-left: 0;
+    }
+  }
+
+  .navbar-nav .nav-link.active {
+    @media (min-width: $large) {
+      border-top: .25rem solid $YellowWalk;
+      padding-top: .75rem;
+      color: #000;
+    }
+  }
+
+  .navbar-nav .nav-link:hover {
+    @media (min-width: $large) {
+      border-top: .25rem solid $YellowWalk;
+      padding-top: .75rem;
+      color: #000;
+    }
+  }
+
+  .navbar-toggler {
+    margin: 0.5rem 0;
+  }
+
+  &>.container {
+    justify-content: flex-end;
+  }
+
+}

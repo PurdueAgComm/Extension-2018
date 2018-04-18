@@ -1,0 +1,36 @@
+.story-callouts {
+  padding: 2rem 0;
+
+  &__title {
+    padding-left: 0;
+    margin-left: 0;
+    padding-bottom: 1rem;
+  }
+
+  &__callout {
+    border-left: .125rem solid $YellowWalk;
+    padding: .75rem !important;
+    color: #000;
+    margin: .4rem 0;
+
+    @media (min-width: $medium) {
+      margin: 0;
+    }
+  }
+
+  &__callout:hover {
+    text-decoration: none;
+    color: #000;
+    background: #eee;
+  }
+
+  &__callout-date {
+    font-size: .75rem;
+    color: #777;
+  }
+
+  &__callout-title {
+    font-size: .9375rem;
+    margin-bottom: 0;
+  }
+}

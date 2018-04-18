@@ -1,0 +1,33 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row nowrap;
+  padding: 1rem 0;
+
+  @media (min-width: $small) {
+    padding: 1.5rem 0;
+    justify-content: space-between;
+    flex-flow: row wrap;
+    align-items: center;
+  }
+
+  &__logo {
+    width: 183px;
+    height: 56px;
+
+    @media (min-width: $small) {
+      width: 280px;
+      height: 86px;
+    }
+  }
+
+  .navbar-toggler {
+    @media (min-width: $large) {
+      display: none;
+    }
+  }
+
+  .navbar-toggler-icon {
+    background-image: url("/assets/images/hamburger.svg");
+  }
+}

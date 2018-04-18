@@ -1,0 +1,49 @@
+.stories-angled {
+  margin: 1rem 0 7rem;
+
+  &__title {
+    padding-left: 0;
+    margin-left: 0;
+    position: relative;
+    z-index: 4;
+  }
+
+  &__story:nth-child(odd) {
+    background: #fafafa;
+    padding: 2rem 2rem 7rem;
+  }
+
+  &__story:nth-child(even) {
+    background: #fff;
+    padding: 2rem 2rem 8rem;
+  }
+
+  &__story-date {
+    color: #868686;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: .4rem;
+
+    @media (min-width: $large) {
+      text-align: left;
+    }
+  }
+
+  &__story-title {
+    text-align: center;
+
+    @media (min-width: $large) {
+      text-align: left;
+    }
+  }
+
+  &__story-image {
+    display: block;
+    margin: auto;
+    width: auto !important;
+
+    @media (min-width: $large) {
+      text-align: left;
+    }
+  }
+}

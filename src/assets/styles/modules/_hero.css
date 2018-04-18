@@ -1,0 +1,55 @@
+.hero {
+  position: relative;
+  border-top: .25rem solid $YellowWalk;
+  text-align: center;
+  margin: auto;
+  height: auto;
+
+  @media (min-width: $xlarge) {
+    max-height: 38.4375rem;
+    overflow: hidden;
+  }
+
+  &__banner {
+    position: relative;
+    width: 100%;
+
+    @media (min-width: $xlarge) {
+      display: block;
+      margin: auto;
+    }
+  }
+
+  &__search {
+    background: rgba(0, 0, 0, .5);
+    z-index: 3;
+    padding: 2rem 4rem;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    max-width: 50rem;
+    max-height: 11rem;
+
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+      left: 20%;
+    }
+  }
+
+  &__search-title {
+    font-family: Palatino, Perpetua, Baskerville, "Times New Roman", "Nimbus Roman No9 L", serif;
+    font-style: italic;
+    font-size: 1.8625rem;
+    line-height: 2.125rem;
+    color: #fff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, .5);
+    margin-bottom: 1rem;
+
+    @media (min-width: $medium) {
+      font-size: 3.0625rem;
+      line-height: 3.125rem;
+    }
+  }
+}

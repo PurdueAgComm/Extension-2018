@@ -1,0 +1,52 @@
+.cta {
+  border: .25rem solid;
+  width: 100%;
+  text-align: center;
+  padding: .75rem;
+  margin: 2rem 0;
+  display: block;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &__primary {
+    border-color: #ddd;
+    font-size: 2rem;
+    color: #2d2d2d;
+  }
+
+  &__primary:hover {
+    background: #ddd;
+    color: #2d2d2d;
+
+  }
+
+  &__secondary {
+    text-transform: uppercase;
+    font-size: 1.375rem;
+  }
+
+  &__secondary--green {
+    background: #339966;
+    border-color: #71b894;
+    color: #fff;
+  }
+
+  &__secondary--green:hover {
+    background: #fff;
+    color: #339966;
+  }
+
+  &__secondary--white {
+    background: transparent;
+    border-color: #fff;
+    color: #fff;
+  }
+
+  &__secondary--white:hover {
+    background: #fff;
+    color: #000;
+    border-color: #fff;
+  }
+}

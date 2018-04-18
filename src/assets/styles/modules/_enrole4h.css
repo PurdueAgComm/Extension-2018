@@ -1,0 +1,14 @@
+.enrole4h {
+  &__img {
+    margin: auto;
+    display: block;
+  }
+
+  &__title {
+    font-size: 2.25rem;
+  }
+
+  &__text {
+    font-size: 1.375rem;
+  }
+}

@@ -1,0 +1,186 @@
+.edge {
+  &--bottom {
+    position: relative;
+    z-index: 1;
+  }
+
+  &--bottom::after {
+    background: inherit;
+    content: "";
+    display: block;
+    height: 50%;
+    left: 0;
+    position: absolute;
+    right: 0;
+    z-index: -1;
+    backface-visibility: hidden;
+  }
+
+  &--bottom::after {
+    bottom: 0;
+    transform: skewY(-5deg);
+    transform-origin: 100%;
+
+    @media (min-width: $xlarge) {
+      transform: skewY(-3.5deg);
+    }
+  }
+
+  &--bottom--reverse {
+    position: relative;
+    z-index: 1;
+  }
+
+  &--bottom--reverse::after {
+    background: inherit;
+    content: "";
+    display: block;
+    height: 50%;
+    left: 0;
+    position: absolute;
+    right: 0;
+    z-index: -1;
+    backface-visibility: hidden;
+  }
+
+  &--bottom--reverse::after {
+    bottom: 0;
+    transform: skewY(5deg);
+    transform-origin: 0 100%;
+
+    @media (min-width: $xlarge) {
+      transform: skewY(3.5deg);
+    }
+  }
+
+  &--top {
+    position: relative;
+    z-index: 1;
+    margin-top: 7.8rem;
+  }
+
+  &--top::before {
+    background: inherit;
+    content: "";
+    display: block;
+    height: 50%;
+    left: 0;
+    position: absolute;
+    right: 0;
+    z-index: -1;
+    backface-visibility: hidden;
+  }
+
+  &--top::before {
+    top: 0;
+    transform: skewY(5deg);
+    transform-origin: 100% 0;
+
+    @media (min-width: $xlarge) {
+      transform: skewY(3.5deg);
+    }
+  }
+
+  &--top--reverse {
+    position: relative;
+    z-index: 1;
+  }
+
+  &--top--reverse::before {
+    background: inherit;
+    content: "";
+    display: block;
+    height: 50%;
+    left: 0;
+    position: absolute;
+    right: 0;
+    z-index: -1;
+    backface-visibility: hidden;
+  }
+
+  &--top--reverse::before {
+    top: 0;
+    transform: skewY(-5deg);
+    transform-origin: 0 0;
+
+    @media (min-width: $xlarge) {
+      transform: skewY(-3.5deg);
+    }
+  }
+
+  &--both {
+    position: relative;
+    z-index: 1;
+  }
+
+  &--both::before,
+  &--both::after {
+    background: inherit;
+    content: "";
+    display: block;
+    height: 70%;
+    left: 0;
+    position: absolute;
+    right: 0;
+    z-index: -1;
+    backface-visibility: hidden;
+  }
+
+  &--both::before {
+    top: 0;
+    transform: skewY(5deg);
+    transform-origin: 100% 0;
+
+    @media (min-width: $xlarge) {
+      transform: skewY(3.5deg);
+    }
+  }
+
+  &--both::after {
+    bottom: 0;
+    transform: skewY(-5deg);
+    transform-origin: 100%;
+
+    @media (min-width: $xlarge) {
+      transform: skewY(-3.5deg);
+    }
+  }
+
+  &--both--reverse {
+    position: relative;
+    z-index: 1;
+  }
+
+  &--both--reverse::before,
+  &--both--reverse::after {
+    background: inherit;
+    content: "";
+    display: block;
+    height: 50%;
+    left: 0;
+    position: absolute;
+    right: 0;
+    z-index: -1;
+    backface-visibility: hidden;
+  }
+
+  &--both--reverse::before {
+    top: 0;
+    transform: skewY(-5deg);
+    transform-origin: 0 0;
+
+    @media (min-width: $xlarge) {
+      transform: skewY(-3.5deg);
+    }
+  }
+
+  &--both--reverse::after {
+    bottom: 0;
+    transform: skewY(5deg);
+    transform-origin: 0 0;
+
+    @media (min-width: $xlarge) {
+      transform: skewY(3.5deg);
+    }
+  }
+}
