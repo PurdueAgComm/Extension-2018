@@ -3,12 +3,12 @@ module.exports = {
     "files": [
       "./src/_compiled/styles.css",
       "./src/_compiled/*.js",
-      "./src/*.html"
+      "./src/*.php"
     ],
-    "server": "src", // use this if it IS a static site
-    // "proxy": "", // use this if it's NOT a static site, ex: app.mysite.dev
+    //"server": "src", // use this if it IS a static site
+     "proxy": "extension.test", // use this if it's NOT a static site, ex: app.mysite.dev
     "notify": false,
     "open": false
   },
-  "templatePath": "/*.html" // Relative to the src directory
+  "templatePath": "/*.php" // Relative to the src directory
 }
