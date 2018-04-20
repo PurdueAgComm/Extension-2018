@@ -15,7 +15,30 @@ $root = $navigation->currentHome->strPublicURLRoot;
 $hid = $navigation->currentHome->intHomeID;
 
 ?>
-<ul>
+<div class="wide-container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container">
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a href="//<?php echo $root;?>pages/index.php">Home</a></li>
+            <a href="//<?php echo $root;?>pages/about.php">About</a>
+            <?php foreach($navigation->listMenuCategories as $cat):?>
+                <a class="nav-item nav-link" href="//<?php echo $root;?>pages/category.php?hid=<?php echo $hid;?>&cat=<?php echo $cat->intCategoryID;?>"><?php echo $cat->strCategoryText;?></a>
+            <?php endforeach ?>
+            <form action="/" method="get" class="form__search form__search--mobile-nav">
+              <input type="search" name="search" class="form__search-input" placeholder="Search people, articles, and more" aria-label="Search" aria-placeholder="Search people, articles, and more"
+              />
+              <input type="image" value="Search" src="/assets/images/icon--search.svg" class="form__search-submit" alt="Search">
+            </form>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+
+<!-- TODO: delete -->
+<!-- <ul>
     <li><a href="//<?php echo $root;?>pages/index.php">Home</a></li>
     <li>
         <a href="//<?php echo $root;?>pages/about.php">About</a>
@@ -42,4 +65,4 @@ $hid = $navigation->currentHome->intHomeID;
             </ul>
         </li>
     <?php endforeach; ?>
-</ul>
+</ul> -->
