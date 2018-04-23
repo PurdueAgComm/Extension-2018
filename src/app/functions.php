@@ -103,11 +103,16 @@ function get_navigation()
     include('../partials/page-navigation.php');
 }
 
-function get_article_list($pagesize = 7, $pagecount = 0)
+function get_article_list($pagesize = 7, $pagecount = 0, $type = 'state')
 {
     global $ext;
     $articles = $ext->getArticleList($pagesize, $pagecount);
-    include('../partials/feed-article.php');
+    if($type == 'state') {
+        include('../partials/feed-state-articles.php');
+    }
+    else {
+        include('../partials/feed-county-articles.php');
+    }
 }
 
 function get_category_list($cat_id, $page_size = 7, $page_count = 0)
