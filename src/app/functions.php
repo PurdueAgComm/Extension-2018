@@ -9,7 +9,6 @@
  * @email: john@sfp.net
  *
  */
-
 function get_homepath()
 {
     $known_routes = [
@@ -34,6 +33,10 @@ function get_homepath()
     }
     if(isset($path_parts[0])){
         $is_county = $path_parts[0];
+        if(isset($path_parts[1]) && $path_parts[0] === 'extension'){
+            //this may be the dev server, get the next subdir
+            $is_county = $path_parts[1];
+        }
     }
     $ext = SFP\PurdueAg\ExtDCR::validateHomepath('extension.purdue.edu/'.$is_county);
     if($ext){
@@ -41,7 +44,6 @@ function get_homepath()
     }
     return 'extension.purdue.edu/';
 }
-
 function get_template()
 {
     $known_routes = [
@@ -62,47 +64,39 @@ function get_template()
     }
     return 'home.php';
 }
-
 function bootstrap()
 {
     //require API Interaction class
     require_once('../lib/SFP/PurdueAg/src/ExtDCR.php');
-
     //get the global homepath from the view and create the ext global var
     global $homepath, $ext;
-
     if($homepath == ''){
         //either return an error that the template never set homepath
         error_log('homepath not set by template. Using default value.', 0);
         //or provide a default
         $homepath = 'extension.purdue.edu/';
     }
-
     //instantiate the ExtDCR with homepath to begin fetching relevant content
     $ext = new SFP\PurdueAg\ExtDCR($homepath);
 }
-
 function get_banner()
 {
     global $ext;
     $banner = $ext->getPageBanner();
     include('../partials/tpl-banner.php');
 }
-
 function get_menu()
 {
     global $ext;
     $navigation = $ext->getMenu();
     include('../partials/header-menu.php');
 }
-
 function get_navigation()
 {
     global $ext;
     $navigation = $ext->getMenu();
     include('../partials/page-navigation.php');
 }
-
 function get_article_list($pagesize = 7, $pagecount = 0, $type = 'state')
 {
     global $ext;
@@ -114,41 +108,40 @@ function get_article_list($pagesize = 7, $pagecount = 0, $type = 'state')
         include('../partials/feed-county-articles.php');
     }
 }
-
 function get_category_list($cat_id, $page_size = 7, $page_count = 0)
 {
     global $ext;
     $articles = $ext->getCategoryPage($cat_id, $page_size, $page_count);
     include('../partials/feed-article.php');
 }
-
 function get_event_list($pagesize = 5, $pagecount = 0)
 {
     global $ext;
     $events = $ext->getEventList($pagesize, $pagecount);
     include('../partials/feed-event.php');
 }
-
+function get_article($article_id)
+{
+    global $ext;
+    $article = $ext->getArticlePage($article_id);
+    include('../partials/page-article.php');
+}
 function get_footer()
 {
     include('../partials/tpl-footer.php');
 }
-
 function get_header()
 {
     include('../partials/tpl-header.php');
 }
-
 function get_marketing()
 {
     include('../partials/tpl-marketing.php');
 }
-
 function get_4h_marketing()
 {
     include('../partials/tpl-4h-marketing');
 }
-
 function get_resource_links()
 {
     include('../partials/tpl-resource-links.php');
