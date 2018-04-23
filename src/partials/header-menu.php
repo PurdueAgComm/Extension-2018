@@ -20,8 +20,8 @@ $hid = $navigation->currentHome->intHomeID;
       <div class="container">
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
-            <a href="//<?php echo $root;?>pages/index.php">Home</a></li>
-            <a href="//<?php echo $root;?>pages/about.php">About</a>
+            <a class="nav-item nav-link" href="//<?php echo $root;?>pages/index.php">Home</a></li>
+            <a class="nav-item nav-link" href="//<?php echo $root;?>pages/about.php">About</a>
             <?php foreach($navigation->listMenuCategories as $cat):?>
                 <a class="nav-item nav-link" href="//<?php echo $root;?>pages/category.php?hid=<?php echo $hid;?>&cat=<?php echo $cat->intCategoryID;?>"><?php echo $cat->strCategoryText;?></a>
             <?php endforeach ?>

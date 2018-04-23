@@ -1,3 +1,8 @@
+<?php
+  //note: this is a patch to fix inline style url paths that are not setting the domain
+  $banner->strBody = str_replace('url(/','url(https://extension.purdue.edu/',$banner->strBody);
+  //echo $banner->strBody;
+?>
 <div class="wide-container">
   <div class="hero">
     <picture class="hero__banner">

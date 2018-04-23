@@ -86,11 +86,7 @@ function get_banner()
 {
     global $ext;
     $banner = $ext->getPageBanner();
-
-    //note: this is a patch to fix inline style url paths that are not setting the domain
-    $banner->strBody = str_replace('url(/','url(https://extension.purdue.edu/',$banner->strBody);
-
-    echo $banner->strBody;
+    include('../partials/tpl-banner.php');
 }
 
 function get_menu()
@@ -130,5 +126,25 @@ function get_event_list($pagesize = 5, $pagecount = 0)
 
 function get_footer()
 {
+    include('../partials/tpl-footer.php');
+}
 
+function get_header()
+{
+    include('../partials/tpl-header.php');
+}
+
+function get_marketing()
+{
+    include('../partials/tpl-marketing.php');
+}
+
+function get_4h_marketing()
+{
+    include('../partials/tpl-4h-marketing');
+}
+
+function get_resource_links()
+{
+    include('../partials/tpl-resource-links.php');
 }
