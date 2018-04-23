@@ -14,4 +14,6 @@
       </div>
     </div>
   </div>
-</div> <!-- /.wide-container :: opened in feed-county-articles.php -->
+<!--
+TODO: remove once everything is working, it's a reminder I removed this from feed-county-articles.php
+</div> --> <!-- /.wide-container :: opened in feed-county-articles.php -->

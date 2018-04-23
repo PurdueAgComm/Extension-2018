@@ -50,3 +50,5 @@
       </div>
     </a>
     <?php endforeach;?>
+  </div>
+</div>

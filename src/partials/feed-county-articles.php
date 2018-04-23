@@ -1,66 +1,50 @@
-<div class="wide-container"> <!-- /.wide-container :: closed in tpl-4h-marketing.php -->
+<div class="wide-container">
   <div class="stories-angled">
     <div class="container">
       <h2 class="stories-angled__title">Recent Stories</h2>
     </div>
-    <div class="stories-angled__story edge edge--both--reverse">
+    <?php
+    // alternate classes for each article to tesselate
+    $n = 1;
+    foreach($articles as $article):
+    if($n%2) :
+      $storyClassFlag = "edge--both--reverse";
+    else :
+      $storyClassFlag = "edge--both";
+    endif;
+    $n++;
+    ?>
+    <div class="stories-angled__story edge <?php echo $storyClassFlag; ?>">
       <div class="container">
         <div class="row">
-          <div class="col-md-auto">
-            <img src="/assets/images/thumbnail1.png" class="stories-angled__story-image" alt="Thumbnail1">
-          </div>
+          <?php if(isset($article->thumb)): ?>
+            <div class="col-md-auto">
+              <a href="/article/<?php echo $article->intItemID; ?>">
+                <img src="<?php echo $article->thumb->url; ?>" class="stories-angled__story-image"  alt="<?php echo $article->thumb->alt; ?>" />
+              </a>
+            </div>
+          <?php endif; ?>
           <div class="col">
-            <p class="stories-angled__story-date">January 5, 2018</p>
-            <a href="#">
-              <h3 class="stories-angled__story-title">Quality Assurance Education for Youth: Indiana 4-H Being a Part of the Solution</h3>
+            <p class="stories-angled__story-date">
+              <?php echo $article->datCreated; ?>
+              FakeDate 30, 2018
+              <?php if($article->bln4H) : echo " | 4-H"; endif; ?>
+            </p>
+            <a href="/article/<?php echo $article->intItemID; ?>">
+              <h3 class="stories-angled__story-title"><?php echo $article->strTitle ?></h3>
             </a>
           </div>
         </div>
       </div>
     </div>
-    <div class="stories-angled__story edge edge--both">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-auto">
-            <img src="/assets/images/thumbnail3.png" class="stories-angled__story-image" alt="Thumbnail3">
-          </div>
-          <div class="col">
-            <p class="stories-angled__story-date">January 4, 2018</p>
-            <a href="#">
-              <h3 class="stories-angled__story-title">Quality Assurance Education for Youth: Indiana 4-H Being a Part of the Solution</h3>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="stories-angled__story edge edge--both--reverse">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-auto">
-            <img src="/assets/images/thumbnail2.png" class="stories-angled__story-image" alt="Thumbnail2">
-          </div>
-          <div class="col">
-            <p class="stories-angled__story-date">January 3, 2018</p>
-            <a href="#">
-              <h3 class="stories-angled__story-title">Quality Assurance Education for Youth: Indiana 4-H Being a Part of the Solution</h3>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="stories-angled__story edge edge--both">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-auto">
-            <img src="/assets/images/thumbnail3.png" class="stories-angled__story-image" alt="Thumbnail3">
-          </div>
-          <div class="col">
-            <p class="stories-angled__story-date">January 1, 2018</p>
-            <a href="#">
-              <h3 class="stories-angled__story-title">Quality Assurance Education for Youth: Indiana 4-H Being a Part of the Solution</h3>
-            </a>
-          </div>
+    <?php endforeach; ?>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <a href="/articles/" class="cta cta__primary" style='position:relative;z-index: 3;'>View All Stories</a>
         </div>
       </div>
     </div>
   </div>
+</div>
+

@@ -16,7 +16,7 @@
           <h3 class="story-callouts__callout-title"><?php echo $article->strTitle; ?></h3>
         </a>
       <?php endforeach; ?>
-      <a href="#" class="cta cta__primary">View All Stories</a>
+      <a href="/articles/" class="cta cta__primary">View All Stories</a>
     </div>
   </div>
 </div>
