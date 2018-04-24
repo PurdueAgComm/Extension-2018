@@ -3439,6 +3439,71 @@ a:hover {
     margin-bottom: 0;
   }
 
+.story__title--wide--background {
+    background-color: #fafafa;
+    /*border-bottom: 2px solid $YellowWalk;*/
+    margin-bottom: 20px !important;
+  }
+
+.story__title--wide--background:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      border-bottom: 200px solid #ffd100;
+      border-left: 150px solid transparent;
+      float: right;
+      mix-blend-mode: multiply;
+    }
+
+.story__title--background {
+    padding: 1rem;
+  }
+
+.story__meta {
+    float: left;
+    background: #fafafa;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    padding: .5rem 1rem;
+    border-left: 3px solid #ffd100;
+  }
+
+.story__title {
+
+  }
+
+.story__meta::after {
+    /*content: '';
+    position: relative;
+    bottom: 0;
+    left: 0;
+    border-bottom: 30px solid gold;
+    border-left: 40px solid transparent;
+    float: right;*/
+  }
+
+.story__body {
+    clear:both;
+  }
+
+.story__body a:link {
+      font-weight: 600;
+      text-decoration: underline;
+    }
+
+.story__body a:hover {
+      text-decoration: none;
+    }
+
+.story__body a:visited {
+      color: #ad1f65;
+    }
+
+a:link .story__meta:hover {
+  background-color: #eaeaea;
+}
+
 .wide-container {
   position: relative;
   margin: auto;
