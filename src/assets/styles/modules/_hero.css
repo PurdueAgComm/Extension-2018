@@ -5,6 +5,16 @@
   margin: auto;
   height: auto;
 
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-top: 200px solid $YellowWalk;
+      border-right: 150px solid transparent;
+      mix-blend-mode: screen;
+    }
+
   @media (min-width: $xlarge) {
     max-height: 38.4375rem;
     overflow: hidden;
@@ -18,6 +28,9 @@
       display: block;
       margin: auto;
     }
+
+
+
   }
 
   &__search {

@@ -3169,6 +3169,16 @@ a:hover {
   height: auto;
 }
 
+.hero:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-top: 200px solid #ffd100;
+      border-right: 150px solid transparent;
+      mix-blend-mode: screen;
+    }
+
 @media (min-width: 1200px) {
 
 .hero {
@@ -3180,6 +3190,9 @@ a:hover {
 .hero__banner {
     position: relative;
     width: 100%;
+
+
+
   }
 
 @media (min-width: 1200px) {
@@ -3187,6 +3200,9 @@ a:hover {
 .hero__banner {
       display: block;
       margin: auto
+
+
+
   }
     }
 
@@ -3441,9 +3457,9 @@ a:hover {
 
 .story__title--wide--background {
     background-color: #fafafa;
-    /*border-bottom: 2px solid $YellowWalk;*/
-    margin-bottom: 20px !important;
   }
+
+/*border-bottom: 2px solid $YellowWalk;*/
 
 .story__title--wide--background:after {
       content: '';
@@ -3466,7 +3482,7 @@ a:hover {
     margin-right: 1rem;
     margin-bottom: 1rem;
     padding: .5rem 1rem;
-    border-left: 3px solid #ffd100;
+    border-bottom: 3px solid #ffd100;
   }
 
 .story__title {
