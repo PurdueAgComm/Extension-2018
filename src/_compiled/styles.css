@@ -3130,7 +3130,7 @@ a:hover {
 @media (min-width: 576px) {
 
 .header {
-    padding: 1.5rem 0;
+    padding: 0;
     justify-content: space-between;
     flex-flow: row wrap;
     align-items: center
@@ -3330,6 +3330,8 @@ a:hover {
     height: 4rem;
     margin: auto;
     margin-bottom: 1rem;
+    text-align: center;
+    color: white;
   }
 
 .resources__resource-circle--yellow {
@@ -3346,15 +3348,21 @@ a:hover {
 
 .resources a {
     text-decoration: underline;
+    font-weight: 600;
   }
 
 .resources a:hover {
     color: #000;
+    text-decoration: none;
   }
 
 .resources li {
     margin: 0.75rem 0;
   }
+
+.center-circle {
+  margin-top: 1rem;
+}
 
 .stories-angled {
   margin: 1rem 0 7rem;

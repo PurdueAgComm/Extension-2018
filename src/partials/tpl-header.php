@@ -11,7 +11,8 @@
 <body>
   <div class="container">
     <header class="header">
-      <img src="/assets/images/logo.png" alt="Purdue Extensions Logo" class="header__logo" />
+      <!-- TODO: svg of logo -->
+      <img src="/assets/images/logo.png" alt="Purdue Extension - Purdue University" class="header__logo" />
       <form action="/" method="get" class="form__search form__search--header">
         <input type="search" name="search" class="form__search-input" placeholder="Search people, articles, and more" aria-label="Search" aria-placeholder="Search people, articles, and more"
         />

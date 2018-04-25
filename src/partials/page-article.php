@@ -1,5 +1,5 @@
 <?php $root = $navigation->currentHome->strPublicURLRoot; ?>
-
+<?php $pageTitle = $article->strTitle; ?>
 <div class="wide-container no-margin-auto story__title--wide--background">
   <div class="container story__title--background">
     <h1 class="story__title"><?php echo $article->strTitle; ?></h1>
@@ -18,7 +18,11 @@
     <i class="fas fa-calendar" title="Date Modified"></i> <?php echo date("F j, Y", strtotime($article->datModified)); ?>
   </div>
 
-  <div class="story__body">
+  <article class="story__body">
     <?php echo $article->strBody; ?>
-  </div>
+  </article>
 </div>
+
+<script type="text/javascript">
+    document.title = "<?php echo $article->strTitle; ?> - Purdue Extension";
+</script>
