@@ -8,7 +8,7 @@
 
 <div class="container">
   <!-- TODO: get_category_name() function create for human name -->
-  <a href="/<?php echo $root; ?>/profile/<?php echo $article->strAuthorAlias; ?>">
+  <a href="/profile/<?php echo $article->strAuthorAlias; ?>">
     <div class="story__meta">
       <i class="fas fa-user" title="Author"></i> <?php echo $article->strAuthorName; ?>
     </div>
@@ -22,11 +22,3 @@
     <?php echo $article->strBody; ?>
   </div>
 </div>
-
-<hr>
-
-
-<h4>NOTE:Full Object Dump</h4>
-<pre>
-<?php var_dump($article); ?>
-</pre>
