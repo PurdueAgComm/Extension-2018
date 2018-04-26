@@ -114,10 +114,10 @@ function get_category_list($cat_id, $page_size = 7, $page_count = 0)
     $articles = $ext->getCategoryPage($cat_id, $page_size, $page_count);
     include('../partials/feed-category.php');
 }
-function get_event_list($pagesize = 5, $pagecount = 0)
+function get_event_list($pagesize = 5, $pagecount = 0, $page = "home")
 {
     global $ext;
-    $events = $ext->getEventList($pagesize, $pagecount);
+    $events = $ext->getEventList($pagesize, $pagecount, $page);
     include('../partials/feed-event.php');
 }
 function get_article($article_id)
