@@ -2923,6 +2923,10 @@ a:hover {
     position: relative;
   }
 
+.events__event:hover {
+      background-color: #ededed;
+    }
+
 .events__event::after {
     content: "";
     position: absolute;
@@ -2942,6 +2946,10 @@ a:hover {
     background: #ffe3e3;
   }
 
+.events__event--canceled:hover {
+      background-color: #f7dbdb;
+    }
+
 .events__event--canceled::after {
     border-bottom: 20px solid #ff7676;
   }
@@ -2949,6 +2957,10 @@ a:hover {
 .events__event--featured {
     background: #ffd100;
   }
+
+.events__event--featured:hover {
+      background-color: #f7c900;
+    }
 
 .events__event--featured::after {
     border-bottom: 20px solid #000;
@@ -3042,6 +3054,10 @@ a:hover {
     font-size: 2rem;
     line-height: 1.5rem;
   }
+
+a.events--link {
+  text-decoration: none;
+}
 
 .footer {
   background: #000;

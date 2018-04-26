@@ -22,7 +22,7 @@
         $eventClassFlag = "events__event--canceled";
       }
     ?>
-    <a href="/event/<?php echo $event->intEventID; ?>">
+    <a class="events--link" href="/event/<?php echo $event->intEventID; ?>">
       <div class="events__event <?php echo $eventClassFlag; ?>">
         <div class="row justify-content-md-center">
           <div class="col-md-auto">

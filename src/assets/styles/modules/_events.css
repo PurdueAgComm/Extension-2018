@@ -4,6 +4,10 @@
     margin: 1.5rem 0;
     padding: 2rem;
     position: relative;
+
+    &:hover {
+      background-color: #ededed;
+    }
   }
 
   &__event::after {
@@ -22,6 +26,10 @@
 
   &__event--canceled {
     background: #ffe3e3;
+
+    &:hover {
+      background-color: #f7dbdb;
+    }
   }
 
   &__event--canceled::after {
@@ -30,6 +38,10 @@
 
   &__event--featured {
     background: $YellowWalk;
+
+    &:hover {
+      background-color: #f7c900;
+    }
   }
 
   &__event--featured::after {
@@ -114,4 +126,8 @@
     font-size: 2rem;
     line-height: 1.5rem;
   }
+}
+
+a.events--link {
+  text-decoration: none;
 }
