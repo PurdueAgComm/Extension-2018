@@ -1,11 +1,16 @@
 <?php
 /**
- * Homepage Event Feed List
+ * Event Feed List
  */
 ?>
 <div class="container">
   <div class="events">
-    <h2>Upcoming Events</h2>
+
+    <?php if($page == "home") : // change heading depending on page events are included on ?>
+      <h2>Upcoming Events</h2>
+    <?php elseif($page == "events") : ?>
+      <h1>Upcoming Events</h1>
+    <?php endif; ?>
     <?php foreach($events as $event) :
       // deconstruct event date
       $eventDay = date("D", strtotime($event->datStartDate));
@@ -22,7 +27,7 @@
         $eventClassFlag = "events__event--canceled";
       }
     ?>
-    <a class="events--link" href="/event/<?php echo $event->intEventID; ?>">
+    <a data-animate class="events--link" href="/event/<?php echo $event->intEventID; ?>">
       <div class="events__event <?php echo $eventClassFlag; ?>">
         <div class="row justify-content-md-center">
           <div class="col-md-auto">

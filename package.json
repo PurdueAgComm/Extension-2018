@@ -41,6 +41,7 @@
     "xo": "^0.18.2"
   },
   "dependencies": {
+    "animate.js": "^1.4.0",
     "bootstrap": "^4.1.0",
     "jquery": "^3.3.1",
     "normalize.css": "^8.0.0",
