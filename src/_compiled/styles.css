@@ -2787,8 +2787,8 @@ a:hover {
 
 .edge--top--reverse::before {
     top: 0;
-    -webkit-transform: skewY(-5deg);
-            transform: skewY(-5deg);
+    -webkit-transform: skewY(-4deg);
+            transform: skewY(-4deg);
     -webkit-transform-origin: 0 0;
             transform-origin: 0 0;
   }
@@ -3062,7 +3062,31 @@ a.events--link {
 .footer {
   background: #000;
   height: 20rem;
+  padding-top: 2rem;
 }
+
+@media (min-width: 992px) {
+
+.footer {
+    height: 11rem
+}
+
+  }
+
+.footer p {
+    color: #adadad;
+    font-size: .8rem;
+    margin: .5rem 0;
+  }
+
+.footer p:last-child {
+      margin-bottom: 3rem;
+    }
+
+.footer a {
+    color: #adadad;
+    text-decoration: underline;
+  }
 
 .form__search {
     position: relative;
@@ -3311,6 +3335,28 @@ a.events--link {
 .navbar>.container {
     justify-content: flex-end;
   }
+
+.navbar-nav li {
+  line-height: 1.5;
+}
+
+.dropdown-menu {
+  border-radius: 0;
+  border: none;
+  border-top: 3px solid #ffd100;
+  background-color: #fafafa;
+}
+
+@media (max-width: 576px) {
+
+.dropdown-menu {
+    border-top: none
+}
+  }
+
+.dropdown-item:hover {
+  background-color: #ffd100;
+}
 
 .resources {
   padding: 5rem 0 13rem;

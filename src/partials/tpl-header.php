@@ -12,10 +12,9 @@
   <div class="container">
     <header class="header">
       <!-- TODO: svg of logo -->
-      <img src="/assets/images/logo.png" alt="Purdue Extension - Purdue University" class="header__logo" />
-      <form action="/" method="get" class="form__search form__search--header">
-        <input type="search" name="search" class="form__search-input" placeholder="Search people, articles, and more" aria-label="Search" aria-placeholder="Search people, articles, and more"
-        />
+      <a href="/"><img src="/assets/images/logo.png" alt="Purdue Extension - Purdue University" class="header__logo" /></a>
+      <form action="/results/" method="get" class="form__search form__search--header">
+        <input type="search" name="q" class="form__search-input" placeholder="Search people, articles, and more" aria-label="Search" aria-placeholder="Search people, articles, and more"/>
         <input type="image" value="Search" src="/assets/images/icon--search.svg" class="form__search-submit"  alt="Search">
       </form>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"

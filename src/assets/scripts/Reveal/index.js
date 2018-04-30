@@ -23,5 +23,11 @@ export default class Reveal {
       delay: 700,
       viewFactor: 0.4,
     });
+
+    sr.reveal('.reveal-meta', {
+      duration: 500,
+      delay: 200,
+      viewFactor: 0.4,
+    });
   }
 }

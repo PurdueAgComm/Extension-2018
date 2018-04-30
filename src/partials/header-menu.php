@@ -23,10 +23,20 @@ $hid = $navigation->currentHome->intHomeID;
             <a class="nav-item nav-link" href="//<?php echo $root;?>pages/index.php">Home</a></li>
             <a class="nav-item nav-link" href="//<?php echo $root;?>pages/about.php">About</a>
             <?php foreach($navigation->listMenuCategories as $cat):?>
-                <a class="nav-item nav-link" href="//<?php echo $root;?>pages/category.php?hid=<?php echo $hid;?>&cat=<?php echo $cat->intCategoryID;?>"><?php echo $cat->strCategoryText;?></a>
+                <a class="nav-item nav-link" href="//<?php echo $root;?>/category/<?php echo $hid;?>/<?php echo $cat->intCategoryID;?>"><?php echo $cat->strCategoryText;?></a>
             <?php endforeach ?>
-            <form action="/" method="get" class="form__search form__search--mobile-nav">
-              <input type="search" name="search" class="form__search-input" placeholder="Search people, articles, and more" aria-label="Search" aria-placeholder="Search people, articles, and more"
+            <li class="nav-item dropdown">
+                <a class="nav-item nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Dropdown link
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+            </li>
+            <form action="/results/" method="get" class="form__search form__search--mobile-nav">
+              <input type="search" name="q" class="form__search-input" placeholder="Search people, articles, and more" aria-label="Search" aria-placeholder="Search people, articles, and more"
               />
               <input type="image" value="Search" src="/assets/images/icon--search.svg" class="form__search-submit" alt="Search">
             </form>

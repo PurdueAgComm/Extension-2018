@@ -44,3 +44,23 @@
   }
 
 }
+
+.navbar-nav li {
+  line-height: 1.5;
+}
+
+
+.dropdown-menu {
+  border-radius: 0;
+  border: none;
+  border-top: 3px solid $YellowWalk;
+  background-color: #fafafa;
+
+  @media (max-width: $small) {
+    border-top: none;
+  }
+}
+
+.dropdown-item:hover {
+  background-color: $YellowWalk;
+}

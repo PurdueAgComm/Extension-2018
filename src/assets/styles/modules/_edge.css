@@ -100,7 +100,7 @@
 
   &--top--reverse::before {
     top: 0;
-    transform: skewY(-5deg);
+    transform: skewY(-4deg);
     transform-origin: 0 0;
 
     @media (min-width: $xlarge) {

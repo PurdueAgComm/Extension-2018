@@ -1,4 +1,25 @@
 .footer {
   background: #000;
   height: 20rem;
+  padding-top: 2rem;
+
+  @media (min-width: $large) {
+    height: 11rem;
+
+  }
+
+  & p {
+    color: #adadad;
+    font-size: .8rem;
+    margin: .5rem 0;
+
+    &:last-child {
+      margin-bottom: 3rem;
+    }
+  }
+
+  & a {
+    color: #adadad;
+    text-decoration: underline;
+  }
 }
