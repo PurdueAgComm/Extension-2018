@@ -1,6 +1,6 @@
 <div class="wide-container">
   <div class="color-blocks">
-    <div class="color-blocks__color-block color-blocks--teal edge">
+    <div class="color-blocks__color-block color-blocks--teal edge reveal">
       <div class="row justify-content-start no-gutters">
         <div class="col-lg-6">
           <picture class="hero__banner">
@@ -21,7 +21,7 @@
         </div>
       </div>
     </div>
-    <div class="color-blocks__color-block color-blocks--brown">
+    <div class="color-blocks__color-block color-blocks--brown reveal">
       <div class="row justify-content-start no-gutters">
         <div class="col-lg-6">
           <picture class="hero__banner">
@@ -42,7 +42,7 @@
         </div>
       </div>
     </div>
-    <div class="color-blocks__color-block color-blocks--yellow">
+    <div class="color-blocks__color-block color-blocks--yellow reveal">
       <div class="row justify-content-start no-gutters">
         <div class="col-lg-6">
           <picture class="hero__banner">
@@ -63,7 +63,7 @@
         </div>
       </div>
     </div>
-    <div class="color-blocks__color-block color-blocks--green edge edge--bottom">
+    <div class="color-blocks__color-block color-blocks--green edge edge--bottom reveal">
       <div class="row justify-content-start no-gutters">
         <div class="col-lg-6">
           <picture class="hero__banner">

@@ -9,8 +9,6 @@ if ($("[data-toggle='tooltip']").length) {
 
 if ($("[class*='reveal']").length) {
   System.import("./Reveal").then(module => new module.default());
-  alert("sdf");
 }
-
 
 

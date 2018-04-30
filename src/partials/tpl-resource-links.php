@@ -4,7 +4,7 @@
           <div class="row">
             <div class="col-md-4">
               <div class="resources__resource">
-                <div class="resources__resource-circle resources__resource-circle--yellow">
+                <div class="resources__resource-circle resources__resource-circle--yellow reveal-resource">
                   <i class="fas fa-sun fa-2x center-circle"></i>
                 </div>
                 <h3 class="resources__resource-title">Small Farmer</h3>
@@ -23,7 +23,7 @@
             </div>
             <div class="col-md-4">
               <div class="resources__resource">
-                <div class="resources__resource-circle resources__resource-circle--brown">
+                <div class="resources__resource-circle resources__resource-circle--brown reveal-resource-2">
                   <i class="fas fa-industry fa-2x center-circle"></i>
                 </div>
                 <h3 class="resources__resource-title">Large Farmer</h3>
@@ -42,7 +42,7 @@
             </div>
             <div class="col-md-4">
               <div class="resources__resource">
-                <div class="resources__resource-circle resources__resource-circle--teal">
+                <div class="resources__resource-circle resources__resource-circle--teal reveal-resource-3">
                   <i class="fas fa-hospital fa-2x center-circle"></i>
                 </div>
                 <h3 class="resources__resource-title">Wellness Professional</h3>
