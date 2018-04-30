@@ -41,13 +41,13 @@
     "xo": "^0.18.2"
   },
   "dependencies": {
-    "animate.js": "^1.4.0",
     "bootstrap": "^4.1.0",
     "jquery": "^3.3.1",
     "normalize.css": "^8.0.0",
     "picturefill": "^3.0.2",
     "popper.js": "^1.14.3",
-    "promise-polyfill": "^7.0.0"
+    "promise-polyfill": "^7.0.0",
+    "scrollreveal": "^3.4.0"
   },
   "babel": {
     "presets": [

@@ -7,7 +7,10 @@ if ($("[data-toggle='tooltip']").length) {
   System.import("./Tooltip").then(module => new module.default());
 }
 
-if ($("[data-animate]").length) {
-  System.import("./Animate").then(module => new module.default());
+if ($("[class*='reveal']").length) {
+  System.import("./Reveal").then(module => new module.default());
+  alert("sdf");
 }
+
+
 

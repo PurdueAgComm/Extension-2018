@@ -140,7 +140,7 @@ function get_marketing()
 }
 function get_4h_marketing()
 {
-    include('../partials/tpl-4h-marketing');
+    include('../partials/tpl-4h-marketing.php');
 }
 function get_resource_links()
 {

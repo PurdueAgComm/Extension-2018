@@ -195,10 +195,6 @@ amdefine@>=0.0.4:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/amdefine/-/amdefine-1.0.1.tgz#4a5282ac164729e93619bcfd3ad151f817ce91f5"
 
-animate.js@^1.4.0:
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/animate.js/-/animate.js-1.4.0.tgz#691ad7eb86f86835d801d037dd9df45169157506"
-
 ansi-align@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/ansi-align/-/ansi-align-2.0.0.tgz#c36aeccba563b89ceb556f3690f0b1d9e3547f7f"
@@ -6393,6 +6389,10 @@ safe-regex@^1.1.0:
 sax@~1.2.4:
   version "1.2.4"
   resolved "https://registry.yarnpkg.com/sax/-/sax-1.2.4.tgz#2816234e2378bddc4e5354fab5caa895df7100d9"
+
+scrollreveal@^3.4.0:
+  version "3.4.0"
+  resolved "https://registry.yarnpkg.com/scrollreveal/-/scrollreveal-3.4.0.tgz#77ce77b383d1883f2aafebdfc6f17a105718a780"
 
 seek-bzip@^1.0.3, seek-bzip@^1.0.5:
   version "1.0.5"

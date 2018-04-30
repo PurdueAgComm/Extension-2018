@@ -27,8 +27,8 @@
         $eventClassFlag = "events__event--canceled";
       }
     ?>
-    <a data-animate class="events--link" href="/event/<?php echo $event->intEventID; ?>">
-      <div class="events__event <?php echo $eventClassFlag; ?>">
+    <a class="events--link" href="/event/<?php echo $event->intEventID; ?>">
+      <div class="events__event <?php echo $eventClassFlag; ?> reveal">
         <div class="row justify-content-md-center">
           <div class="col-md-auto">
             <div class="events__event-date">
