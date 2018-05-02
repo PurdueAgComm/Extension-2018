@@ -78,9 +78,16 @@ class ExtDCR
         return $this->call->getLabelList();
     }
 
-    public function getEventPage()
+    //todo: move this to the ExtCall Class
+    public function getEventPage($event_id)
     {
-
+        $params = array(
+            't' => 'd', //get event details?
+            'i' => $event_id,
+        );
+        $result = $this->call->post('event.ashx', $params);
+        $event = $result; //todo: transform or modify?
+        return $event;
     }
 
     public function getEventsPage()
