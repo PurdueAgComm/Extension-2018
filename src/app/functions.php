@@ -127,6 +127,12 @@ function get_article($article_id)
     $article = $ext->getArticlePage($article_id);
     include('../partials/page-article.php');
 }
+function get_event($event_id)
+{
+    global $ext;
+    $event = $ext->getEventPage($event_id);
+    include('../partials/page-event.php');
+}
 function get_footer()
 {
     include('../partials/tpl-footer.php');
