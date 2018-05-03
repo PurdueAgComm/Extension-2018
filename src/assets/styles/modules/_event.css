@@ -1,4 +1,4 @@
-.story {
+.event {
 
   &__title--wide--background {
     background-color: #fafafa;
@@ -8,7 +8,7 @@
       position: absolute;
       bottom: 0;
       right: 0;
-      border-bottom: 200px solid $YellowWalk;
+      border-bottom: 200px solid $PappysPurple;
       border-left: 150px solid transparent;
       float: right;
       mix-blend-mode: multiply;
@@ -28,6 +28,10 @@
     border-bottom: 3px solid $YellowWalk;
   }
 
+  &__days {
+    clear: both;
+  }
+
   &__body {
     clear:both;
 
@@ -44,8 +48,4 @@
       color: $PappysPurple;
     }
   }
-}
-
-a:link .story__meta:hover {
-  background-color: #eaeaea;
 }

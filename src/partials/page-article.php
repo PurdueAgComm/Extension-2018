@@ -18,7 +18,7 @@
     <i class="fas fa-calendar" data-toggle="tooltip" data-placement="bottom" title="Date Modified"></i> <?php echo date("F j, Y", strtotime($article->datModified)); ?>
   </div>
 
-  <article class="story__body reveal-body">
+  <article class="story__body">
     <?php echo $article->strBody; ?>
   </article>
 </div>
