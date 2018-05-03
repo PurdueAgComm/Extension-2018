@@ -21,5 +21,9 @@
   & a {
     color: #adadad;
     text-decoration: underline;
+
+    &:hover {
+      color: #fafafa;
+    }
   }
 }

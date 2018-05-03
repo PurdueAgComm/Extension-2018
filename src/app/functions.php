@@ -123,6 +123,7 @@ function get_event_list($pagesize = 5, $pagecount = 0, $page = "home")
 function get_article($article_id)
 {
     global $ext;
+    global $article;
     $article = $ext->getArticlePage($article_id);
     include('../partials/page-article.php');
 }

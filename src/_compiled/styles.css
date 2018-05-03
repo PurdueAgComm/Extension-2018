@@ -3088,6 +3088,10 @@ a.events--link {
     text-decoration: underline;
   }
 
+.footer a:hover {
+      color: #fafafa;
+    }
+
 .form__search {
     position: relative;
     display: flex;

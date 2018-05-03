@@ -55,5 +55,28 @@
       </div>
     </a>
     <?php endforeach;?>
+    <div class="container">
+      <div class="row">
+        <?php
+        if($page != "home") : //don't show pagination on home page
+          if(isset($_GET['pc']) ) :
+            $page_count = (int) $_GET['pc'];
+          endif;
+          if($page_count < 1) :
+          ?>
+            <a href="?pc=<?php echo $page_count+1;?>" class="cta cta__primary" style='position:relative;z-index: 3;'>Next Page &raquo;</a>
+          <?php
+          else :
+          ?>
+            <div class="col-sm-6">
+              <a href="?pc=<?php echo $page_count-1;?>" class="cta cta__primary" style='position:relative;z-index: 3;'>&laquo; Previous Page</a>
+            </div>
+            <div class="col-sm-6">
+              <a href="?pc=<?php echo $page_count+1;?>" class="cta cta__primary" style='position:relative;z-index: 3;'>Next Page &raquo;</a>
+            </div>
+          <?php endif;
+        endif; ?>
+      </div>
+    </div>
   </div>
 </div>

@@ -1,11 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<?php
+// Social media variable setting
+$url = "https://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+$title = "Purdue Extension";
+$image = "https://extension.purdue.edu/annualreport/images/cover.jpg";
+?>
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Purdue Extension</title>
   <link rel="stylesheet" href="/_compiled/styles.css">
+  <meta name="description" content="Purdue Extension helps Indiana build vibrant communities, strong families, and profitable businesses on its Main Streets and at its farm gates." />
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" value="summary">
+
+  <!-- Open Graph data -->
+  <meta property="og:title" content="<?php echo $title; ?>" />
+  <?php if(isset($article->strTitle)) : ?>
+  <meta property="og:type" content="article" />
+  <?php endif; ?>
+  <meta property="og:url" content="<?php echo $url; ?>" />
+  <meta property="og:image" content="<?php echo $image; ?>" />
+  <?php if(isset($description)) : ?>
+  <meta property="og:description" content="<?php echo $description; ?>" />
+  <?php endif; ?>
 </head>
 
 <body>
