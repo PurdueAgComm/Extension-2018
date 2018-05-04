@@ -3,15 +3,17 @@ TODO: display canceled dateTimes</p>
       dateTime has passed styling</p>
       toggle button text
       display map button for multi-events
+      what if no contact or if no registration data - maybe put in sidebar?
 -->
 
+<div class="wide-container no-margin-auto event__title--wide--background">
   <div class="container event__title--background">
     <h1 class="event__title reveal"><?php echo $event->strTitle; ?></h1>
   </div>
 </div>
 
-<?php if(sizeof($event->DateList) == 1) : ?>
-<?php $mapFix = 1; ?>
+<?php if(sizeof($event->DateList) == 1 && $event->DateList[0]->strCity != "N/A") : ?>
+<?php $mapFix = 1; // fix margin on meta tags?>
 <div class="wide-container no-margin-auto">
   <iframe
     width="100%"
@@ -23,7 +25,7 @@ TODO: display canceled dateTimes</p>
 </div>
 <?php endif; ?>
 <div class="container">
-  <?php if(isset($event->strContactName)) : ?>
+  <?php if(!empty($event->strContactName)) : ?>
   <a href="mailto:<?php echo $event->strContactEmail; ?>">
     <div class="event__meta reveal-meta <?php if($mapFix) { echo 'mapFix'; } ?>" data-toggle="tooltip" data-placement="bottom" title="Email <?php echo $event->strContactName; ?>">
       <i class="fas fa-user" data-toggle="tooltip" title="Contact"></i> <?php echo $event->strContactName; ?>
