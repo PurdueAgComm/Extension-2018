@@ -2680,6 +2680,7 @@ a:hover {
 
 .cta__tertiary-no-margin {
       border: 1px solid #bababa;
+      margin: 1rem 0;
     }
 
 .cta__tertiary-no-margin:hover {
@@ -3030,8 +3031,8 @@ a:hover {
     background: #ad1f65;
   }
 
-.event__resource-circle--brown {
-    background: #b36012;
+.event__resource-circle--orange {
+    background: #ff9b1a;
   }
 
 .event__resource-circle--teal {
@@ -3054,6 +3055,10 @@ a:hover {
 
 .center-circle {
   margin-top: 1rem;
+}
+
+.mapFix {
+  margin-top: -6px;
 }
 
 .events__event {

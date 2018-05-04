@@ -84,8 +84,8 @@
     background: $PappysPurple;
   }
 
-  &__resource-circle--brown {
-    background: $BellTowerBrick;
+  &__resource-circle--orange {
+    background: $MackeyOrange;
   }
 
   &__resource-circle--teal {
@@ -109,4 +109,8 @@
 
 .center-circle {
   margin-top: 1rem;
+}
+
+.mapFix {
+  margin-top: -6px;
 }
