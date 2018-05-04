@@ -19,7 +19,17 @@
   &__primary:hover {
     background: #ddd;
     color: #2d2d2d;
+  }
 
+  &__primary-small {
+    border-color: #ddd;
+    font-size: 1rem;
+    color: #2d2d2d;
+  }
+
+  &__primary-small:hover {
+    background: #ddd;
+    color: #2d2d2d;
   }
 
   &__secondary {
@@ -48,5 +58,22 @@
     background: #fff;
     color: #000;
     border-color: #fff;
+  }
+
+  &__tertiary {
+    border: 1px solid #bababa;
+
+    &-no-margin {
+      border: 1px solid #bababa;
+
+      &:hover {
+        background-color: #eaeaea;
+      }
+    }
+
+    &:hover {
+      background-color: #eaeaea;
+
+    }
   }
 }

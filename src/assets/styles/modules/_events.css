@@ -122,9 +122,28 @@
     line-height: 1.5rem;
   }
 
+  &__event-address {
+    font-size: 1.3rem;
+    padding: 0 2rem;
+  }
+
+  &__event-time-detail {
+    font-size: 1.5rem;
+    padding: 0 2rem;
+    font-weight: 600;
+  }
+
   &__event-time {
     font-size: 2rem;
     line-height: 1.5rem;
+  }
+
+  &__event-year {
+    font-size: 7vw;
+    color: #cacaca;
+    padding: 0;
+    margin: 0;
+    text-align: center;
   }
 }
 
