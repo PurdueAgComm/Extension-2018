@@ -79,6 +79,11 @@ TODO: display canceled dateTimes</p>
                 <?php echo $day->strCity; ?>, <?php echo $day->strState; ?> <?php echo $day->strZip; ?>
               <?php endif; ?>
             </address>
+            <?php if(!$mapFix) : // more than one address so show buttons ?>
+              <div class="events__event-address">
+                <a class="cta cta__tertiary-no-margin" style="font-size: .7em; width: fit-content;" href="https://maps.google.com/?q=<?php echo $day->strAddress1 . ' ' . $day->strCity . ' ' . $day->strState . ' ' . $day->strZip;?>"><i class="fas fa-map-marker"></i> View Map</a>
+              </div>
+            <?php endif; ?>
           </div>
           <div class="col-lg-4">
             <div class="events__event-details">
