@@ -2978,6 +2978,8 @@ a:hover {
 
 .event__body {
     clear:both;
+    padding: 1rem;
+    border-left: 7px solid #ad1f65;
   }
 
 .event__body a:link {

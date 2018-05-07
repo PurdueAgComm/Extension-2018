@@ -12,7 +12,7 @@ TODO: display canceled dateTimes</p>
   </div>
 </div>
 
-<?php if(sizeof($event->DateList) == 1 && $event->DateList[0]->strCity != "N/A") : ?>
+<?php if(sizeof($event->DateList) == 1 && $event->DateList[0]->strCity != "N/A" && $event->DateList[0]->strCity != "Online" && $event->DateList[0]->strCity != "Available Online") : ?>
 <?php $mapFix = 1; // fix margin on meta tags?>
 <div class="wide-container no-margin-auto">
   <iframe
@@ -69,13 +69,13 @@ TODO: display canceled dateTimes</p>
               <?php if(!empty($day->strBuilding)) : ?>
                 <?php echo $day->strBuilding; ?><br>
               <?php endif; ?>
-              <?php if(!empty($day->strAddress1) && $day->strAddress1 != "N/A") : ?>
+              <?php if(!empty($day->strAddress1) && $day->strAddress1 != "N/A" ) : ?>
                 <?php echo $day->strAddress1; ?><br>
               <?php endif; ?>
               <?php if(!empty($day->strAddress2)) : ?>
                 <?php echo $day->strAddress2; ?><br>
               <?php endif; ?>
-              <?php if(!empty($day->strCity) && $day->strCity != "N/A") : ?>
+              <?php if(!empty($day->strCity) && $day->strCity != "N/A"  && $event->DateList[0]->strCity != "Online" && $event->DateList[0]->strCity != "Available Online") : ?>
                 <?php echo $day->strCity; ?>, <?php echo $day->strState; ?> <?php echo $day->strZip; ?>
               <?php endif; ?>
             </address>
@@ -96,55 +96,95 @@ TODO: display canceled dateTimes</p>
   <?php endif; ?>
   <?php endforeach; ?>
 
-  <?php if(!empty($event->strDescription)) : ?>
-    <div class="row">
-      <div class="col">
+  <div class="row">
+    <?php if(!empty($event->strDescription)) : ?>
+      <div class="col-sm-8">
         <article class="event__body">
-          <h2>About <?php echo $event->strTitle; ?></h2>
+          <h2>About</h2>
           <?php echo $event->strDescription; ?>
         </article>
       </div>
-    </div>
-  <?php endif; ?>
-
-  <?php if(!empty($event->strContactName)) : ?>
-    <div class="row">
-      <div class="col-md-4 offset-md-2">
-        <div class="event__resource">
-          <div class="event__resource-circle event__resource-circle--purple reveal-resource">
-            <i class="fas fa-envelope fa-2x center-circle"></i>
-          </div>
-          <h3 class="event__resource-title">Contact</h3>
-          <?php if(!empty($event->strContactEmail)) : ?>
-            <a href="mailto:<?php echo $event->strContactEmail; ?>" class="cta cta__tertiary-no-margin">Email <?php echo $event->strContactName; ?> <i class="fas fa-arrow-right"></i></a>
-          <?php endif;?>
-          <?php if(!empty($event->strContactPhone)) : ?>
-              <a href="tel:<?php echo $event->strContactPhone; ?>" class="cta cta__tertiary-no-margin">Call <?php echo $event->strContactName; ?> <i class="fas fa-arrow-right"></i></a>
+      <div class="col-sm-4">
+        <?php if(!empty($event->strContactName)) : ?>
+            <div class="col">
+              <div class="event__resource">
+                <div class="event__resource-circle event__resource-circle--purple reveal-resource">
+                  <i class="fas fa-envelope fa-2x center-circle"></i>
+                </div>
+                <h3 class="event__resource-title">Contact</h3>
+                <?php if(!empty($event->strContactEmail)) : ?>
+                  <a href="mailto:<?php echo $event->strContactEmail; ?>" class="cta cta__tertiary-no-margin">Email <?php echo $event->strContactName; ?> <i class="fas fa-arrow-right"></i></a>
+                <?php endif;?>
+                <?php if(!empty($event->strContactPhone)) : ?>
+                    <a href="tel:<?php echo $event->strContactPhone; ?>" class="cta cta__tertiary-no-margin">Call <?php echo $event->strContactName; ?> <i class="fas fa-arrow-right"></i></a>
+                <?php endif; ?>
+              </div>
+            </div>
           <?php endif; ?>
-        </div>
+
+          <?php if(!empty($event->strCost) || !empty($event->strRegistration)) : ?>
+            <div class="col">
+              <div class="event__resource">
+                <div class="event__resource-circle event__resource-circle--orange reveal-resource">
+                  <i class="far fa-check-square fa-2x center-circle"></i>
+                </div>
+                <h3 class="event__resource-title">Register</h3>
+                <?php if(!empty($event->strCost)) : ?>
+                  <p class="event__resource-copy">
+                    <strong>Cost:</strong> <?php echo $event->strCost; ?>
+                  </p>
+                <?php endif; ?>
+                <?php if(!empty($event->strRegister)) : ?>
+                  <a href="<?php echo $event->strRegister; ?>" class="cta cta__tertiary-no-margin">Register Now <i class="fas fa-arrow-right"></i></a>
+                <?php endif; ?>
+              </div>
+            </div>
+          <?php endif; ?>
       </div>
-    <?php endif; ?>
 
-    <?php if(!empty($event->strCost) || !empty($event->strRegistration)) : ?>
-      <div class="col-md-4">
-        <div class="event__resource">
-          <div class="event__resource-circle event__resource-circle--orange reveal-resource-2">
-            <i class="far fa-check-square fa-2x center-circle"></i>
-          </div>
-          <h3 class="event__resource-title">Register</h3>
-          <?php if(!empty($event->strCost)) : ?>
-            <p class="event__resource-copy">
-              <strong>Cost:</strong> <?php echo $event->strCost; ?>
-            </p>
+  <?php else : ?>
+      <div class="col-sm-4">
+        <?php if(!empty($event->strContactName)) : ?>
+            <div class="col">
+              <div class="event__resource">
+                <div class="event__resource-circle event__resource-circle--purple reveal-resource">
+                  <i class="fas fa-envelope fa-2x center-circle"></i>
+                </div>
+                <h3 class="event__resource-title">Contact</h3>
+                <?php if(!empty($event->strContactEmail)) : ?>
+                  <a href="mailto:<?php echo $event->strContactEmail; ?>" class="cta cta__tertiary-no-margin">Email <?php echo $event->strContactName; ?> <i class="fas fa-arrow-right"></i></a>
+                <?php endif;?>
+                <?php if(!empty($event->strContactPhone)) : ?>
+                    <a href="tel:<?php echo $event->strContactPhone; ?>" class="cta cta__tertiary-no-margin">Call <?php echo $event->strContactName; ?> <i class="fas fa-arrow-right"></i></a>
+                <?php endif; ?>
+              </div>
+            </div>
           <?php endif; ?>
-          <?php if(!empty($event->strRegister)) : ?>
-            <a href="<?php echo $event->strRegister; ?>" class="cta cta__tertiary-no-margin">Register Now <i class="fas fa-arrow-right"></i></a>
+
+          <?php if(!empty($event->strCost) || !empty($event->strRegistration)) : ?>
+            <div class="col">
+              <div class="event__resource">
+                <div class="event__resource-circle event__resource-circle--orange reveal-resource">
+                  <i class="far fa-check-square fa-2x center-circle"></i>
+                </div>
+                <h3 class="event__resource-title">Register</h3>
+                <?php if(!empty($event->strCost)) : ?>
+                  <p class="event__resource-copy">
+                    <strong>Cost:</strong> <?php echo $event->strCost; ?>
+                  </p>
+                <?php endif; ?>
+                <?php if(!empty($event->strRegister)) : ?>
+                  <a href="<?php echo $event->strRegister; ?>" class="cta cta__tertiary-no-margin">Register Now <i class="fas fa-arrow-right"></i></a>
+                <?php endif; ?>
+              </div>
+            </div>
           <?php endif; ?>
-        </div>
       </div>
-    <?php endif; ?>
 
-  </div> <!-- /.row -->
+  <?php endif; // if no description?>
+</div> <!--/.row -->
+
+
 </div> <!-- /.container -->
 <br style="clear:both;">
 
