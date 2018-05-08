@@ -26,8 +26,8 @@
           <?php endif; ?>
           <div class="col">
             <p class="stories-angled__story-date">
-              <?php echo $article->datCreated; ?>
-              FakeDate 30, 2018
+              <?php echo date('F j, Y', strtotime($article->datModified)); ?>
+              <!-- FakeDate 30, 2018 -->
               <?php if($article->bln4H) : echo " | 4-H"; endif; ?>
             </p>
             <a href="/article/<?php echo $article->intItemID; ?>">

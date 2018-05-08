@@ -168,7 +168,12 @@ class ExtDCR
 
         //build article list additional details/assets
         foreach($articles as &$article){
+            //extra API calls could become a performance concern, let's consider caching this information
             $expandedDetails = $this->call->getExpandedItemDetails($article->intItemID);
+            $articleDetails = $this->call->getItemDetails($article->intItemID);
+            $article->datCreated = $articleDetails->datCreated;
+            $article->datModified = $articleDetails->datModified;
+
             if(count($expandedDetails->Images)){
                 //let's get the thumbnail
                 $imageUrl = $this->call->getImageLink($expandedDetails->Images[0]->intImageID);
