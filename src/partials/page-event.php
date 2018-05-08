@@ -2,8 +2,6 @@
 TODO: display canceled dateTimes</p>
       dateTime has passed styling</p>
       toggle button text
-      display map button for multi-events
-      what if no contact or if no registration data - maybe put in sidebar?
 -->
 <?php //var_dump($event); ?>
 <?php
@@ -72,7 +70,11 @@ TODO: display canceled dateTimes</p>
           <div class="col">
             <div class="events__event-time-detail">
               <?php ($day->chrTimeZone == "E") ? $timeZone = "ET" : $timeZone = "CT"; ?>
-              <?php echo date("g:i a", strtotime($day->datStartTime)); ?> - <?php echo date("g:i a", strtotime($day->datEndTime)) . " " . $timeZone ?>
+              <?php if(date("g:i a", strtotime($day->datStartTime)) != "12:00 am" && date("g:i a", strtotime($day->datEndTime)) != "11:59 pm") : ?>
+                <?php echo date("g:i a", strtotime($day->datStartTime)); ?> - <?php echo date("g:i a", strtotime($day->datEndTime)) . " " . $timeZone ?>
+              <?php else : ?>
+                All Day
+              <?php endif; ?>
             </div>
             <address class="events__event-address">
               <?php if(!empty($day->strBuilding)) : ?>
@@ -88,7 +90,7 @@ TODO: display canceled dateTimes</p>
                 <?php echo $day->strCity; ?>, <?php echo $day->strState; ?> <?php echo $day->strZip; ?>
               <?php endif; ?>
             </address>
-            <?php if(!$mapFix) : // more than one address so show buttons ?>
+            <?php if(!$mapFix && $day->strCity != "Online" && $day->strCity != "N/A" && $day->strCity != "Available Online") : // more than one address so show buttons ?>
               <div class="events__event-address">
                 <a class="cta cta__tertiary-no-margin" style="font-size: .7em; width: fit-content;" href="https://maps.google.com/?q=<?php echo $day->strAddress1 . ' ' . $day->strCity . ' ' . $day->strState . ' ' . $day->strZip;?>"><i class="fas fa-map-marker"></i> View Map</a>
               </div>

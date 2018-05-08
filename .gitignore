@@ -29,7 +29,9 @@ nbproject
 _notes
 .vscode
 dwsync.xml
+sftp-config.json
 
 # SFP Random Files
 .vagrant
 Vagrantfile
+
