@@ -120,6 +120,12 @@ function get_event_list($pagesize = 5, $pagecount = 0, $page = "home")
     $events = $ext->getEventList($pagesize, $pagecount, $page);
     include('../partials/feed-event.php');
 }
+function get_event_filter($pagesize = 10, $pagecount = 0)
+{
+    global $ext;
+    $events = $ext->getEventsByFilter($pagesize, $pagecount);
+    include('../partials/feed-event.php');
+}
 function get_article($article_id)
 {
     global $ext;
@@ -127,7 +133,7 @@ function get_article($article_id)
     $article = $ext->getArticlePage($article_id);
     include('../partials/page-article.php');
 }
-function get_event($event_id)
+function get_event($event_id, $event_ed = 0)
 {
     global $ext;
     $event = $ext->getEventPage($event_id);

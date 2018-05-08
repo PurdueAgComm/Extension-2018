@@ -12,6 +12,7 @@
       <h1>Upcoming Events</h1>
     <?php endif; ?>
     <?php foreach($events as $event) :
+
       // deconstruct event date
       $eventDay = date("D", strtotime($event->datStartDate));
       $eventMonth = date("M", strtotime($event->datStartDate));
@@ -26,8 +27,25 @@
       if($event->blnCancelEvent) {
         $eventClassFlag = "events__event--canceled";
       }
+      $multiday = false;
+      if($event->intEventDateCount > 1){
+        //Multiday Event
+        $multiday = true;
+      }
+      $eventED = false;
+      if($page != "home"){
+        //the event filter call nests the event info into an eventList that appears to always be a count of 1
+        $event = $event->eventList[0];
+        if($event->DateList->intEventDateID){
+          $eventED = $event->DateList->intEventDateID;
+        }
+      }
     ?>
+    <?php if($eventED): ?>
+    <a class="events--link" href="/event/<?php echo $event->intEventID; ?>/<?php echo $eventED;?>">
+    <?php else: ?>
     <a class="events--link" href="/event/<?php echo $event->intEventID; ?>">
+    <?php endif; ?>
       <div class="events__event <?php echo $eventClassFlag; ?> reveal">
         <div class="row justify-content-md-center">
           <div class="col-md-auto">

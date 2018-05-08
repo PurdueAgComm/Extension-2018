@@ -11,6 +11,7 @@ get_header();
 get_menu();
 get_banner();
 echo "<br>";
-get_event_list($page_size, $page_count, "events");
+//get_event_list($page_size, $page_count, "events");
+get_event_filter($page_size, $page_count);
 get_resource_links();
 get_footer();

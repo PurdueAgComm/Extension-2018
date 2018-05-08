@@ -5,7 +5,16 @@ TODO: display canceled dateTimes</p>
       display map button for multi-events
       what if no contact or if no registration data - maybe put in sidebar?
 -->
+<?php //var_dump($event); ?>
+<?php
 
+  foreach($event->DateList as $eventDateList){
+    if($eventDateList->intEventDateID == $event_ed){
+      $eventDate = $eventDateList; //This is the selected Date of the multidate event
+    }
+  }
+  var_dump($eventDate);
+?>
 <div class="wide-container no-margin-auto event__title--wide--background">
   <div class="container event__title--background">
     <h1 class="event__title reveal"><?php echo $event->strTitle; ?></h1>

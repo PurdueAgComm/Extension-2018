@@ -174,4 +174,24 @@ class ExtDCR
         $events = $this->call->getEventList($this->_getHomeID(), $size, $count);
         return $events;
     }
+
+    public function getEventsByFilter($size = 10, $count = 0)
+    {
+        $params = array(
+            't' => 'ef',
+            'l' => $this->_getHomeID(),
+            'tids' => -1,
+            //'cids' => 7,
+            'ps' => $size,
+            'pn' => $count,
+            'sd' => date('m-d-Y'),
+            //'ed',
+            //'scids' => 33,
+            'sar' => false,
+            'bc' => true,
+        );
+
+        $result = $this->call->post('event.ashx', $params);
+        return $result;
+    }
 }
