@@ -44,7 +44,7 @@ function get_homepath()
     }
     return 'extension.purdue.edu/';
 }
-function get_template()
+function get_template($county = false)
 {
     $known_routes = [
         '/category',
@@ -61,6 +61,9 @@ function get_template()
             //known route is present in request uri
             return trim($route, '/').'.php';
         }
+    }
+    if($county){
+        return 'county.php';
     }
     return 'home.php';
 }
