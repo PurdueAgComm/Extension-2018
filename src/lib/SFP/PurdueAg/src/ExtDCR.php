@@ -107,8 +107,20 @@ class ExtDCR
             'c' => $cat_id,
             's' => -1
         );
-        $result = $this->call->post('Item.ashx', $params);
-        return $result;
+        $results = $this->call->post('Item.ashx', $params);
+
+        foreach($results as &$result){
+            $expandedDetails = $this->call->getExpandedItemDetails($result->intItemID);
+            if(count($expandedDetails->Images)){
+                //let's get the thumbnail
+                $imageUrl = $this->call->getImageLink($expandedDetails->Images[0]->intImageID);
+                $result->thumb = new stdClass();
+                $result->thumb->url = $imageUrl;
+                $result->thumb->alt = $expandedDetails->Images[0]->strAltText;
+            }
+        }
+
+        return $results;
     }
 
     //todo: move this to the ExtCall Class
