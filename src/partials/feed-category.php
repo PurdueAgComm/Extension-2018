@@ -2,7 +2,7 @@
   <div class="stories-angled">
     <div class="container">
       <!-- TODO: get_category_name() function create for human name -->
-      <h1 class="stories-angled__title">Category Name</h1>
+      <h1 class="stories-angled__title"><?php echo get_category_name($cat_id); ?></h1>
     </div>
     <?php
     // alternate classes for each article to tesselate
@@ -27,8 +27,8 @@
           <?php endif; ?>
           <div class="col">
             <p class="stories-angled__story-date">
-              <?php echo $article->datCreated; ?>
-              FakeDate 30, 2018
+              <?php echo date('F j, Y', strtotime($article->datModified)); ?>
+              <!-- FakeDate 30, 2018 -->
               <?php if($article->bln4H) : echo " | 4-H"; endif; ?>
             </p>
             <a href="/article/<?php echo $article->intItemID; ?>">

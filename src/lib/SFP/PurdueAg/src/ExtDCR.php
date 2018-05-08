@@ -111,6 +111,9 @@ class ExtDCR
 
         foreach($results as &$result){
             $expandedDetails = $this->call->getExpandedItemDetails($result->intItemID);
+            $articleDetails = $this->call->getItemDetails($result->intItemID);
+            $result->datCreated = $articleDetails->datCreated;
+            $result->datModified = $articleDetails->datModified;
             if(count($expandedDetails->Images)){
                 //let's get the thumbnail
                 $imageUrl = $this->call->getImageLink($expandedDetails->Images[0]->intImageID);
