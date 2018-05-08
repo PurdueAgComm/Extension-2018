@@ -23,6 +23,8 @@ function get_homepath()
     ];
     require_once('../lib/SFP/PurdueAg/src/ExtDCR.php');
     $path = trim($_SERVER['REQUEST_URI'],'/');
+    $query_parts =explode('?',$path);
+    $path = $query_parts[0];
     $path_parts = explode('/',$path);
     $is_county = '';
     foreach($known_routes as $route) {
@@ -161,4 +163,107 @@ function get_4h_marketing()
 function get_resource_links()
 {
     include('../partials/tpl-resource-links.php');
+}
+function validate_county($county)
+{
+    $known_counties = array(
+        'Adams',
+        'Allen',
+        'Bartholomew',
+        'Benton',
+        'Blackford',
+        'Boone',
+        'Brown',
+        'Carroll',
+        'Cass',
+        'Clark',
+        'Clay',
+        'Clinton',
+        'Crawford',
+        'Daviess',
+        'Dearborn',
+        'Decatur',
+        'DeKalb',
+        'Delaware',
+        'Dubois',
+        'Elkhart',
+        'Fayette',
+        'Floyd',
+        'Fountain',
+        'Franklin',
+        'Fulton',
+        'Gibson',
+        'Grant',
+        'Greene',
+        'Hamilton',
+        'Hancock',
+        'Harrison',
+        'Hendricks',
+        'Henry',
+        'Howard',
+        'Huntington',
+        'Jackson',
+        'Jasper',
+        'Jay',
+        'Jefferson',
+        'Jennings',
+        'Johnson',
+        'Knox',
+        'Kosciusko',
+        'LaGrange',
+        'Lake',
+        'LaPorte',
+        'Lawrence',
+        'Madison',
+        'Marion',
+        'Marshall',
+        'Martin',
+        'Miami',
+        'Monroe',
+        'Montgomery',
+        'Morgan',
+        'Newton',
+        'Noble',
+        'Ohio',
+        'Orange',
+        'Owen',
+        'Parke',
+        'Perry',
+        'Pike',
+        'Porter',
+        'Posey',
+        'Pulaski',
+        'Putnam',
+        'Randolph',
+        'Ripley',
+        'Rush',
+        'Saint Joseph',
+        'Scott',
+        'Shelby',
+        'Spencer',
+        'Starke',
+        'Steuben',
+        'Sullivan',
+        'Switzerland',
+        'Tippecanoe',
+        'Tipton',
+        'Union',
+        'Vanderburgh',
+        'Vermillion',
+        'Vigo',
+        'Wabash',
+        'Warren',
+        'Warrick',
+        'Washington',
+        'Wayne',
+        'Wells',
+        'White',
+        'Whitley',
+    );
+    foreach($known_counties as $check){
+        if(strtolower($check) === strtolower($county)){
+            return true;
+        }
+    }
+    return false;
 }

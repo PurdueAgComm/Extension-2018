@@ -7,7 +7,10 @@ require_once('../app/functions.php');
 //set the homepath URL variable
 $county = '';
 if(isset($_GET['county'])){
-    $county = $_GET['county']; //todo: sanitize (is there a known list of counties we can in_array against?)
+    $county = $_GET['county'];
+    if(!validate_county($county)){
+        $county = '';
+    }
 }
 
 $homepath = 'extension.purdue.edu/'.$county;
