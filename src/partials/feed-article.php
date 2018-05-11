@@ -1,6 +1,7 @@
 <?php
 /**
  * Feed item/article markup
+ // todo delete
  */
 ?>
 <?php foreach($articles as $article):?>

@@ -20,7 +20,7 @@
         <div class="row">
           <?php if(isset($article->thumb)): ?>
             <div class="col-md-auto">
-              <a href="/article/<?php echo $article->intItemID; ?>">
+              <a href="<?php echo $GLOBALS['SITE_PATH']; ?>/article/<?php echo $article->intItemID; ?>">
                 <img src="<?php echo $article->thumb->url; ?>" class="stories-angled__story-image"  alt="<?php echo $article->thumb->alt; ?>" />
               </a>
             </div>
@@ -31,7 +31,7 @@
               <!-- FakeDate 30, 2018 -->
               <?php if($article->bln4H) : echo " | 4-H"; endif; ?>
             </p>
-            <a href="/article/<?php echo $article->intItemID; ?>">
+            <a href="<?php echo $GLOBALS['SITE_PATH']; ?>/article/<?php echo $article->intItemID; ?>">
               <h3 class="stories-angled__story-title"><?php echo $article->strTitle ?></h3>
             </a>
           </div>

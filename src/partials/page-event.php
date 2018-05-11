@@ -3,7 +3,7 @@ TODO: display canceled dateTimes</p>
       dateTime has passed styling</p>
       toggle button text
 -->
-<?php var_dump($event); ?>
+<?php //var_dump($event); ?>
 <?php
   $eventDate = false;
   foreach($event->DateList as $eventDateList){
@@ -13,7 +13,7 @@ TODO: display canceled dateTimes</p>
   }
   if($eventDate){
     //the specified event date is set, let's get those details instead to put into the template below.
-    var_dump($eventDate);
+    //var_dump($eventDate);
   }
 ?>
 <div class="wide-container no-margin-auto event__title--wide--background">

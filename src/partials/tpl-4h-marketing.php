@@ -2,7 +2,7 @@
   <div class="enrole4h">
     <div class="row">
       <div class="col-md-auto">
-        <img src="/assets/images/4-H-Clover-RGB_digital.png" alt="4H Logo" class="enrole4h__img">
+        <img src="<?php echo $GLOBALS['SITE_PATH']; ?>/assets/images/4-H-Clover-RGB_digital.png" alt="4H Logo" class="enrole4h__img">
       </div>
       <div class="col">
         <h3 class="enrole4h__title">Enroll in 4-H Today</h3>

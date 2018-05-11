@@ -5,7 +5,6 @@
 ?>
 <div class="container">
   <div class="events">
-
     <?php if($page == "home") : // change heading depending on page events are included on ?>
       <h2>Upcoming Events</h2>
     <?php elseif($page == "events") : ?>
@@ -42,9 +41,9 @@
       }
     ?>
     <?php if($eventED): ?>
-    <a class="events--link" href="/event/<?php echo $event->intEventID; ?>/<?php echo $eventED;?>">
+    <a class="events--link" href="<?php echo $GLOBALS['SITE_PATH']; ?>/event/<?php echo $event->intEventID; ?>/<?php echo $eventED;?>">
     <?php else: ?>
-    <a class="events--link" href="/event/<?php echo $event->intEventID; ?>">
+    <a class="events--link" href="<?php echo $GLOBALS['SITE_PATH']; ?>/event/<?php echo $event->intEventID; ?>">
     <?php endif; ?>
       <div class="events__event <?php echo $eventClassFlag; ?> reveal">
         <div class="row justify-content-md-center">
@@ -93,7 +92,9 @@
               <a href="?pc=<?php echo $page_count+1;?>" class="cta cta__primary" style='position:relative;z-index: 3;'>Next Page &raquo;</a>
             </div>
           <?php endif;
-        endif; ?>
+        else : ?>
+          <a href="<?php echo $GLOBALS['SITE_PATH']; ?>/events/" class="cta cta__primary">View All Events</a>
+        <?php endif; ?>
       </div>
     </div>
   </div>
