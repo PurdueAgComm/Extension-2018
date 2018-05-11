@@ -4,10 +4,10 @@
       <div class="row justify-content-start no-gutters">
         <div class="col-lg-6">
           <picture class="hero__banner">
-            <source srcset="/assets/images/hhs.png" media="(min-width: 1200px)">
-            <source srcset="/assets/images/hhs--small.png" media="(min-width: 992px)">
-            <source srcset="/assets/images/hhs.png" media="(min-width: 576px)">
-            <img srcset="/assets/images/hhs.png" alt="A test image">
+            <source srcset="<?php echo $GLOBALS['SITE_PATH']; ?>/assets/images/hhs.png" media="(min-width: 1200px)">
+            <source srcset="<?php echo $GLOBALS['SITE_PATH']; ?>/assets/images/hhs--small.png" media="(min-width: 992px)">
+            <source srcset="<?php echo $GLOBALS['SITE_PATH']; ?>/assets/images/hhs.png" media="(min-width: 576px)">
+            <img srcset="<?php echo $GLOBALS['SITE_PATH']; ?>/assets/images/hhs.png" alt="Photo of shoes running down path">
           </picture>
         </div>
         <div class="col-lg-6 color-blocks__content justify-content-center">
@@ -21,10 +21,10 @@
       <div class="row justify-content-start no-gutters">
         <div class="col-lg-6">
           <picture class="hero__banner">
-            <source srcset="/assets/images/community.png" media="(min-width: 1200px)">
-            <source srcset="/assets/images/community--small.png" media="(min-width: 992px)">
-            <source srcset="/assets/images/community.png" media="(min-width: 576px)">
-            <img srcset="/assets/images/community.png" alt="A test image">
+            <source srcset="<?php echo $GLOBALS['SITE_PATH']; ?>/assets/images/community.png" media="(min-width: 1200px)">
+            <source srcset="<?php echo $GLOBALS['SITE_PATH']; ?>/assets/images/community--small.png" media="(min-width: 992px)">
+            <source srcset="<?php echo $GLOBALS['SITE_PATH']; ?>/assets/images/community.png" media="(min-width: 576px)">
+            <img srcset="<?php echo $GLOBALS['SITE_PATH']; ?>/assets/images/community.png" alt="Two men talking outside a local pharmacy">
           </picture>
         </div>
         <div class="col-lg-6 color-blocks__content justify-content-center">
@@ -38,10 +38,10 @@
       <div class="row justify-content-start no-gutters">
         <div class="col-lg-6">
           <picture class="hero__banner">
-            <source srcset="/assets/images/anr.png" media="(min-width: 1200px)">
-            <source srcset="/assets/images/anr--small.png" media="(min-width: 992px)">
-            <source srcset="/assets/images/anr.png" media="(min-width: 576px)">
-            <img srcset="/assets/images/anr.png" alt="A test image">
+            <source srcset="<?php echo $GLOBALS['SITE_PATH']; ?>/assets/images/anr.png" media="(min-width: 1200px)">
+            <source srcset="<?php echo $GLOBALS['SITE_PATH']; ?>/assets/images/anr--small.png" media="(min-width: 992px)">
+            <source srcset="<?php echo $GLOBALS['SITE_PATH']; ?>/assets/images/anr.png" media="(min-width: 576px)">
+            <img srcset="<?php echo $GLOBALS['SITE_PATH']; ?>/assets/images/anr.png" alt="Drone flying over field">
           </picture>
         </div>
         <div class="col-lg-6 color-blocks__content justify-content-center">
@@ -55,10 +55,10 @@
       <div class="row justify-content-start no-gutters">
         <div class="col-lg-6">
           <picture class="hero__banner">
-            <source srcset="/assets/images/4h.png" media="(min-width: 1200px)">
-            <source srcset="/assets/images/4h--small.png" media="(min-width: 992px)">
-            <source srcset="/assets/images/4h.png" media="(min-width: 576px)">
-            <img srcset="/assets/images/4h.png" alt="A test image">
+            <source srcset="<?php echo $GLOBALS['SITE_PATH']; ?>/assets/images/4h.png" media="(min-width: 1200px)">
+            <source srcset="<?php echo $GLOBALS['SITE_PATH']; ?>/assets/images/4h--small.png" media="(min-width: 992px)">
+            <source srcset="<?php echo $GLOBALS['SITE_PATH']; ?>/assets/images/4h.png" media="(min-width: 576px)">
+            <img srcset="<?php echo $GLOBALS['SITE_PATH']; ?>/assets/images/4h.png" alt="Man standing in front of sunflowers">
           </picture>
         </div>
         <div class="col-lg-6 color-blocks__content justify-content-center">

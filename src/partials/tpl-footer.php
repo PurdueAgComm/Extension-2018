@@ -8,7 +8,7 @@
             <p>If you have trouble accessing this page because of a disability, please email us at <a href="mailto:extension@purdue.edu?subject=ADA Request">extension@purdue.edu</a></p>
           </div>
           <div class="col-md-2 col-sm-4 col-6 offset-sm-0 offset-3 ">
-            <a href="https://purdue.edu"><img src="http://www.purdue.edu/purdue/images/logo.png" alt="Purdue University"></a>
+            <a href="https://purdue.edu"><img src="https://www.purdue.edu/purdue/images/logo.png" alt="Purdue University"></a>
           </div>
         </div>
       </div>
@@ -17,8 +17,8 @@
 
 
 <!-- SCRIPTS -->
-  <script src="/_compiled/vendor.js" async></script>
-  <script src="/_compiled/app.js" async></script>
+  <script src="<?php echo $GLOBALS['SITE_PATH']; ?>/_compiled/vendor.js" async></script>
+  <script src="<?php echo $GLOBALS['SITE_PATH']; ?>/_compiled/app.js" async></script>
   <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
   <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
 </body>
