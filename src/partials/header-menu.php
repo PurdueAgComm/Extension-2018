@@ -38,7 +38,7 @@ $hid = $navigation->currentHome->intHomeID;
             <form action="/results/" method="get" class="form__search form__search--mobile-nav">
               <input type="search" name="q" class="form__search-input" placeholder="Search people, articles, and more" aria-label="Search" aria-placeholder="Search people, articles, and more"
               />
-              <input type="image" value="Search" src="/assets/images/icon--search.svg" class="form__search-submit" alt="Search">
+              <input type="image" value="Search" src="<?php echo $GLOBALS['SITE_PATH']; ?>/assets/images/icon--search.svg" class="form__search-submit" alt="Search">
             </form>
           </div>
         </div>

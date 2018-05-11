@@ -4,7 +4,6 @@
 // determine URL structure since dev and production is different
 // dev = purdue.edu/extension
 // prod = extension.purdue.edu
-$GLOBALS['dev'] = FALSE;
 if($_SERVER["SERVER_NAME"] == "dev.www.purdue.edu") {
   $GLOBALS['SITE_PATH'] = "/extension";
 }
