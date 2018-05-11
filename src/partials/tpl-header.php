@@ -17,7 +17,7 @@ $image = "https://extension.purdue.edu/annualreport/images/cover.jpg";
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Purdue Extension</title>
   <link rel="stylesheet" href="<?php echo $GLOBALS['SITE_PATH']; ?>/_compiled/styles.css">
-  <meta name="description" content="Purdue Extension helps Indiana build vibrant communities, strong families, and profitable businesses on its Main Streets and at its farm gates." />
+  <meta name="description" content="See how Purdue Extension connects Indiana to Purdue University research and programs in agriculture, communities, families, health, and youth development." />
   <!-- Twitter Card data -->
   <meta name="twitter:card" value="summary">
 

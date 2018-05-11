@@ -20,12 +20,16 @@ $hid = $navigation->currentHome->intHomeID;
       <div class="container">
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
-            <a class="nav-item nav-link" href="//<?php echo $root;?>pages/index.php">Home</a></li>
-            <a class="nav-item nav-link" href="//<?php echo $root;?>pages/about.php">About</a>
+            <!-- <a class="nav-item nav-link" href="//<?php echo $root;?>pages/index.php">Home</a></li>
+            <a class="nav-item nav-link" href="//<?php echo $root;?>pages/about.php">About</a> -->
+            <a class="nav-item nav-link" href="<?php echo $GLOBALS['SITE_PATH']; ?>/">Home</a>
+            <a class="nav-item nav-link" href="<?php echo $GLOBALS['SITE_PATH']; ?>/about">About</a>
+
             <?php foreach($navigation->listMenuCategories as $cat):?>
-                <a class="nav-item nav-link" href="//<?php echo $root;?>/category/<?php echo $hid;?>/<?php echo $cat->intCategoryID;?>"><?php echo $cat->strCategoryText;?></a>
+                <!-- <a class="nav-item nav-link" href="//<?php echo $root;?>/category/<?php echo $hid;?>/<?php echo $cat->intCategoryID;?>"><?php echo $cat->strCategoryText;?></a> -->
+                <a class="nav-item nav-link" href="<?php echo $GLOBALS['SITE_PATH']; ?>/category/<?php echo $cat->intCategoryID;?>"><?php echo $cat->strCategoryText;?></a>
             <?php endforeach ?>
-            <li class="nav-item dropdown">
+            <!-- <li class="nav-item dropdown">
                 <a class="nav-item nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   Dropdown link
                 </a>
@@ -34,7 +38,7 @@ $hid = $navigation->currentHome->intHomeID;
                   <a class="dropdown-item" href="#">Another action</a>
                   <a class="dropdown-item" href="#">Something else here</a>
                 </div>
-            </li>
+            </li> -->
             <form action="/results/" method="get" class="form__search form__search--mobile-nav">
               <input type="search" name="q" class="form__search-input" placeholder="Search people, articles, and more" aria-label="Search" aria-placeholder="Search people, articles, and more"
               />

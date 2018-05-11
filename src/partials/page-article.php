@@ -7,7 +7,7 @@
 
 <div class="container">
   <?php if(!$article->blnSuppressByline) : ?>
-  <a href="/profile/<?php echo $article->strAuthorAlias; ?>">
+  <a href="<?php echo $GLOBALS['SITE_PATH']; ?>/profile/<?php echo $article->strAuthorAlias; ?>">
     <div class="story__meta reveal-meta" data-toggle="tooltip" data-placement="bottom" title="<?php echo $article->strAuthorTitle;?>">
       <i class="fas fa-user" data-toggle="tooltip" title="Author"></i> <?php echo $article->strAuthorName; ?>
     </div>
