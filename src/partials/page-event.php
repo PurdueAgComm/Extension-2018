@@ -5,13 +5,16 @@ TODO: display canceled dateTimes</p>
 -->
 <?php var_dump($event); ?>
 <?php
-
+  $eventDate = false;
   foreach($event->DateList as $eventDateList){
     if($eventDateList->intEventDateID == $event_ed){
       $eventDate = $eventDateList; //This is the selected Date of the multidate event
     }
   }
-  var_dump($eventDate);
+  if($eventDate){
+    //the specified event date is set, let's get those details instead to put into the template below.
+    var_dump($eventDate);
+  }
 ?>
 <div class="wide-container no-margin-auto event__title--wide--background">
   <div class="container event__title--background">
