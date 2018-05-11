@@ -11,13 +11,9 @@
           </picture>
         </div>
         <div class="col-lg-6 color-blocks__content justify-content-center">
-          <h3 class="color-blocks__title">LORUM IPSUM DOLOR SIT</h3>
-          <p class="color-blocks__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur scelerisque sagittis nulla vel pulvinar.
-            Quisque aliquam dignissim ipsum, non mollis leo tincidunt a. Quisque in sollicitudin lacus, vitae euismod
-            justo. Suspendisse convallis orci in ligula pretium porta. Quisque quis quam eget arcu efficitur eleifend
-            eu ut lectus. Aenean tempus venenatis nunc at auctor.
-          </p>
-          <a href="#" class="cta cta__secondary cta__secondary--white">Learn More</a>
+          <h3 class="color-blocks__title">A message to move</h3>
+          <p class="color-blocks__text">Sometimes the hardest part of getting fit is taking that first step. Purdue Extension motivates adults to Get WalkIN’ through email coaching. And it’s working!</p>
+          <a href="https://extension.purdue.edu/annualreport/walking/" class="cta cta__secondary cta__secondary--white">Learn More</a>
         </div>
       </div>
     </div>
@@ -32,13 +28,9 @@
           </picture>
         </div>
         <div class="col-lg-6 color-blocks__content justify-content-center">
-          <h3 class="color-blocks__title">LORUM IPSUM DOLOR SIT</h3>
-          <p class="color-blocks__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur scelerisque sagittis nulla vel pulvinar.
-            Quisque aliquam dignissim ipsum, non mollis leo tincidunt a. Quisque in sollicitudin lacus, vitae euismod
-            justo. Suspendisse convallis orci in ligula pretium porta. Quisque quis quam eget arcu efficitur eleifend
-            eu ut lectus. Aenean tempus venenatis nunc at auctor.
-          </p>
-          <a href="#" class="cta cta__secondary cta__secondary--white">Learn More</a>
+          <h3 class="color-blocks__title">Revitalizing small towns</h3>
+          <p class="color-blocks__text">Purdue Extension partners with the Hometown Collaboration Initiative, helping small towns capitalize on their potential to flourish.</p>
+          <a href="https://extension.purdue.edu/annualreport/hci/" class="cta cta__secondary cta__secondary--white">Learn More</a>
         </div>
       </div>
     </div>
@@ -46,20 +38,16 @@
       <div class="row justify-content-start no-gutters">
         <div class="col-lg-6">
           <picture class="hero__banner">
-            <source srcset="/assets/images/agfarmer.png" media="(min-width: 1200px)">
-            <source srcset="/assets/images/agfarmer--small.png" media="(min-width: 992px)">
-            <source srcset="/assets/images/agfarmer.png" media="(min-width: 576px)">
-            <img srcset="/assets/images/agfarmer.png" alt="A test image">
+            <source srcset="/assets/images/anr.png" media="(min-width: 1200px)">
+            <source srcset="/assets/images/anr--small.png" media="(min-width: 992px)">
+            <source srcset="/assets/images/anr.png" media="(min-width: 576px)">
+            <img srcset="/assets/images/anr.png" alt="A test image">
           </picture>
         </div>
         <div class="col-lg-6 color-blocks__content justify-content-center">
-          <h3 class="color-blocks__title">LORUM IPSUM DOLOR SIT</h3>
-          <p class="color-blocks__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur scelerisque sagittis nulla vel pulvinar.
-            Quisque aliquam dignissim ipsum, non mollis leo tincidunt a. Quisque in sollicitudin lacus, vitae euismod
-            justo. Suspendisse convallis orci in ligula pretium porta. Quisque quis quam eget arcu efficitur eleifend
-            eu ut lectus. Aenean tempus venenatis nunc at auctor.
-          </p>
-          <a href="#" class="cta cta__secondary cta__secondary--white">Learn More</a>
+          <h3 class="color-blocks__title">Eyes in the sky</h3>
+          <p class="color-blocks__text">Agriculture’s next wave is digital. That means data-driven diagnoses, forecasts, and assessments. Unmanned aerial vehicles are crucial to that toolkit, and Purdue Extension is setting best practices for farmers across Indiana.</p>
+          <a href="https://extension.purdue.edu/annualreport/hci/" class="cta cta__secondary cta__secondary--white">Learn More</a>
         </div>
       </div>
     </div>
@@ -74,13 +62,9 @@
           </picture>
         </div>
         <div class="col-lg-6 color-blocks__content justify-content-center">
-          <h3 class="color-blocks__title">LORUM IPSUM DOLOR SIT</h3>
-          <p class="color-blocks__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur scelerisque sagittis nulla vel pulvinar.
-            Quisque aliquam dignissim ipsum, non mollis leo tincidunt a. Quisque in sollicitudin lacus, vitae euismod
-            justo. Suspendisse convallis orci in ligula pretium porta. Quisque quis quam eget arcu efficitur eleifend
-            eu ut lectus. Aenean tempus venenatis nunc at auctor.
-          </p>
-          <a href="#" class="cta cta__secondary cta__secondary--white">Learn More</a>
+          <h3 class="color-blocks__title">Encouraging Indiana’s future entrepreneurs</h3>
+          <p class="color-blocks__text">Indiana 4-H Youth Development has always grown the next generation of leaders. Today, that also means entrepreneurship. Purdue Extension and the Indiana 4-H Entrepreneurship Academy create opportunities for youth to dream big.</p>
+          <a href="https://extension.purdue.edu/annualreport/entrepreneurs/" class="cta cta__secondary cta__secondary--white">Learn More</a>
         </div>
       </div>
     </div>

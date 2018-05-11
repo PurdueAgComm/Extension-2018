@@ -3,7 +3,7 @@ TODO: display canceled dateTimes</p>
       dateTime has passed styling</p>
       toggle button text
 -->
-<?php //var_dump($event); ?>
+<?php var_dump($event); ?>
 <?php
 
   foreach($event->DateList as $eventDateList){
