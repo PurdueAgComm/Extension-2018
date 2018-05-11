@@ -177,8 +177,15 @@ function get_resource_links()
 {
     include('../partials/tpl-resource-links.php');
 }
+function get_about()
+{
+    global $ext;
+    $about = $ext->getAboutPage();
+    include('../partials/page-about.php');
+}
 function validate_county($county)
 {
+    //todo: use the PI API to get county list instead?
     $known_counties = array(
         'Adams',
         'Allen',

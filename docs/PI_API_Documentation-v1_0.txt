@@ -1,0 +1,387 @@
+-------------------------------------------------------------------------------------------------------
+Project			PI - API
+File			PI_API_Documentation
+File Version	1.0
+-------------------------------------------------------------------------------------------------------
+
+
+-------------------------------------------------------------------------------------------------------
+Notes
+-------------------------------------------------------------------------------------------------------
+
+(1)	The API is only for retrieving data; there are not methods for inserting or modifying records. Thus,
+	all methods calls will use GET requests.
+
+(2) Titles: Use the 
+
+-------------------------------------------------------------------------------------------------------
+URL
+-------------------------------------------------------------------------------------------------------
+
+Method			GET
+Base URL		https://ag.purdue.edu/api/pi/2014/04/
+Service URL		<base><service>.svc/json/<method>?<parameters>
+
+Example			https://ag.purdue.edu/api/pi/2014/04/EmployeeService.svc/json/GetEmployeeByAlias?strAlias=xyz
+
+
+-------------------------------------------------------------------------------------------------------
+Data Types
+-------------------------------------------------------------------------------------------------------
+
+	---------------------------------------------------------------------------------------------------
+	WS_Address
+	---------------------------------------------------------------------------------------------------
+	strBuilding : string
+	strRoom : string
+	strAddress1 : string
+	strAddress2 : string
+	strCity : string
+	strStateID : string
+	strZip : string
+	strPhone : string
+	strPhone2 : string
+	strFax : string
+	strMobile : string
+	
+	---------------------------------------------------------------------------------------------------
+	WS_Campus
+	---------------------------------------------------------------------------------------------------
+	intCampusID : int
+	strCampusName : string
+	strCampusDescription: string
+	
+	---------------------------------------------------------------------------------------------------
+	WS_CesAppointment
+	---------------------------------------------------------------------------------------------------
+	intCountyID : int
+	strPreferredTitle : string					Title to be displayed on directory & profile pages
+	intCesJobID : string
+	strCesJobTitle : string
+	intCesTitle : int							Record ID of selected preferred title
+	strCesTitle : string						Title corresponding to selected preferred title
+	blnPrimaryAppointment : bool
+	blnArchive : bool
+	
+	---------------------------------------------------------------------------------------------------
+	WS_County
+	---------------------------------------------------------------------------------------------------
+	intCountyID : int
+	strCountyName : string
+	intAreaID : int
+	intDistrictID : int
+	strSiteTitle : string
+	blnArchive : bool
+	strFullUrl : string
+	strRelativeUrl : string
+	strHelpEmail : string
+	Address : WS_Address
+	
+	---------------------------------------------------------------------------------------------------
+	WS_DirectoryDepartment
+	---------------------------------------------------------------------------------------------------
+	Some organizations cover multiple organization IDs. This is represented by the Directory Department.
+	Multiple organizations may belong to a directory department, and employees from each organization 
+	will be displayed when the directory department is chosen.
+	---------------------------------------------------------------------------------------------------
+	intDirectoryListID : int
+	intOrgID : int
+	strOrgName : string
+	blnArchive : bool
+	
+	---------------------------------------------------------------------------------------------------
+	WS_District
+	---------------------------------------------------------------------------------------------------
+	intDistrictID : int
+	strDistrictName : string
+	blnArchive : bool
+	
+	---------------------------------------------------------------------------------------------------
+	WS_Employee
+	---------------------------------------------------------------------------------------------------
+	strAlias : string
+	strFistName : string
+	strMiddleName : string
+	strLastName : string
+	strSuffix : string
+	strEmail : string
+	strPreferredTitle : string					[Deprecated]
+	strUrl : string								Personal website
+	strCvUrl : string							CV website
+	strPhone : string							Phone for primary appointment. Better to use appointment phone
+	
+	---------------------------------------------------------------------------------------------------
+	WS_EmployeeCountyInfo
+	---------------------------------------------------------------------------------------------------
+	Information about an employee for a county.
+	---------------------------------------------------------------------------------------------------
+	strAlias : string
+	intCountyID : int
+	strCountyName : string
+	strGeneralInfo : string						[Deprecated]
+	Address : WS_Address
+	
+	---------------------------------------------------------------------------------------------------
+	WS_EmployeeGroup
+	---------------------------------------------------------------------------------------------------
+	HR classification
+	---------------------------------------------------------------------------------------------------
+	chrEmployeeGroupID : char
+	strTitle : string
+	strDescription : string
+	blnArchive : bool
+	
+	---------------------------------------------------------------------------------------------------
+	WS_EmployeeOrgInfo
+	---------------------------------------------------------------------------------------------------
+	Information about an employee for an organization.
+	---------------------------------------------------------------------------------------------------
+	strAlias : string
+	intOrgID : int
+	strOrgName : string
+	strGeneralInfo : string
+	Address : WS_Address
+	
+	---------------------------------------------------------------------------------------------------
+	WS_EmployeeSubGroup
+	---------------------------------------------------------------------------------------------------
+	HR classification
+	---------------------------------------------------------------------------------------------------
+	chrEmployeeGroupID : char
+	strEmployeeSubGroupID : string
+	strTitle : string
+	strDescription : string
+	
+	---------------------------------------------------------------------------------------------------
+	WS_Job
+	---------------------------------------------------------------------------------------------------
+	HR classification
+	---------------------------------------------------------------------------------------------------
+	intJobID : int
+	strTitle : string
+	blnArchive : bool
+	
+	---------------------------------------------------------------------------------------------------
+	WS_Organization
+	---------------------------------------------------------------------------------------------------
+	intOrgID : int
+	strOrgName : string
+	blnArchive : bool
+	strFullUrl : string
+	strRelativeUrl : string
+	strHelpEmail : string
+	
+	---------------------------------------------------------------------------------------------------
+	WS_OrgAppointments
+	---------------------------------------------------------------------------------------------------
+	intOrgID : int
+	chrEmployeeGroupID : int
+	intHrJobID : int
+	strPositionTitle : string
+	strPreferredTitle : string					Title to be displayed on directory & profile pages
+	blnPrimaryAppointment : bool
+	blnArchive : bool
+	
+	---------------------------------------------------------------------------------------------------
+	WS_StaffDirectory
+	---------------------------------------------------------------------------------------------------
+	Staff directory for a county or organization
+	---------------------------------------------------------------------------------------------------
+	intDirectoryListID : int
+	chrInitialLetter : char
+	strEmployeeGroupIDList : string
+	intPageSize : int
+	intCurrentPage : int
+	intRecordCount : int
+	intPageCount : int
+	blnLastPage : bool
+	StaffDirectory : List<WS_Employee>
+	
+	---------------------------------------------------------------------------------------------------
+	WS_State
+	---------------------------------------------------------------------------------------------------
+	strStateID : string
+	strName : string
+	
+	---------------------------------------------------------------------------------------------------
+	WS_Title
+	---------------------------------------------------------------------------------------------------
+	Store information about a CES job title.
+	---------------------------------------------------------------------------------------------------
+	intTitleID : int
+	intJobID : int
+	strTitle : string
+	
+
+-------------------------------------------------------------------------------------------------------
+Services
+-------------------------------------------------------------------------------------------------------
+
+	---------------------------------------------------------------------------------------------------
+	CampusInformationService
+	---------------------------------------------------------------------------------------------------
+	List<WS_Campus> GetCampusList()
+	- Return the list of Purdue campuses.
+	
+	List<WS_EmployeeGroup> GetEmployeeGroupList()
+	- Return the list of employee groups.
+	
+	List<WS_EmployeeSubGroup> GetEmployeeSubGroupList(char chrEmployeeGroupID)
+	- Return the employee sub groups for the specified employee group.
+	
+	List<WS_Job> GetHrJobList()
+	- Return the list of HR job codes.
+	
+	List<WS_State> GetStateList()
+	- Return the list of states.
+	
+	string Version()
+	- Return web service's version information
+		
+	---------------------------------------------------------------------------------------------------
+	CesInformationService
+	---------------------------------------------------------------------------------------------------
+	List<WS_Job> GetCesJobList()
+	- Return the list of CES jobs.
+	
+	List<WS_Title> GetTitleCesList()
+	- Return the list of CES job titles.
+	
+	string Version()
+	- Return web service's version information.
+	
+	---------------------------------------------------------------------------------------------------
+	CountyService
+	---------------------------------------------------------------------------------------------------
+	WS_County GetCounty(int intCountyID)
+	- Retrieve a county.
+	
+	WS_Address GetCountyAddress(int intCountyID)
+	- Retrieve the county's address.
+	
+	List<WS_County> GetCountyList()
+	- Retrieve the list of counties.
+	
+	List<WS_Employee> GetStaffDirectory(int intCountyID)
+	- Return the list of employees who have appointments to the specified county.
+	
+	string Version()
+	- Return web service's version information
+	
+	---------------------------------------------------------------------------------------------------
+	DistrictService
+	---------------------------------------------------------------------------------------------------
+	List<WS_County> GetCountyList(int intDistrictID)
+	- Retrieve the list of counties that belong to the specified district.
+	
+	List<WS_District> GetDistrictList()
+	- Retrieve the list of districts.
+	
+	List<WS_Employee> GetStaffDirectory(int intDistrictID)
+	- Return the list of employees who have appointments to the specified county.
+	
+	string Version()
+	- Return web service's version information
+		
+	---------------------------------------------------------------------------------------------------
+	EmployeeService
+	---------------------------------------------------------------------------------------------------
+	List<WS_Employee> Find(string strLastName, strName)
+	- Retrieve the employees whose names match the search criteria.
+	
+	List<WS_Employee> FindByRequestingPUID(string strLastName, strName, int intRequestingPUID)
+	- Retrieve the employees whose names match the search criteria.
+	
+	List<WS_CesAppointment> GetCesAppointments(string strAlias)
+	- Retrieve the employee's CES appointments.
+	
+	string GetCountyGeneralInfo(string strAlias, int intCountyID)
+	- [Deprecated]
+	
+	List<WS_County> GetEmployeeCountyList(string strAlias)
+	- Retrieve the list of counties to which the employee has one or more appointments.
+	
+	WS_Employee GetEmployeeByAlias(string strAlias)
+	- Retrieve the specified employee.
+	
+	WS_EmployeeCountyInfo GetEmployeeCountyInfo(string strAlias, int intOrgID)
+	- Retrieve the employee's information for the specified county.
+	
+	WS_EmployeeOrgInfo GetEmployeeOrgInfo(string strAlias, int intOrgID)
+	- Retrieve the employee's information for the specified organization.
+	
+	List<WS_Organization> GetEmployeeOrgList(strAlias, intDirectoryListID)
+	- Retrieve the list of organizations to which the employee has one or more appointments.
+	
+	string GetGeneralInfo(string strAlias, int intOrgID, int intDirectoryID)
+	- Retrieve the employee's general information.
+	
+	List<WS_OrgAppointment> GetOrgAppointments(string strAlias)
+	- Retrieve the employee's appointments.
+	
+	string Version()
+	- Return the web service's version information
+	
+	---------------------------------------------------------------------------------------------------
+	OrganizationService
+	---------------------------------------------------------------------------------------------------
+	List<WS_DirectoryDepartment> GetDepartmentDirectoryList()
+	- Retrieve the list of departments that should appear in the directory web part's department list.  
+	  Multiple organization units may belong to a single directory department.
+	
+	WS_Organization GetOrganization(int intOrgID)
+	- Retrieve an organization.
+	
+	List<WS_Organization> GetOrganizationList()
+	- Retrieve the list of organizations.
+	
+	List<WS_Employee> GetStaffDirectory(int intDirectoryListID, char chrInitialLetter, string strEmployeeGroupIDList)
+	- Return the list of employees who have appointments to the specified organization.
+	
+	WS_StaffDirectory GetStaffDirectoryWithPaging(int intDirectoryListID, char chrInitialLetter, string strEmployeeGroupIDList, int intPageSize, int intCurrentPage)
+	- Return the list of employees who have appointments to the specified organization.
+	
+	string Version()
+	- Return web service's version information
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

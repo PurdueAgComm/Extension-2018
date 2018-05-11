@@ -13,12 +13,14 @@ namespace SFP\PurdueAg;
 
 //require API Calling Class
 require_once('ExtCall.php');
+require_once('ExtPI.php');
 
 use stdClass;
 
 class ExtDCR
 {
     private $call;
+    private $pi;
     private $api = 'https://api.ag.purdue.edu/api/DepotWS/';
     private $homeId = 0;
     private $countyUrl;
@@ -26,6 +28,7 @@ class ExtDCR
     public function __construct($county_url)
     {
         $this->call = new ExtCall($this->api);
+        $this->pi = new ExtPI();
         $this->countyUrl = $county_url;
         $this->homeId = $this->_getHomeID($this->countyUrl);
     }
@@ -53,7 +56,8 @@ class ExtDCR
 
     public function getAboutPage()
     {
-
+        $about = $this->pi->example();
+        return $about;
     }
 
     public function getProfilePage()

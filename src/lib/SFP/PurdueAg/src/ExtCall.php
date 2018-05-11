@@ -23,7 +23,7 @@ class ExtCall
 
     public function get()
     {
-        //todo: is the GET verb used for any API calls?
+        //the GET HTTP verb isn't used for any known calls, leaving for future development
     }
 
     public function post($call, $params)
@@ -35,7 +35,6 @@ class ExtCall
         curl_setopt($this->ch, CURLOPT_POSTFIELDS, $param_string);
         curl_setopt($this->ch, CURLOPT_RETURNTRANSFER, true);
         $result = curl_exec($this->ch);
-        error_log($result, 0);
         curl_close($this->ch);
         return json_decode($result);
     }
