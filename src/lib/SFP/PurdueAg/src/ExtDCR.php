@@ -54,9 +54,16 @@ class ExtDCR
         return $menu;
     }
 
-    public function getAboutPage()
+    public function getAboutPage($countyName = '')
     {
-        $about = $this->pi->example();
+        //$about = $this->pi->example();
+        if($countyName){
+            $about = $this->pi->getCountyAbout($countyName);
+        }
+        else{
+            //this may be a state level or root about page.
+            $about = array();
+        }
         return $about;
     }
 

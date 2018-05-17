@@ -177,10 +177,10 @@ function get_resource_links()
 {
     include('../partials/tpl-resource-links.php');
 }
-function get_about()
+function get_about($countyName)
 {
     global $ext;
-    $about = $ext->getAboutPage();
+    $about = $ext->getAboutPage($countyName);
     include('../partials/page-about.php');
 }
 function validate_county($county)
