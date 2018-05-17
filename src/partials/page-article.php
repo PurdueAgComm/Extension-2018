@@ -5,6 +5,13 @@
   </div>
 </div>
 
+<!-- example of additional article media being accessed -->
+<?php var_dump($article->details); ?>
+<?php foreach($article->details->Images as $image): ?>
+    <img src="<?php echo $image->strImageLink; ?>" title="<?php echo $image->strCaption; ?>" alt="<?php echo $image->strAltText; ?>" />
+<?php endforeach; ?>
+<!-- end example -->
+
 <div class="container">
   <?php if(!$article->blnSuppressByline) : ?>
   <a href="<?php echo $GLOBALS['SITE_PATH']; ?>/profile/<?php echo $article->strAuthorAlias; ?>">

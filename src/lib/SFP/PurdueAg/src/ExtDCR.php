@@ -72,14 +72,18 @@ class ExtDCR
 
     }
 
-    //todo: move this to the ExtCall Class
     public function getArticlePage($article_id)
     {
-        $params = array(
-            't' => 'd', //get item details
-            'i' => $article_id,
-        );
-        $result = $this->call->post('Item.ashx', $params);
+        $result = $this->call->getItemDetails($article_id);
+        $expandedDetails = $this->call->getExpandedItemDetails($article_id);
+        if(count($expandedDetails->Images)){
+            //let's get the image URLs
+            foreach($expandedDetails->Images as &$image){
+                $imageUrl = $this->call->getImageLink($expandedDetails->Images[0]->intImageID);
+                $image->strImageLink = $imageUrl;
+            }
+        }
+        $result->details = $expandedDetails;
         $article = $result;
         return $article;
     }
