@@ -35,7 +35,7 @@ class ExtPI
         $svc = new CountyService();
         $counties = $svc->getCountyList();
         foreach($counties as $county){
-            if($county->strCountyName == $countyName){
+            if(strtolower($county->strCountyName) == strtolower($countyName)){
                 $countyID = $county->intCountyID;
             }
         }

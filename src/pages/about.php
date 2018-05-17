@@ -1,8 +1,14 @@
 <?php
+if($homepath !== 'extension.purdue.edu/'){
+    $county = str_replace('extension.purdue.edu/','',$homepath);
+}
+else{
+    $county = '';
+}
 
 get_header();
 get_menu();
 //get_banner();
-get_about('Benton');
+get_about($county);
 get_resource_links();
 get_footer();
