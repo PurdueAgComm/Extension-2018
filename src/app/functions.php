@@ -204,6 +204,13 @@ function get_label_page($label, $list)
 {
     include('../partials/page-label.php');
 }
+function get_profile($profile_id, $county_name)
+{
+    global $ext;
+    $profile = $ext->getProfile($profile_id);
+    $about = $ext->getAboutPage($county_name);
+    include('../partials/page-profile.php');
+}
 function validate_county($county)
 {
     //todo: use the PI API to get county list instead?

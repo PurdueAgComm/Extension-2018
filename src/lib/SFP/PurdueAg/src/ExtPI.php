@@ -51,4 +51,13 @@ class ExtPI
 
         return $about;
     }
+
+    public function getProfile($profile_id)
+    {
+        require_once(dirname(__FILE__).'/ExtPI/EmployeeService.php');
+        $svc = new EmployeeService();
+        $profile = $svc->getEmployeeByAlias($profile_id);
+        var_dump($profile);
+        return $profile;
+    }
 }

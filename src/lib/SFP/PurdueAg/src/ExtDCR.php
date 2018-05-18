@@ -67,9 +67,11 @@ class ExtDCR
         return $about;
     }
 
-    public function getProfilePage()
+    public function getProfile($profile_id)
     {
-
+        var_dump($profile_id);
+        $result = $this->pi->getProfile($profile_id);
+        return $result;
     }
 
     public function getArticlePage($article_id)
