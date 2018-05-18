@@ -88,7 +88,17 @@ class ExtDCR
         return $article;
     }
 
-    public function getLabelPage()
+    public function getLabelPage($label_id)
+    {
+        $params = array(
+            't' => 'b',
+            'i' => $this->_getHomeID(),
+            'l' => $label_id,
+        );
+        return $this->call->post('label.ashx', $params);
+    }
+
+    public function getLabelList()
     {
         return $this->call->getLabelList();
     }

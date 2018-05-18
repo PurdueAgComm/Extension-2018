@@ -183,6 +183,27 @@ function get_about($countyName)
     $about = $ext->getAboutPage($countyName);
     include('../partials/page-about.php');
 }
+function get_label($label_id)
+{
+    global $ext;
+    $labels = $ext->getLabelList();
+    foreach($labels as $label) {
+        if($label->intLabelID == $label_id){
+            return $label;
+        }
+    }
+    return false;
+}
+function get_label_list($label_id)
+{
+    global $ext;
+    $articles = $ext->getLabelPage($label_id);
+    return $articles;
+}
+function get_label_page($label, $list)
+{
+    include('../partials/page-label.php');
+}
 function validate_county($county)
 {
     //todo: use the PI API to get county list instead?
