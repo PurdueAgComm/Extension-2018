@@ -16,10 +16,8 @@ use SFP\PurdueAg\ExtPI\EmployeeService;
 
 class ExtPI
 {
-
     public function __construct()
     {
-
     }
 
     public function example()
@@ -34,8 +32,8 @@ class ExtPI
         require_once(dirname(__FILE__).'/ExtPI/CountyService.php');
         $svc = new CountyService();
         $counties = $svc->getCountyList();
-        foreach($counties as $county){
-            if(strtolower($county->strCountyName) == strtolower($countyName)){
+        foreach ($counties as $county) {
+            if (strtolower($county->strCountyName) == strtolower($countyName)) {
                 $countyID = $county->intCountyID;
             }
         }
@@ -57,7 +55,6 @@ class ExtPI
         require_once(dirname(__FILE__).'/ExtPI/EmployeeService.php');
         $svc = new EmployeeService();
         $profile = $svc->getEmployeeByAlias($profile_id);
-        var_dump($profile);
         return $profile;
     }
 }
