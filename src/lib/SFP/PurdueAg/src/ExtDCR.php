@@ -57,10 +57,9 @@ class ExtDCR
     public function getAboutPage($countyName = '')
     {
         //$about = $this->pi->example();
-        if($countyName){
+        if ($countyName) {
             $about = $this->pi->getCountyAbout($countyName);
-        }
-        else{
+        } else {
             //this may be a state level or root about page.
             $about = array();
         }
@@ -69,7 +68,6 @@ class ExtDCR
 
     public function getProfile($profile_id)
     {
-        var_dump($profile_id);
         $result = $this->pi->getProfile($profile_id);
         return $result;
     }
@@ -78,9 +76,9 @@ class ExtDCR
     {
         $result = $this->call->getItemDetails($article_id);
         $expandedDetails = $this->call->getExpandedItemDetails($article_id);
-        if(count($expandedDetails->Images)){
+        if (count($expandedDetails->Images)) {
             //let's get the image URLs
-            foreach($expandedDetails->Images as &$image){
+            foreach ($expandedDetails->Images as &$image) {
                 $imageUrl = $this->call->getImageLink($expandedDetails->Images[0]->intImageID);
                 $image->strImageLink = $imageUrl;
             }
@@ -119,7 +117,6 @@ class ExtDCR
 
     public function getEventsPage()
     {
-
     }
 
     //todo: move this to the ExtCall Class
@@ -136,12 +133,12 @@ class ExtDCR
         );
         $results = $this->call->post('Item.ashx', $params);
 
-        foreach($results as &$result){
+        foreach ($results as &$result) {
             $expandedDetails = $this->call->getExpandedItemDetails($result->intItemID);
             $articleDetails = $this->call->getItemDetails($result->intItemID);
             $result->datCreated = $articleDetails->datCreated;
             $result->datModified = $articleDetails->datModified;
-            if(count($expandedDetails->Images)){
+            if (count($expandedDetails->Images)) {
                 //let's get the thumbnail
                 $imageUrl = $this->call->getImageLink($expandedDetails->Images[0]->intImageID);
                 $result->thumb = new stdClass();
@@ -186,7 +183,7 @@ class ExtDCR
     {
         $call = new ExtCall('https://api.ag.purdue.edu/api/DepotWS/');
         $ext = $call->getHomeID($url);
-        if(isset($ext->intHomeID)){
+        if (isset($ext->intHomeID)) {
             return true;
         }
         return false;
@@ -197,14 +194,14 @@ class ExtDCR
         $articles = $this->call->getItemBlurbList($this->_getHomeID(), $size, $count);
 
         //build article list additional details/assets
-        foreach($articles as &$article){
+        foreach ($articles as &$article) {
             //extra API calls could become a performance concern, let's consider caching this information
             $expandedDetails = $this->call->getExpandedItemDetails($article->intItemID);
             $articleDetails = $this->call->getItemDetails($article->intItemID);
             $article->datCreated = $articleDetails->datCreated;
             $article->datModified = $articleDetails->datModified;
 
-            if(count($expandedDetails->Images)){
+            if (count($expandedDetails->Images)) {
                 //let's get the thumbnail
                 $imageUrl = $this->call->getImageLink($expandedDetails->Images[0]->intImageID);
                 $article->thumb = new stdClass();
