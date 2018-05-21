@@ -1,12 +1,11 @@
 <?php
-preg_match('~^(.*)/profile/(?P<profile>(.*))$~',$_SERVER['REQUEST_URI'],$matches);
-if(isset($matches['profile'])){
+preg_match('~^(.*)/profile/(?P<profile>(.*))$~', $_SERVER['REQUEST_URI'], $matches);
+if (isset($matches['profile'])) {
     $profile = $matches['profile'];
 }
-if($homepath !== 'extension.purdue.edu/'){
-    $county = str_replace('extension.purdue.edu/','',$homepath);
-}
-else{
+if ($homepath !== 'extension.purdue.edu/') {
+    $county = str_replace('extension.purdue.edu/', '', $homepath);
+} else {
     $county = '';
 }
 get_header();
