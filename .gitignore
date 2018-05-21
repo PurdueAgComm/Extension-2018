@@ -30,8 +30,8 @@ _notes
 .vscode
 dwsync.xml
 sftp-config.json
+deployment-config.json
 
 # SFP Random Files
 .vagrant
 Vagrantfile
-
