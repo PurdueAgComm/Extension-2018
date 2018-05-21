@@ -2529,6 +2529,15 @@ img {
   max-width: 100%;
 }
 
+ul li a:link {
+  font-weight: bold;
+  text-decoration: none;
+}
+
+ul li a:link:hover {
+    text-decoration: underline;
+  }
+
 .u-no-padding {
   padding: 0;
 }
@@ -3581,6 +3590,25 @@ a.events--link {
 .dropdown-item:hover {
   background-color: #f3f3f3;
 }
+
+.profile__title--wide--background {
+    background-color: #fafafa;
+  }
+
+.profile__title--wide--background:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      border-bottom: 200px solid #ff9b1a;
+      border-left: 150px solid transparent;
+      float: right;
+      mix-blend-mode: multiply;
+    }
+
+.profile__title--background {
+    padding: 1rem;
+  }
 
 .resources {
   padding: 5rem 0 13rem;
