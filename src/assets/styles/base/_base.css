@@ -12,3 +12,12 @@
 img {
   max-width: 100%;
 }
+
+ul li a:link {
+  font-weight: bold;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
