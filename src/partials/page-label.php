@@ -6,7 +6,7 @@
 <div class="container">
   <ul class="label__list">
   <?php foreach ($list as $article): ?>
-      <a class="label" href="/article/<?php echo $article->intItemID; ?>">
+      <a class="label" href="<?php global $county; echo $county; ?>/article/<?php echo $article->intItemID; ?>">
         <li class="label__list-item">
           <?php //todo: set the url base to the county so users stay "on-site" when linking??>
           <h2><?php echo $article->strTitle; ?></h2>

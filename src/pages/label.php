@@ -3,6 +3,13 @@ preg_match('~^(.*)/label/(?P<label_id>(\d+))(.*)$~',$_SERVER['REQUEST_URI'],$mat
 if(isset($matches['label_id'])){
     $label_id = (int) $matches['label_id'];
 }
+global $county;
+if($homepath !== 'extension.purdue.edu/'){
+    $county = str_replace('extension.purdue.edu/','',$homepath);
+}
+else{
+    $county = '';
+}
 get_header();
 get_menu();
 get_banner();

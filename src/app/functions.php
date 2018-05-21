@@ -198,7 +198,12 @@ function get_label_list($label_id)
 {
     global $ext;
     $articles = $ext->getLabelPage($label_id);
+    usort($articles, 'sort_label_list');
     return $articles;
+}
+function sort_label_list($a, $b)
+{
+    return strcmp($a->strTitle, $b->strTitle);
 }
 function get_label_page($label, $list)
 {
