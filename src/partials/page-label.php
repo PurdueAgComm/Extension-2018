@@ -8,7 +8,6 @@
   <?php foreach ($list as $article): ?>
       <a class="label" href="/<?php global $county; echo $county; ?>/article/<?php echo $article->intItemID; ?>">
         <li class="label__list-item">
-          <?php //todo: set the url base to the county so users stay "on-site" when linking??>
           <h2><?php echo $article->strTitle; ?></h2>
           <p><?php echo $article->strShortBody; ?></p>
         </li>
