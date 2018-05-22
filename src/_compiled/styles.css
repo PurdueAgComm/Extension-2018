@@ -3600,7 +3600,7 @@ a.events--link {
       position: absolute;
       bottom: 0;
       right: 0;
-      border-bottom: 200px solid #ff9b1a;
+      border-bottom: 200px solid #29a492;
       border-left: 150px solid transparent;
       float: right;
       mix-blend-mode: multiply;
@@ -3609,6 +3609,78 @@ a.events--link {
 .profile__title--background {
     padding: 1rem;
   }
+
+@media (max-width: 768px) {
+
+.profile__person-photo {
+      text-align: center
+  }
+    }
+
+.profile__person-name {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 0;
+  }
+
+@media (max-width: 768px) {
+
+.profile__person-name {
+      text-align: center
+  }
+    }
+
+.profile__person-title {
+    font-size: 1.3rem;
+
+  }
+
+@media (max-width: 768px) {
+
+.profile__person-title {
+      text-align: center
+
+  }
+    }
+
+.profile__person-email {
+    margin-bottom: .5rem;
+
+  }
+
+.profile__person-email--icon {
+      background-color: #29a492;
+      padding: 1rem;
+      margin-bottom: .5rem;
+      text-align: center;
+    }
+
+.profile__person-email--email {
+      background-color: #fafafa;
+      padding: 1rem !important;
+      margin-bottom: .5rem;
+    }
+
+.profile__person-email--email:hover {
+        background-color: #ededed;
+      }
+
+.profile__person-phone--icon {
+      background-color: #29a492;
+      padding: 1rem;
+      margin-bottom: .5rem;
+      text-align: center;
+    }
+
+.profile__person-phone--phone {
+      background-color: #fafafa;
+      padding: 1rem !important;
+      margin-bottom: .5rem;
+    }
+
+.profile__person-phone--phone:hover {
+        background-color: #ededed;
+      }
 
 .resources {
   padding: 5rem 0 13rem;

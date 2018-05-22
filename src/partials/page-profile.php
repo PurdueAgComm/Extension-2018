@@ -19,11 +19,62 @@
       <li><a href="mailto:extension@purdue.edu">Tell us if we've made a mistake</a></li>
     </ul>
   <?php else : ?>
-      
+    <br>
+    <div class="row">
+      <div class="col-md-3">
+        <div class="profile__person-photo">
+          <img src="https://extension.purdue.edu/ProfileImages/<?php echo $profile->strAlias; ?>.jpg" alt="Photo of <?php echo $profile->strFirstName . " " . $profile->strLastName . " " . $profile->strSuffix; ?>" class="img-responsive" />
+        </div>
+      </div>
+      <div class="col-md-9">
+        <div class="row">
+          <div class="col-12">
+            <h3 class="profile__person-name"><?php echo $profile->strFirstName . " " . $profile->strLastName . " " . $profile->strSuffix; ?></h3>
+            <h4 class="profile__person-title"><?php echo $profile->strPreferredTitle; ?></h4>
+          </div>
+          <div class="col-md-6">
+            <div class="row no-gutters">
+              <div class="profile__person-email--icon col-2">
+                <i class="fas fa-envelope fa-fw"></i>
+              </div>
+              <div class="profile__person-email--email col-10">
+                <a href="mailto:<?php echo $profile->strEmail; ?>"><?php echo $profile->strEmail; ?></a>
+              </div>
+            </div>
+            <div class="row no-gutters">
+              <div class="profile__person-phone--icon col-2">
+                <i class="fas fa-phone fa-fw"></i>
+              </div>
+              <div class="profile__person-phone--phone col-10">
+                <a href="tel:<?php echo $profile->strEmail; ?>"><?php echo $profile->strPhone; ?></a>
+              </div>
+            </div>
+          </div> <!-- /.col-6 -->
+          <div class="col-md-6">
+            <div class="row no-gutters">
+              <div class="profile__person-email--icon col-2">
+                <i class="fas fa-envelope fa-fw"></i>
+              </div>
+              <div class="profile__person-email--email col-10">
+                <a href="mailto:<?php echo $profile->strEmail; ?>"><?php echo $profile->strEmail; ?></a>
+              </div>
+            </div>
+            <div class="row no-gutters">
+              <div class="profile__person-phone--icon col-2">
+                <i class="fas fa-phone fa-fw"></i>
+              </div>
+              <div class="profile__person-phone--phone col-10">
+                <a href="tel:<?php echo $profile->strEmail; ?>"><?php echo $profile->strPhone; ?></a>
+              </div>
+            </div>
+          </div> <!-- /.col-6 -->
+        </div> <!-- /.row -->
+      </div> <!-- /.col-sm-9 -->
+    </div> <!-- /.row -->
   <?php endif; ?>
 </div>
 
-
+<br><br><br><br><br>
 <?php var_dump($profile); ?>
 
 <h3>contact</h3>

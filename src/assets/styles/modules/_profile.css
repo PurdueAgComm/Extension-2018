@@ -1,5 +1,6 @@
 .profile {
 
+
   &__title--wide--background {
     background-color: #fafafa;
 
@@ -8,7 +9,7 @@
       position: absolute;
       bottom: 0;
       right: 0;
-      border-bottom: 200px solid $MackeyOrange;
+      border-bottom: 200px solid $FoutainRunTeal;
       border-left: 150px solid transparent;
       float: right;
       mix-blend-mode: multiply;
@@ -17,6 +18,74 @@
 
   &__title--background {
     padding: 1rem;
+  }
+
+  &__person-photo {
+    @media (max-width: $medium) {
+      text-align: center;
+    }
+  }
+
+  &__person-name {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 0;
+
+    @media (max-width: $medium) {
+      text-align: center;
+    }
+  }
+
+  &__person-title {
+    font-size: 1.3rem;
+
+    @media (max-width: $medium) {
+      text-align: center;
+    }
+
+  }
+
+  &__person-email {
+    margin-bottom: .5rem;
+
+    &--icon {
+      background-color: $FoutainRunTeal;
+      padding: 1rem;
+      margin-bottom: .5rem;
+      text-align: center;
+    }
+
+    &--email {
+      background-color: #fafafa;
+      padding: 1rem !important;
+      margin-bottom: .5rem;
+
+      &:hover {
+        background-color: #ededed;
+      }
+    }
+
+  }
+
+  &__person-phone {
+
+    &--icon {
+      background-color: $FoutainRunTeal;
+      padding: 1rem;
+      margin-bottom: .5rem;
+      text-align: center;
+    }
+
+    &--phone {
+      background-color: #fafafa;
+      padding: 1rem !important;
+      margin-bottom: .5rem;
+
+      &:hover {
+        background-color: #ededed;
+      }
+    }
+
   }
 
 }
