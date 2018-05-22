@@ -24,6 +24,8 @@ class ExtDCR
     private $api = 'https://api.ag.purdue.edu/api/DepotWS/';
     private $homeId = 0;
     private $countyUrl;
+    private $countyCode = '';
+    private $countyTitle = '';
 
     public function __construct($county_url)
     {
@@ -31,6 +33,22 @@ class ExtDCR
         $this->pi = new ExtPI();
         $this->countyUrl = $county_url;
         $this->homeId = $this->_getHomeID($this->countyUrl);
+    }
+
+    //returns the county loaded in lowercase, as seen in the url path
+    public function getCountyCode()
+    {
+        return $this->countyCode;
+    }
+
+    //returns the UCWords of the current County loaded
+    public function getCountyTitle()
+    {
+        $title = $this->countyTitle;
+        if($title !== 'Extension'){
+            $title .= ' County';
+        }
+        return $title;
     }
 
     //todo: deprecate this, move to wrapper functions
@@ -169,12 +187,15 @@ class ExtDCR
 
     private function _getHomeID($url = false)
     {
-        if ($url === false) {
+        //todo: this needs refactored
+        if ($url === false && $this->homeId === 0) {
             $url = $this->countyUrl;
         }
         if ($this->homeId === 0 && $url !== false) {
             $result = $this->call->getHomeID($url);
             $this->homeId = $result->intHomeID;
+            $this->countyTitle = $result->strHomeName;
+            $this->countyCode = strtolower($result->strHomeName);
         }
         return $this->homeId;
     }

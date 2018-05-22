@@ -2,21 +2,21 @@
 /** Begin Bootstrap */
 
 //require the application functions file
-require_once('../app/functions.php');
+//require_once('../app/functions.php');
 
 //set the homepath URL variable
-$county = '';
-if(isset($_GET['county'])){
-    $county = $_GET['county'];
-    if(!validate_county($county)){
-        $county = '';
-    }
-}
-
-$homepath = 'extension.purdue.edu/'.$county;
+//$county = '';
+//if(isset($_GET['county'])){
+//    $county = $_GET['county'];
+//    if(!validate_county($county)){
+//        $county = '';
+//    }
+//}
+//
+//$homepath = 'extension.purdue.edu/'.$county;
 
 //kick off the bootstrap
-bootstrap();
+//bootstrap(); //this is already bootstrapped
 
 /** End Bootstrap */
 get_header();

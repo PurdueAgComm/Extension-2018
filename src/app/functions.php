@@ -218,6 +218,11 @@ function get_profile($profile_id, $county_name)
     $about = $ext->getAboutPage($county_name);
     include('../partials/page-profile.php');
 }
+function get_county_name()
+{
+    global $ext;
+    return $ext->getCountyTitle();
+}
 function validate_county($county)
 {
     //todo: use the PI API to get county list instead?

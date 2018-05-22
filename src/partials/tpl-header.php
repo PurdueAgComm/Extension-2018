@@ -15,7 +15,7 @@ $image = "https://extension.purdue.edu/annualreport/images/cover.jpg";
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Purdue Extension</title>
+  <title><?php echo get_county_name(); ?> - Purdue Extension</title>
   <link rel="stylesheet" href="<?php echo $GLOBALS['SITE_PATH']; ?>/_compiled/styles.css">
   <meta name="description" content="See how Purdue Extension connects Indiana to Purdue University research and programs in agriculture, communities, families, health, and youth development." />
   <!-- Twitter Card data -->
