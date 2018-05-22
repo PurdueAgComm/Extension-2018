@@ -19,7 +19,8 @@ function get_homepath()
         'label',
         'about',
         'article',
-        'profile'
+        'profile',
+        'articles'
     ];
     require_once('../lib/SFP/PurdueAg/src/ExtDCR.php');
     $path = trim($_SERVER['REQUEST_URI'],'/');
@@ -55,8 +56,9 @@ function get_template($county = false)
         '/event',
         '/label',
         '/about',
+        '/articles',
         '/article',
-        '/profile'
+        '/profile',
     ];
     foreach($known_routes as $route){
         if(strpos($_SERVER['REQUEST_URI'],$route) !== false){
