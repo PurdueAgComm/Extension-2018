@@ -55,24 +55,30 @@
               </div>
             </div>
           </div> <!-- /.col-6 -->
-          <div class="col-md-6">
-            <div class="row no-gutters">
-              <div class="profile__person-email--icon col-2">
-                <i class="fas fa-envelope fa-fw"></i>
+          <?php if (!empty($profile->strURL) || !empty($profile->strCvURL)) : ?>
+            <div class="col-md-6">
+              <?php if (!empty($profile->strURL)) : ?>
+              <div class="row no-gutters">
+                <div class="profile__person-email--icon col-2">
+                  <i class="fas fa-globe fa-fw"></i>
+                </div>
+                <div class="profile__person-email--email col-10">
+                  <a href="<?php echo $profile->strUrl; ?>">Visit Website</a>
+                </div>
               </div>
-              <div class="profile__person-email--email col-10">
-                <a href="mailto:<?php echo $profile->strEmail; ?>"><?php echo $profile->strEmail; ?></a>
-              </div>
-            </div>
-            <div class="row no-gutters">
-              <div class="profile__person-phone--icon col-2">
-                <i class="fas fa-phone fa-fw"></i>
-              </div>
-              <div class="profile__person-phone--phone col-10">
-                <a href="tel:<?php echo $profile->strEmail; ?>"><?php echo $profile->strPhone; ?></a>
-              </div>
-            </div>
-          </div> <!-- /.col-6 -->
+              <?php endif; ?>
+              <?php if (!empty($profile->strCvURL)) : ?>
+                <div class="row no-gutters">
+                  <div class="profile__person-phone--icon col-2">
+                    <i class="fas fa-file-alt fa-fw"></i>
+                  </div>
+                  <div class="profile__person-phone--phone col-10">
+                    <a href="<?php echo $profile->strCvUrl; ?>">Download CV</a>
+                  </div>
+                </div>
+              <?php endif; ?>
+            </div> <!-- /.col-6 -->
+          <?php endif; ?>
         </div> <!-- /.row -->
       </div> <!-- /.col-sm-9 -->
     </div> <!-- /.row -->
