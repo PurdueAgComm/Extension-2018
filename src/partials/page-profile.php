@@ -28,7 +28,8 @@
     <div class="row">
       <div class="col-md-3">
         <div class="profile__person-photo">
-          <img src="https://extension.purdue.edu/ProfileImages/<?php echo $profile->strAlias; ?>.jpg" alt="Photo of <?php echo $profile->strFirstName . " " . $profile->strLastName . " " . $profile->strSuffix; ?>" class="img-responsive" />
+          <!-- TODO: if no image, show fake profile --> 
+          <img src="https://extension.purdue.edu/ProfileImages/<?php echo $profile->strAlias; ?>.jpg" alt="Photo of <?php echo $profile->strFirstName . " " . $profile->strLastName . " " . $profile->strSuffix; ?>" class="reveal img-responsive" />
         </div>
       </div>
       <div class="col-md-9">
