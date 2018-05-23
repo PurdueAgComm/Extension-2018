@@ -32,7 +32,7 @@ TODO: display canceled dateTimes
     src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAsACDVQ0WOsJNxWBAKN-GAp45ILf88Lt8
       &q=<?php echo $event->DateList[0]->strAddress1; ?>,<?php echo $event->DateList[0]->strCity; ?>+<?php echo $event->DateList[0]->strState; ?>" allowfullscreen>
   </iframe>
-</div>`Ω
+</div>
 <?php endif; ?>
 <div class="container">
   <?php if (!empty($event->strContactName)) : ?>
