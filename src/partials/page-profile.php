@@ -2,6 +2,15 @@
 // Page to display profiles for Extension staff members
 // If users are on a county site, it will display other county staff members
 // $about['contact'] is available for county-location information, but is not currently used
+
+// check to see if profile images exist, if they don't provide a ghost images
+$url = 'https://extension.purdue.edu/ProfileImages/' . $profile->strAlias . '.jpg';
+$headers = get_headers($url, 1);
+if ($headers[0] == 'HTTP/1.1 200 OK') {
+    $profile_image = $url;
+} else {
+    $profile_image = "https://extension.purdue.edu/ProfileImages/noImage.jpg";
+}
 ?>
 <div class="wide-container no-margin-auto profile__title--wide--background">
   <div class="container label__title--background">
@@ -28,8 +37,7 @@
     <div class="row">
       <div class="col-md-3">
         <div class="profile__person-photo">
-          <!-- TODO: if no image, show fake profile --> 
-          <img src="https://extension.purdue.edu/ProfileImages/<?php echo $profile->strAlias; ?>.jpg" alt="Photo of <?php echo $profile->strFirstName . " " . $profile->strLastName . " " . $profile->strSuffix; ?>" class="reveal img-responsive" />
+          <img src="<?php echo $profile_image ?>" alt="Photo of <?php echo $profile->strFirstName . " " . $profile->strLastName . " " . $profile->strSuffix; ?>" class="reveal img-responsive" />
         </div>
       </div>
       <div class="col-md-9">
@@ -39,22 +47,26 @@
             <h4 class="profile__person-title"><?php echo $profile->strPreferredTitle; ?></h4>
           </div>
           <div class="col-md-6">
-            <div class="row no-gutters">
-              <div class="profile__person-email--icon col-2">
-                <i class="fas fa-envelope fa-fw"></i>
+            <?php if (!empty($profile->strEmail)) : ?>
+              <div class="row no-gutters">
+                <div class="profile__person-email--icon col-2">
+                  <i class="fas fa-envelope fa-fw"></i>
+                </div>
+                <div class="profile__person-email--email col-10">
+                  <a href="mailto:<?php echo $profile->strEmail; ?>"><?php echo $profile->strEmail; ?></a>
+                </div>
               </div>
-              <div class="profile__person-email--email col-10">
-                <a href="mailto:<?php echo $profile->strEmail; ?>"><?php echo $profile->strEmail; ?></a>
+            <?php endif; ?>
+            <?php if (!empty($profile->strPhone)) : ?>
+              <div class="row no-gutters">
+                <div class="profile__person-phone--icon col-2">
+                  <i class="fas fa-phone fa-fw"></i>
+                </div>
+                <div class="profile__person-phone--phone col-10">
+                  <a href="tel:<?php echo $profile->strEmail; ?>"><?php echo $profile->strPhone; ?></a>
+                </div>
               </div>
-            </div>
-            <div class="row no-gutters">
-              <div class="profile__person-phone--icon col-2">
-                <i class="fas fa-phone fa-fw"></i>
-              </div>
-              <div class="profile__person-phone--phone col-10">
-                <a href="tel:<?php echo $profile->strEmail; ?>"><?php echo $profile->strPhone; ?></a>
-              </div>
-            </div>
+            <?php endif; ?>
           </div> <!-- /.col-6 -->
           <?php if (!empty($profile->strURL) || !empty($profile->strCvURL)) : ?>
             <div class="col-md-6">
@@ -94,10 +106,12 @@
   <?php foreach ($about['staff'] as $staff): ?>
       <?php if ($staff->strAlias != $profile->strAlias): ?>
           <div class="col-6">
-            <div class="profile__staff">
-              <h3 class="profile__staff-name"><?php echo $staff->strFirstName . " " . $staff->strLastName . " " . $staff->strSuffix; ?></h3>
-              <p class="profile__staff-title"><?php echo $staff->strPreferredTitle; ?></p>
-            </div>
+            <a class="profile" href="profile/<?php echo $staff->strAlias;?>">
+              <div class="profile__staff">
+                <h3 class="profile__staff-name"><?php echo $staff->strFirstName . " " . $staff->strLastName . " " . $staff->strSuffix; ?></h3>
+                <p class="profile__staff-title"><?php echo $staff->strPreferredTitle; ?></p>
+              </div>
+            </a>
           </div>
       <?php endif; ?>
   <?php endforeach; ?>

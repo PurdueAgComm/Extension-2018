@@ -1,5 +1,8 @@
 .profile {
 
+  &:hover {
+    text-decoration: none;
+  }
 
   &__title--wide--background {
     background-color: #fafafa;

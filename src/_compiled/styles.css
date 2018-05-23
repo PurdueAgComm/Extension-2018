@@ -2572,6 +2572,52 @@ a:hover {
   color: #000;
 }
 
+.about:hover {
+    text-decoration: none;
+  }
+
+.about__address {
+    padding: 1rem;
+    border-left: 7px solid #ffd100;
+  }
+
+.about__staff {
+    background: #f5f5f5;
+    padding: 1rem;
+    border-left: 7px solid #ffd100;
+    margin: 1rem 0;
+  }
+
+.about__staff:hover {
+      background: #ededed;
+    }
+
+.about__staff-name {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 0;
+  }
+
+@media (max-width: 768px) {
+
+.about__staff-name {
+      text-align: center
+  }
+    }
+
+.about__staff-title {
+    font-size: 1rem;
+
+  }
+
+@media (max-width: 768px) {
+
+.about__staff-title {
+      text-align: center
+
+  }
+    }
+
 .color-blocks {
   margin-top: 3rem;
   margin-bottom: 10rem;
@@ -3590,6 +3636,10 @@ a.events--link {
 .dropdown-item:hover {
   background-color: #f3f3f3;
 }
+
+.profile:hover {
+    text-decoration: none;
+  }
 
 .profile__title--wide--background {
     background-color: #fafafa;
