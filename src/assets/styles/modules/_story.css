@@ -31,6 +31,15 @@
   &__body {
     clear:both;
 
+    &-image {
+      padding: 1rem;
+
+      @media (max-width: $small) {
+        float: none !important;
+        width: 100%;
+      }
+    }
+
     & a:link {
       font-weight: 600;
       text-decoration: underline;

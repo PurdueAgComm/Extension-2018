@@ -3921,6 +3921,18 @@ a.events--link {
     clear:both;
   }
 
+.story__body-image {
+      padding: 1rem;
+    }
+
+@media (max-width: 576px) {
+
+.story__body-image {
+        float: none !important;
+        width: 100%
+    }
+      }
+
 .story__body a:link {
       font-weight: 600;
       text-decoration: underline;

@@ -5,15 +5,8 @@
   </div>
 </div>
 
-<!-- example of additional article media being accessed -->
-<?php var_dump($article->details); ?>
-<?php foreach($article->details->Images as $image): ?>
-    <img src="<?php echo $image->strImageLink; ?>" title="<?php echo $image->strCaption; ?>" alt="<?php echo $image->strAltText; ?>" />
-<?php endforeach; ?>
-<!-- end example -->
-
 <div class="container">
-  <?php if(!$article->blnSuppressByline) : ?>
+  <?php if (!$article->blnSuppressByline) : ?>
   <a href="<?php echo $GLOBALS['SITE_PATH']; ?>/profile/<?php echo $article->strAuthorAlias; ?>">
     <div class="story__meta reveal-meta" data-toggle="tooltip" data-placement="bottom" title="<?php echo $article->strAuthorTitle;?>">
       <i class="fas fa-user" data-toggle="tooltip" title="Author"></i> <?php echo $article->strAuthorName; ?>
@@ -26,6 +19,9 @@
   </div>
 
   <article class="story__body">
+    <?php foreach ($article->details->Images as $image): ?>
+        <img class="reveal float-right img-responsive story__body-image" src="<?php echo $image->strImageLink; ?>" title="<?php echo $image->strCaption; ?>" alt="<?php echo $image->strAltText; ?>" />
+    <?php endforeach; ?>
     <?php echo $article->strBody; ?>
   </article>
 </div>
