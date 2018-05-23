@@ -1,3 +1,8 @@
+<?php
+// Page to display profiles for Extension staff members
+// If users are on a county site, it will display other county staff members
+// $about['contact'] is available for county-location information, but is not currently used
+?>
 <div class="wide-container no-margin-auto profile__title--wide--background">
   <div class="container label__title--background">
     <?php if (!empty($profile)) : ?>
@@ -74,18 +79,21 @@
   <?php endif; ?>
 </div>
 
-<br><br><br><br><br>
-<?php var_dump($profile); ?>
-
-<h3>contact</h3>
-
-<?php var_dump($about['contact']); ?>
-
-<h2>Other Profiles in <?php echo ucwords($county_name); ?></h2>
-<ul>
-<?php foreach ($about['staff'] as $p): ?>
-    <?php if ($p->strAlias != $profile->strAlias): ?>
-        <li><?php var_dump($p); ?></li>
-    <?php endif; ?>
-<?php endforeach; ?>
-</ul>
+<?php if (!empty($county_name)) : ?>
+<br>
+<div class="container">
+  <h2>Meet Other <?php echo ucwords($county_name); ?> County Colleagues</h2>
+  <div class="row">
+  <?php foreach ($about['staff'] as $staff): ?>
+      <?php if ($staff->strAlias != $profile->strAlias): ?>
+          <div class="col-6">
+            <div class="profile__staff">
+              <h3 class="profile__staff-name"><?php echo $staff->strFirstName . " " . $staff->strLastName . " " . $staff->strSuffix; ?></h3>
+              <p class="profile__staff-title"><?php echo $staff->strPreferredTitle; ?></p>
+            </div>
+          </div>
+      <?php endif; ?>
+  <?php endforeach; ?>
+  </div> <!-- /.row -->
+</div> <!-- /. container -->
+<?php endif; ?>

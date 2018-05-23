@@ -3682,6 +3682,43 @@ a.events--link {
         background-color: #ededed;
       }
 
+.profile__staff {
+    background: #f5f5f5;
+    padding: 1rem;
+    border-left: 7px solid #29a492;
+    margin: 1rem 0;
+  }
+
+.profile__staff:hover {
+      background: #ededed;
+    }
+
+.profile__staff-name {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 0;
+  }
+
+@media (max-width: 768px) {
+
+.profile__staff-name {
+      text-align: center
+  }
+    }
+
+.profile__staff-title {
+    font-size: 1rem;
+
+  }
+
+@media (max-width: 768px) {
+
+.profile__staff-title {
+      text-align: center
+
+  }
+    }
+
 .resources {
   padding: 5rem 0 13rem;
   margin-top: 10rem;
