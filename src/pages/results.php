@@ -2,6 +2,7 @@
 get_header();
 get_menu();
 get_banner(); ?>
+<br>
 <!-- TODO: put this in a function and make a partial -->
 <div class="container">
   <div class="row">
