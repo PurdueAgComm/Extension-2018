@@ -2,10 +2,18 @@
 get_header();
 get_menu();
 get_banner(); ?>
-<gcse:searchresults-only></gcse:searchresults-only>
+<!-- TODO: put this in a function and make a partial -->
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h1>Search Results</h1>
+      <gcse:searchresults-only></gcse:searchresults-only>
+    </div>
+  </div>
+</div>
 <?php
 get_resource_links();
-get_footer();
+get_footer(); ?>
 
 
 

@@ -1,6 +1,6 @@
 <?php
   //note: this is a patch to fix inline style url paths that are not setting the domain
-  $banner->strBody = str_replace('url(/','url(https://extension.purdue.edu/',$banner->strBody);
+  $banner->strBody = str_replace('url(/', 'url(https://extension.purdue.edu/', $banner->strBody);
   //echo $banner->strBody;
 ?>
 <div class="wide-container">
@@ -26,7 +26,7 @@
       </script>
       <!-- <gcse:searchbox-only resultsUrl="/results/" class="form__search form__search--hero"></gcse:searchbox-only> -->
       <h2 class="hero__search-title">What are you looking for?</h2>
-      <form action="/results/" method="get" class="form__search form__search--hero">
+      <form action="<?php echo $GLOBALS['SITE_PATH']; ?>/results/" method="get" class="form__search form__search--hero">
         <input type="search" name="q" class="form__search-input form__search-input--hero" placeholder="Search" aria-label="Search" />
         <input type="image" value="Search" src="<?php echo $GLOBALS['SITE_PATH']; ?>/assets/images/icon--search.svg" class="form__search-submit" alt="Search">
       </form>
