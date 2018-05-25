@@ -24,26 +24,26 @@ function get_homepath()
         'results'
     ];
     require_once('../lib/SFP/PurdueAg/src/ExtDCR.php');
-    $path = trim($_SERVER['REQUEST_URI'],'/');
-    $query_parts =explode('?',$path);
+    $path = trim($_SERVER['REQUEST_URI'], '/');
+    $query_parts =explode('?', $path);
     $path = $query_parts[0];
-    $path_parts = explode('/',$path);
+    $path_parts = explode('/', $path);
     $is_county = '';
-    foreach($known_routes as $route) {
-        if(strpos($path,$route) === 0){
+    foreach ($known_routes as $route) {
+        if (strpos($path, $route) === 0) {
             //known reserved path is at /, this *must* be the main page, no need to contact the API
             return 'extension.purdue.edu/';
         }
     }
-    if(isset($path_parts[0])){
+    if (isset($path_parts[0])) {
         $is_county = $path_parts[0];
-        if(isset($path_parts[1]) && $path_parts[0] === 'extension'){
+        if (isset($path_parts[1]) && $path_parts[0] === 'extension') {
             //this may be the dev server, get the next subdir
             $is_county = $path_parts[1];
         }
     }
     $ext = SFP\PurdueAg\ExtDCR::validateHomepath('extension.purdue.edu/'.$is_county);
-    if($ext){
+    if ($ext) {
         return 'extension.purdue.edu/'.$is_county;
     }
     return 'extension.purdue.edu/';
@@ -62,13 +62,13 @@ function get_template($county = false)
         '/profile',
         '/results'
     ];
-    foreach($known_routes as $route){
-        if(strpos($_SERVER['REQUEST_URI'],$route) !== false){
+    foreach ($known_routes as $route) {
+        if (strpos($_SERVER['REQUEST_URI'], $route) !== false) {
             //known route is present in request uri
             return trim($route, '/').'.php';
         }
     }
-    if($county){
+    if ($county) {
         return 'county.php';
     }
     return 'home.php';
@@ -79,7 +79,7 @@ function bootstrap()
     require_once('../lib/SFP/PurdueAg/src/ExtDCR.php');
     //get the global homepath from the view and create the ext global var
     global $homepath, $ext;
-    if($homepath == ''){
+    if ($homepath == '') {
         //either return an error that the template never set homepath
         error_log('homepath not set by template. Using default value.', 0);
         //or provide a default
@@ -110,10 +110,11 @@ function get_article_list($pagesize = 7, $pagecount = 0, $type = 'state')
 {
     global $ext;
     $articles = $ext->getArticleList($pagesize, $pagecount);
-    if($type == 'state') {
+    if ($type == 'state') {
         include('../partials/feed-state-articles.php');
-    }
-    else {
+    } elseif ($type == 'feed') {
+        include('../partials/feed-article.php');
+    } else {
         include('../partials/feed-county-articles.php');
     }
 }
@@ -129,8 +130,8 @@ function get_category_name($cat_id)
     //getMenu call to avoid duplicating API calls on category list pages. Maybe set a global var at that time or something.
     global $ext;
     $navigation = $ext->getMenu();
-    foreach($navigation->listMenuCategories as $cats){
-        if($cats->intCategoryID === $cat_id){
+    foreach ($navigation->listMenuCategories as $cats) {
+        if ($cats->intCategoryID === $cat_id) {
             $cat = $cats->strCategoryText;
         }
     }
@@ -191,8 +192,8 @@ function get_label($label_id)
 {
     global $ext;
     $labels = $ext->getLabelList();
-    foreach($labels as $label) {
-        if($label->intLabelID == $label_id){
+    foreach ($labels as $label) {
+        if ($label->intLabelID == $label_id) {
             return $label;
         }
     }
@@ -322,8 +323,8 @@ function validate_county($county)
         'White',
         'Whitley',
     );
-    foreach($known_counties as $check){
-        if(strtolower($check) === strtolower($county)){
+    foreach ($known_counties as $check) {
+        if (strtolower($check) === strtolower($county)) {
             return true;
         }
     }
