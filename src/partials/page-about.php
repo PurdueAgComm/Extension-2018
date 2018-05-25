@@ -17,7 +17,6 @@
 
   <div class="container">
     <div class="row">
-      <!-- FORMSTACK FORM EMBED -->
       <div class="col">
         <h1>About Purdue Extension</h1>
       </div>
@@ -26,6 +25,7 @@
       <div class="col-sm-6">
         <h2>Reach Out</h2>
         <p>Have a question or comment? Fill out the form below to reach the Purdue Extension office directly.</p>
+      <!-- FORMSTACK FORM EMBED -->
         <script type="text/javascript" src="https://purdueagcommunication.formstack.com/forms/js.php/extension_2018_contact_form"></script><noscript><a href="https://purdueagcommunication.formstack.com/forms/extension_2018_contact_form" title="Online Form">Online Form - Extension 2018 Contact Form</a></noscript>
       <!-- END FORMSTACK FORM EMBED -->
       </div>
