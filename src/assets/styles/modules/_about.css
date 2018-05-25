@@ -7,6 +7,11 @@
   &__address {
     padding: 1rem;
     border-left: 7px solid $YellowWalk;
+    margin-top: 1rem;
+
+    & a:link {
+      font-weight: 600;
+    }
   }
 
   &__staff {
@@ -39,4 +44,27 @@
 
   }
 
+  &__office {
+    list-style-type: none;
+
+
+    & li {
+      background-color: #fafafa;
+      border-left: 3px solid $YellowWalk;
+      padding: .5rem;
+      margin-bottom: 1rem;
+      font-weight: bold;
+
+      &:hover {
+        background-color: #ededed;
+      }
+    }
+
+  }
+
+}
+
+/* override FormStack styling */
+.fsBody, .fsForm {
+  padding: 0 !important;
 }
