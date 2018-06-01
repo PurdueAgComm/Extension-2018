@@ -11,11 +11,12 @@ bootstrap();
 
 //get the template file
 if($homepath === 'extension.purdue.edu/'){
-    $county = false;
+    $county = '';
 }
 else{
-    $county = true;
+    $county = str_replace('extension.purdue.edu/','',$homepath);
 }
+
 $template = get_template($county);
 if(is_file('../pages/'.$template)){
     include('../pages/'.$template);

@@ -14,6 +14,8 @@
 $root = $navigation->currentHome->strPublicURLRoot;
 $hid = $navigation->currentHome->intHomeID;
 
+global $county;
+
 ?>
 <div class="wide-container">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -22,12 +24,12 @@ $hid = $navigation->currentHome->intHomeID;
           <div class="navbar-nav">
             <!-- <a class="nav-item nav-link" href="//<?php echo $root;?>pages/index.php">Home</a></li>
             <a class="nav-item nav-link" href="//<?php echo $root;?>pages/about.php">About</a> -->
-            <a class="nav-item nav-link" href="<?php echo $GLOBALS['SITE_PATH']; ?>/">Home</a>
-            <a class="nav-item nav-link" href="<?php echo $GLOBALS['SITE_PATH']; ?>/about">About</a>
+            <a class="nav-item nav-link" href="<?php echo $county ? '/'.$county : ''; ?>/">Home</a>
+            <a class="nav-item nav-link" href="<?php echo $county ? '/'.$county : ''; ?>/about">About</a>
 
             <?php foreach($navigation->listMenuCategories as $cat):?>
                 <!-- <a class="nav-item nav-link" href="//<?php echo $root;?>/category/<?php echo $hid;?>/<?php echo $cat->intCategoryID;?>"><?php echo $cat->strCategoryText;?></a> -->
-                <a class="nav-item nav-link" href="<?php echo $GLOBALS['SITE_PATH']; ?>/category/<?php echo $cat->intCategoryID;?>"><?php echo $cat->strCategoryText;?></a>
+                <a class="nav-item nav-link" href="<?php echo $county ? '/'.$county : ''; ?>/category/<?php echo $cat->intCategoryID;?>"><?php echo $cat->strCategoryText;?></a>
             <?php endforeach ?>
             <!-- <li class="nav-item dropdown">
                 <a class="nav-item nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
