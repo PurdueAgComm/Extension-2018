@@ -43,9 +43,6 @@
 
   <div class="container">
     <h2>County Offices</h2>
-    <!-- TODO: remove alert and update links -->
-    <div class="alert alert-info">Updating link styles still, having student intern work on it </div>
-    <br>
     <div class="row">
       <div class="col-sm-4">
         <ul class="about__office">
