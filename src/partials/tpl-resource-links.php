@@ -10,13 +10,13 @@
                 <h3 class="resources__resource-title">Small Farmer</h3>
                 <ul>
                   <li>
-                    <a href="#">Link to Desired Resource 1</a>
+                    <a href="https://www.purdue.edu/dffs/">Diversified Farming and Food Systems</a>
                   </li>
                   <li>
-                    <a href="#">Link to Desired Resource 2</a>
+                    <a href="https://ag.purdue.edu/extension/safeproduce/Pages/default.aspx">Safe Produce Indiana</a>
                   </li>
                   <li>
-                    <a href="#">Link to Desired Resource 2</a>
+                    <a href="https://ag.purdue.edu/btny/ppdl/Pages/default.aspx">Purdue Plant and Pest Diagnostic Lab</a>
                   </li>
                 </ul>
               </div>
@@ -29,13 +29,13 @@
                 <h3 class="resources__resource-title">Large Farmer</h3>
                 <ul>
                   <li>
-                    <a href="#">Link to Desired Resource 1</a>
+                    <a href="https://ag.purdue.edu/commercialag/Pages/default.aspx">Center for Commercial Ag</a>
                   </li>
                   <li>
-                    <a href="#">Link to Desired Resource 2</a>
+                    <a href="https://www.addl.purdue.edu/">Animal Disease Diagnostic Lab</a>
                   </li>
                   <li>
-                    <a href="#">Link to Desired Resource 2</a>
+                    <a href="https://ag.purdue.edu/agry/dtc/Pages/default.aspx">Crop Diagnostic Training and Research Center</a>
                   </li>
                 </ul>
               </div>
@@ -48,13 +48,13 @@
                 <h3 class="resources__resource-title">Wellness Professional</h3>
                 <ul>
                   <li>
-                    <a href="#">Link to Desired Resource 1</a>
+                    <a href="http://www.purdue.edu/hhs/extension/programs/detail.aspx?programId=51&category=health">Be Heart Smart</a>
                   </li>
                   <li>
-                    <a href="#">Link to Desired Resource 2</a>
+                    <a href="http://www.purdue.edu/hhs/extension/programs/detail.aspx?programId=40&category=health&programContactTitle=educator">Community Health Coalitions</a>
                   </li>
                   <li>
-                    <a href="#">Link to Desired Resource 2</a>
+                    <a href="http://www.purdue.edu/hhs/extension/programs/detail.aspx?programId=1&category=food">Dining with Diabetes</a>
                   </li>
                 </ul>
               </div>
