@@ -69,7 +69,7 @@
   &__secondary--black:hover {
     background: #171717;
     color: $YellowWalk;
-    border-color: $171717;
+    border-color: #171717;
   }
 
   &__tertiary {

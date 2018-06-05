@@ -2647,7 +2647,7 @@ a:hover {
 }
 
 .color-blocks {
-  margin-top: 3rem;
+  /* margin-top: 3rem; removed because another color block is currently on top */
   margin-bottom: 10rem;
 
 }
@@ -2766,7 +2766,7 @@ a:hover {
 .cta__secondary--black:hover {
     background: #171717;
     color: #ffd100;
-    border-color: #ffd100;
+    border-color: #171717;
   }
 
 .cta__tertiary {
@@ -3426,17 +3426,43 @@ a.events--link {
     }
 
 .give {
-
   padding: 5rem;
   background-color: #ffd100;
+
+
 
 }
 
 .give__headline {
     font-family: Palatino, Perpetua, Baskerville, "Times New Roman", "Nimbus Roman No9 L", serif;
-    font-size: 2.8rem;
-    color: #171717;
+    font-size: 3rem;
+    font-weight: 800 !important;
     text-align: center;
+  }
+
+.give p {
+    font-size: 1.375rem;
+    text-align: center;
+  }
+
+@media (max-width: 576px) {
+
+.give {
+
+    padding: 2rem
+
+
+
+}
+
+    .give__headline {
+    font-size: 2rem;
+    }
+
+    .give p {
+      font-size: 1rem;
+      text-align: left;
+    }
   }
 
 .header {

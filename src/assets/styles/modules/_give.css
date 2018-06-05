@@ -14,4 +14,20 @@
     text-align: center;
   }
 
+  @media (max-width: $small) {
+
+    padding: 2rem;
+
+    &__headline {
+    font-size: 2rem;
+    }
+
+    & p {
+      font-size: 1rem;
+      text-align: left;
+    }
+  }
+
+
+
 }
