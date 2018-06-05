@@ -47,7 +47,7 @@
         <div class="col-lg-6 color-blocks__content justify-content-center">
           <h3 class="color-blocks__title">Eyes in the sky</h3>
           <p class="color-blocks__text">Agriculture’s next wave is digital. That means data-driven diagnoses, forecasts, and assessments. Unmanned aerial vehicles are crucial to that toolkit, and Purdue Extension is setting best practices for farmers across Indiana.</p>
-          <a href="https://extension.purdue.edu/annualreport/hci/" class="cta cta__secondary cta__secondary--white">Learn More</a>
+          <a href="https://extension.purdue.edu/annualreport/uav/" class="cta cta__secondary cta__secondary--white">Learn More</a>
         </div>
       </div>
     </div>
