@@ -2757,6 +2757,18 @@ a:hover {
     border-color: #fff;
   }
 
+.cta__secondary--black {
+    background: transparent;
+    border-color: #171717;
+    color: #171717;
+  }
+
+.cta__secondary--black:hover {
+    background: #171717;
+    color: #ffd100;
+    border-color: #ffd100;
+  }
+
 .cta__tertiary {
     border: 1px solid #bababa;
   }
@@ -3412,6 +3424,20 @@ a.events--link {
       top: .4rem
   }
     }
+
+.give {
+
+  padding: 5rem;
+  background-color: #ffd100;
+
+}
+
+.give__headline {
+    font-family: Palatino, Perpetua, Baskerville, "Times New Roman", "Nimbus Roman No9 L", serif;
+    font-size: 2.8rem;
+    color: #171717;
+    text-align: center;
+  }
 
 .header {
   display: flex;

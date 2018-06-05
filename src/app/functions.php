@@ -170,6 +170,10 @@ function get_header()
 {
     include('../partials/tpl-header.php');
 }
+function get_give()
+{
+    include('../partials/tpl-give.php');
+}
 function get_marketing()
 {
     include('../partials/tpl-marketing.php');

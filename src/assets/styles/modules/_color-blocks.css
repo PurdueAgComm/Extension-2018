@@ -1,5 +1,5 @@
 .color-blocks {
-  margin-top: 3rem;
+  /* margin-top: 3rem; removed because another color block is currently on top */
   margin-bottom: 10rem;
 
   img {

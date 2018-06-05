@@ -60,6 +60,18 @@
     border-color: #fff;
   }
 
+  &__secondary--black {
+    background: transparent;
+    border-color: #171717;
+    color: #171717;
+  }
+
+  &__secondary--black:hover {
+    background: #171717;
+    color: $YellowWalk;
+    border-color: $171717;
+  }
+
   &__tertiary {
     border: 1px solid #bababa;
 

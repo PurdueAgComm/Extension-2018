@@ -1,0 +1,17 @@
+.give {
+  padding: 5rem;
+  background-color: $YellowWalk;
+
+  &__headline {
+    font-family: Palatino, Perpetua, Baskerville, "Times New Roman", "Nimbus Roman No9 L", serif;
+    font-size: 3rem;
+    font-weight: 800 !important;
+    text-align: center;
+  }
+
+  & p {
+    font-size: 1.375rem;
+    text-align: center;
+  }
+
+}
