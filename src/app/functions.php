@@ -154,12 +154,18 @@ function get_article($article_id)
     global $ext;
     global $article;
     $article = $ext->getArticlePage($article_id);
+}
+function display_article() {
+    global $article;
     include('../partials/page-article.php');
 }
 function get_event($event_id, $event_ed = 0)
 {
     global $ext;
     $event = $ext->getEventPage($event_id);
+}
+function display_event() {
+    global $event;
     include('../partials/page-event.php');
 }
 function get_footer()

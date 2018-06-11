@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php
+global $article;
 // determine URL structure since dev and production is different
 // dev = purdue.edu/extension
 // prod = extension.purdue.edu
@@ -28,7 +29,9 @@ $image = "https://extension.purdue.edu/annualreport/images/cover.jpg";
   <?php endif; ?>
   <meta property="og:url" content="<?php echo $url; ?>" />
   <meta property="og:image" content="<?php echo $image; ?>" />
-  <?php if(isset($description)) : ?>
+  <?php if(isset($article->strShortBody)) : ?>
+  <meta property="og:description" content="<?php echo $article->strShortBody; ?>">
+  <?php elseif(isset($description)) : ?>
   <meta property="og:description" content="<?php echo $description; ?>" />
   <?php endif; ?>
 </head>
