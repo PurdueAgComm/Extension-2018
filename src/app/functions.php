@@ -162,6 +162,7 @@ function display_article() {
 function get_event($event_id, $event_ed = 0)
 {
     global $ext;
+    global $event;
     $event = $ext->getEventPage($event_id);
 }
 function display_event() {
