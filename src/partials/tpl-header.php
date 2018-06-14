@@ -4,13 +4,6 @@
 global $article;
 global $event;
 
-// if(isset($article->strTitle)) {
-//   var_dump($article);
-// } elseif(isset($event->strTitle)) {
-//   var_dump($event);
-// }
-// die();
-
 // determine URL structure since dev and production is different
 // dev = purdue.edu/extension
 // prod = extension.purdue.edu
@@ -31,7 +24,6 @@ $description = 'See how Purdue Extension connects Indiana to Purdue University r
   <meta name="description" content="<?php echo $description; ?>" />
   <!-- Twitter Card data -->
   <meta name="twitter:card" value="summary">
-
   <!-- Open Graph data -->
   <meta property="og:url" content="<?php echo $url; ?>" />
   <?php if(isset($article->strTitle)) : // if this is an article ?>
@@ -39,7 +31,7 @@ $description = 'See how Purdue Extension connects Indiana to Purdue University r
     <meta property="og:type" content="article" />
     <meta property="og:title" content="<?php echo $article->strTitle; ?>" />
     <?php if(isset($article->strShortBody)) : // If this article has a 'blurb' ?>
-      <meta property="og:description" content="<?php echo $article->strShortBody; ?>">
+      <meta property="og:description" content="<?php echo $article->strShortBody; ?>" />
     <?php elseif(isset($description)) : // If not, use the standard description ?>
       <meta property="og:description" content="<?php echo $description; ?>" />
     <?php endif; ?>
@@ -56,12 +48,8 @@ $description = 'See how Purdue Extension connects Indiana to Purdue University r
   <?php elseif(isset($event->strTitle)) : // if this is an event ?>
     <!-- Event specific tags -->
     <meta property="og:title" content="<?php echo $event->strTitle; ?>" />
-    <?php if(!empty(trim($event->strDescription))) : // If this event has a description ?>
-      <meta property="og:description" content="<?php echo $event->strDescription; ?>" />
-    <?php else : // Event does not have a description ?>
-      <?php if(!empty($description)) : // If there is a default description given ?>
-        <meta property="og:description" content="<?php echo $description; ?>" />
-      <?php endif; ?>
+    <?php if(!empty($description)) : // If there is a default description given ?>
+      <meta property="og:description" content="<?php echo $description; ?>" />
     <?php endif; ?>
     <meta property="og:image" content="<?php echo $image; ?>" />
     <?php foreach($event->DateList as $day) : // For each day listed ?>

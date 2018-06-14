@@ -18,6 +18,19 @@ else{
 }
 
 $template = get_template($county);
+
+/*
+*
+*   Echo out homepath, county, and template
+*
+*/
+
+// echo '$homepath : ' . $homepath
+//     . '<br />$county : ' . $county
+//     . '<br />$template : ' . $template
+//     . '<br />';
+
+
 if(is_file('../pages/'.$template)){
     include('../pages/'.$template);
 }

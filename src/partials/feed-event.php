@@ -41,9 +41,9 @@
       }
     ?>
     <?php if($eventED): ?>
-    <a class="events--link" href="<?php echo $GLOBALS['SITE_PATH']; ?>/event/<?php echo $event->intEventID; ?>/<?php echo $eventED;?>">
+    <a class="events--link" href="<?php echo get_event_link($event->intEventID); ?>/<?php echo $eventED;?>">
     <?php else: ?>
-    <a class="events--link" href="<?php echo $GLOBALS['SITE_PATH']; ?>/event/<?php echo $event->intEventID; ?>">
+    <a class="events--link" href="<?php echo get_event_link($event->intEventID); ?>">
     <?php endif; ?>
       <div class="events__event <?php echo $eventClassFlag; ?> reveal">
         <div class="row justify-content-md-center">
@@ -93,7 +93,7 @@
             </div>
           <?php endif;
         else : ?>
-          <a href="<?php echo $GLOBALS['SITE_PATH']; ?>/events/" class="cta cta__primary">View All Events</a>
+          <a href="<?php echo get_event_link(); ?>" class="cta cta__primary">View All Events</a>
         <?php endif; ?>
       </div>
     </div>

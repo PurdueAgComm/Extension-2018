@@ -155,6 +155,19 @@ function get_article($article_id)
     global $article;
     $article = $ext->getArticlePage($article_id);
 }
+function get_article_link($article_id = '') {
+    global $county;
+    $strLink = '';
+    if(!empty($county)) {
+        $strLink .= "/$county";
+    }
+    if(empty($article_id)) {
+        $strLink .= '/articles';
+    } else {
+        $strLink .= "/article/$article_id";
+    }
+    return $strLink;
+}
 function display_article() {
     global $article;
     include('../partials/page-article.php');
@@ -164,6 +177,19 @@ function get_event($event_id, $event_ed = 0)
     global $ext;
     global $event;
     $event = $ext->getEventPage($event_id);
+}
+function get_event_link($event_id = '') {
+    global $county;
+    $strLink = '';
+    if(!empty($county)) {
+        $strLink .= "/$county";
+    }
+    if(empty($event_id)) {
+        $strLink .= '/events';
+    } else {
+        $strLink .= "/event/$event_id";
+    }
+    return $strLink;
 }
 function display_event() {
     global $event;
