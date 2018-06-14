@@ -178,7 +178,7 @@ function get_event($event_id, $event_ed = 0)
     global $event;
     $event = $ext->getEventPage($event_id);
 }
-function get_event_link($event_id = '') {
+function get_event_link($event_id = '', $event_ed = '') {
     global $county;
     $strLink = '';
     if(!empty($county)) {
@@ -188,6 +188,9 @@ function get_event_link($event_id = '') {
         $strLink .= '/events';
     } else {
         $strLink .= "/event/$event_id";
+    }
+    if(!empty($event_ed)) {
+        $strLink .= "/$event_ed";
     }
     return $strLink;
 }

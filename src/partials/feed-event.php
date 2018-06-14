@@ -41,7 +41,7 @@
       }
     ?>
     <?php if($eventED): ?>
-    <a class="events--link" href="<?php echo get_event_link($event->intEventID); ?>/<?php echo $eventED;?>">
+    <a class="events--link" href="<?php echo get_event_link($event->intEventID, $eventED); ?>">
     <?php else: ?>
     <a class="events--link" href="<?php echo get_event_link($event->intEventID); ?>">
     <?php endif; ?>
