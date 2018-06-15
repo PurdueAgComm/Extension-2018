@@ -30,16 +30,14 @@ global $county;
                   <?php echo $category->strCategoryText; ?>
                 </a>
                 <div class="dropdown-menu" aria-labelledby="<?php echo 'Dropdown-Link-' . $category->intCategoryID; ?>">
-                  <ul class="nav nav-item">
-                    <?php foreach($category->listMenuSubCategories as $subCategory) : // Loop through each subcategory ?>
-                      <li class="nav nav-item"><?php echo $subCategory->strSubCatText; ?></li>
-                      <ul class="nav nav-item">
-                        <?php foreach($subCategory->listMenuLinks as $subCategoryLink) : // For each link in the subcategory ?>
-                          <li class="nav nav-item"><a href="<?php echo $subCategoryLink->strNodeUrl; ?>"><?php echo $subCategoryLink->strNodeText; ?></a></li>
-                        <?php endforeach; ?> 
-                      </ul>
-                    <?php endforeach; ?>
-                  </ul>
+                  <?php foreach($category->listMenuSubCategories as $subCategory) : // Loop through each subcategory ?>
+                    <p class="dropdown-header"><?php echo $subCategory->strSubCatText; ?></p>
+                    <div class="list-group nav nav-item">
+                      <?php foreach($subCategory->listMenuLinks as $subCategoryLink) : // For each link in the subcategory ?>
+                        <a class="dropdown-item list-group-item lit-group-item-action nav nav-item" href="<?php echo $subCategoryLink->strNodeURL; ?>"><?php echo $subCategoryLink->strNodeText; ?></a>
+                      <?php endforeach; ?> 
+                    </div>
+                  <?php endforeach; ?>
                 </div>
               </li>
             <?php endforeach; ?>
