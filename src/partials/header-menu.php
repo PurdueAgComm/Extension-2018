@@ -15,32 +15,37 @@ $root = $navigation->currentHome->strPublicURLRoot;
 $hid = $navigation->currentHome->intHomeID;
 
 global $county;
-
+// var_dump($navigation); die();
 ?>
 <div class="wide-container">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container">
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
-            <!-- <a class="nav-item nav-link" href="//<?php echo $root;?>pages/index.php">Home</a></li>
-            <a class="nav-item nav-link" href="//<?php echo $root;?>pages/about.php">About</a> -->
             <a class="nav-item nav-link" href="<?php echo $county ? '/'.$county : ''; ?>/">Home</a>
             <a class="nav-item nav-link" href="<?php echo $county ? '/'.$county : ''; ?>/about">About</a>
+            <?php foreach($navigation->listMenuCategories as $category) : // Loop through categories ?>
+              <li class="nav-item dropdown nav-link">
+                  <a class="nav-item" href="<?php echo !empty($county) ? '/' . $county : ''; ?>/category/<?php echo $category->intCategoryID; ?>" id="<?php echo 'Dropdown-Link-' . $category->intCategoryID; ?>">
+                    <?php echo $category->strCategoryText; ?>
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="<?php echo 'Dropdown-Link-' . $category->intCategoryID; ?>">
+                    <ul class="nav nav-item">
+                      <?php foreach($category->listMenuSubCategories as $subCategory) : // Loop through each subcategory ?>
+                        <li class="nav nav-item"><?php echo $subCategory->strSubCatText; ?></li>
+                        <ul class="nav nav-item">
+                          <?php foreach($subCategory->listMenuLinks as $subCategoryLink) : // For each link in the subcategory ?>
+                            <li class="nav nav-item"><a href="<?php echo $subCategoryLink->strNodeUrl; ?>"><?php echo $subCategoryLink->strNodeText; ?></a></li>
+                          <?php endforeach; ?> 
+                        </ul>
+                      <?php endforeach; ?>
+                    </ul>
+                  </div>
+                </li>
+            <?php endforeach; ?>
 
-            <?php foreach($navigation->listMenuCategories as $cat):?>
-                <!-- <a class="nav-item nav-link" href="//<?php echo $root;?>/category/<?php echo $hid;?>/<?php echo $cat->intCategoryID;?>"><?php echo $cat->strCategoryText;?></a> -->
-                <a class="nav-item nav-link" href="<?php echo $county ? '/'.$county : ''; ?>/category/<?php echo $cat->intCategoryID;?>"><?php echo $cat->strCategoryText;?></a>
-            <?php endforeach ?>
-            <!-- <li class="nav-item dropdown">
-                <a class="nav-item nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Dropdown link
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                  <a class="dropdown-item" href="#">Action</a>
-                  <a class="dropdown-item" href="#">Another action</a>
-                  <a class="dropdown-item" href="#">Something else here</a>
-                </div>
-            </li> -->
+
+
             <form action="/results/" method="get" class="form__search form__search--mobile-nav">
               <input type="search" name="q" class="form__search-input" placeholder="Search people, articles, and more" aria-label="Search" aria-placeholder="Search people, articles, and more"
               />
@@ -62,11 +67,11 @@ global $county;
             <li>I believe this menu is hardcoded in the current site's template.  Use var $root; to set relative path on links.</li>
         </ul>
     </li>
-    <?php foreach($navigation->listMenuCategories as $cat):?>
+    <?php foreach($navigation->listMenuCategories as $category):?>
         <li>
-            <a href="//<?php echo $root;?>pages/category.php?hid=<?php echo $hid;?>&cat=<?php echo $cat->intCategoryID;?>"><?php echo $cat->strCategoryText;?></a>
+            <a href="//<?php echo $root;?>pages/category.php?hid=<?php echo $hid;?>&cat=<?php echo $category->intCategoryID;?>"><?php echo $category->strCategoryText;?></a>
             <ul>
-                <?php foreach($cat->listMenuSubCategories as $subcat):?>
+                <?php foreach($category->listMenuSubCategories as $subcat):?>
                     <li>
                         <a href="//<?php echo $root;?>pages/subcategory.php?hid=<?php echo $hid;?>&subcat=<?php echo $subcat->intSubCatID;?>"><?php echo $subcat->strSubCatText;?></a>
                         <ul>

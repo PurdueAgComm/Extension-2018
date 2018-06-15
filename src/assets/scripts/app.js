@@ -11,4 +11,10 @@ if ($("[class*='reveal']").length) {
   System.import("./Reveal").then(module => new module.default());
 }
 
-
+$(document).ready(function() {
+  $('li.dropdown').hover(function() {
+    $(this).find('.dropdown-menu').slideDown(100);
+  }, function() {
+    $(this).find('.dropdown-menu').slideUp(100);
+  });
+});

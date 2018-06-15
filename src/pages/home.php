@@ -1,5 +1,5 @@
 <?php
-get_header();
+// get_header();
 get_menu();
 get_banner();
 get_article_list(4, 0, "state");

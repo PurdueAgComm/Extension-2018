@@ -1,5 +1,5 @@
 <?php
-
+ob_start();
 /** Begin Bootstrap */
 //require the application functions file
 require_once('functions.php');
@@ -34,3 +34,5 @@ $template = get_template($county);
 if(is_file('../pages/'.$template)){
     include('../pages/'.$template);
 }
+
+ob_end_flush();
