@@ -4098,4 +4098,15 @@ a:link .story__meta:hover {
     font-size: .8rem;
   }
 
+.dropdown-header {
+    font-size: 1em;
+    font-weight: bold;
+    color: black;
+}
+
+.list-group a.dropdown-item {
+    padding-left: 30px;
+}
+
+
 /*# sourceMappingURL=styles.css.map */

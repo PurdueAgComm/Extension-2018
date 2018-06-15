@@ -5,3 +5,14 @@
 @import "base/utility";
 @import "base/typography";
 @import "modules/*";
+
+.dropdown-header {
+    font-size: 1em;
+    font-weight: bold;
+    color: black;
+}
+
+.list-group a.dropdown-item {
+    padding-left: 30px;
+}
+
