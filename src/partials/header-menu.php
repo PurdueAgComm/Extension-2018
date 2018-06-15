@@ -26,22 +26,22 @@ global $county;
             <a class="nav-item nav-link" href="<?php echo $county ? '/'.$county : ''; ?>/about">About</a>
             <?php foreach($navigation->listMenuCategories as $category) : // Loop through categories ?>
               <li class="nav-item dropdown nav-link">
-                  <a class="nav-item" href="<?php echo !empty($county) ? '/' . $county : ''; ?>/category/<?php echo $category->intCategoryID; ?>" id="<?php echo 'Dropdown-Link-' . $category->intCategoryID; ?>">
-                    <?php echo $category->strCategoryText; ?>
-                  </a>
-                  <div class="dropdown-menu" aria-labelledby="<?php echo 'Dropdown-Link-' . $category->intCategoryID; ?>">
-                    <ul class="nav nav-item">
-                      <?php foreach($category->listMenuSubCategories as $subCategory) : // Loop through each subcategory ?>
-                        <li class="nav nav-item"><?php echo $subCategory->strSubCatText; ?></li>
-                        <ul class="nav nav-item">
-                          <?php foreach($subCategory->listMenuLinks as $subCategoryLink) : // For each link in the subcategory ?>
-                            <li class="nav nav-item"><a href="<?php echo $subCategoryLink->strNodeUrl; ?>"><?php echo $subCategoryLink->strNodeText; ?></a></li>
-                          <?php endforeach; ?> 
-                        </ul>
-                      <?php endforeach; ?>
-                    </ul>
-                  </div>
-                </li>
+                <a class="nav-item" href="<?php echo !empty($county) ? '/' . $county : ''; ?>/category/<?php echo $category->intCategoryID; ?>" id="<?php echo 'Dropdown-Link-' . $category->intCategoryID; ?>">
+                  <?php echo $category->strCategoryText; ?>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="<?php echo 'Dropdown-Link-' . $category->intCategoryID; ?>">
+                  <ul class="nav nav-item">
+                    <?php foreach($category->listMenuSubCategories as $subCategory) : // Loop through each subcategory ?>
+                      <li class="nav nav-item"><?php echo $subCategory->strSubCatText; ?></li>
+                      <ul class="nav nav-item">
+                        <?php foreach($subCategory->listMenuLinks as $subCategoryLink) : // For each link in the subcategory ?>
+                          <li class="nav nav-item"><a href="<?php echo $subCategoryLink->strNodeUrl; ?>"><?php echo $subCategoryLink->strNodeText; ?></a></li>
+                        <?php endforeach; ?> 
+                      </ul>
+                    <?php endforeach; ?>
+                  </ul>
+                </div>
+              </li>
             <?php endforeach; ?>
 
 
