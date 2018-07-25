@@ -60,7 +60,7 @@ $description = 'See how Purdue Extension connects Indiana to Purdue University r
       <?php if(isset($day->datStartTime)) : // If a start time is listed ?>
         <?php $strStartTime = date('h:i', strtotime($day->datStartTime)); ?>
         <meta property="starttime" content="<?php echo $strStartTime; ?>" />
-      <? endif; ?>
+      <?php endif; ?>
       <?php
         $strAddress = ''; // Start with an empty string
         // Add individual pieces of the address
