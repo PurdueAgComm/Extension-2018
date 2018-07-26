@@ -20,9 +20,10 @@
       $eventTime = date('h:i A', strtotime($event->datStartTime));
       //set class for different event states
       // TODO: API does not have Featured Event status
-      if($event->blnFeatureEvent) {
-        $eventClassFlag = "events__event--featured";
-      }
+      $eventClassFlag = "";
+      // if($event->blnFeatureEvent) {
+      //   $eventClassFlag = "events__event--featured";
+      // }
       if($event->blnCancelEvent) {
         $eventClassFlag = "events__event--canceled";
       }

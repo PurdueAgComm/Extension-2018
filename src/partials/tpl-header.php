@@ -10,6 +10,9 @@ global $event;
 if($_SERVER["SERVER_NAME"] == "dev.www.purdue.edu") {
   $GLOBALS['SITE_PATH'] = "/extension";
 }
+else {
+  $GLOBALS['SITE_PATH'] = "";
+}
 // Social media variable setting
 $url = "https://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 $title = "Purdue Extension";
