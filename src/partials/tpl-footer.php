@@ -1,8 +1,12 @@
+<?php global $county; ?>
   <div class="wide-container">
     <footer class="footer edge edge--top--reverse">
       <div class="container">
         <div class="row">
           <div class="col-md-10 col-sm-8 col-12">
+            <?php if(!empty($county)) : ?>
+              <p><a href="/<?php echo $county; ?>/about/"><?php echo ucfirst($county); ?> County Extension</a></p>
+            <?php endif; ?>
             <p>&copy; <?php echo date("Y"); ?> Purdue University | <a href="http://www.purdue.edu/purdue/disclaimer.html">An equal access, equal opportunity university</a></p>
             <p>615 West State Street, West Lafayette, IN 47907-2053</p>
             <p>If you have trouble accessing this page because of a disability, please email us at <a href="mailto:extension@purdue.edu?subject=ADA Request">extension@purdue.edu</a></p>

@@ -6,10 +6,11 @@
 // check to see if profile images exist, if they don't provide a ghost images
 $url = 'https://extension.purdue.edu/ProfileImages/' . $profile->strAlias . '.jpg';
 $headers = get_headers($url, 1);
-if ($headers[0] == 'HTTP/1.1 200 OK') {
-    $profile_image = $url;
-} else {
+if (!$fp = curl_init($url)) {
     $profile_image = "https://extension.purdue.edu/ProfileImages/noImage.jpg";
+}
+else {
+    $profile_image = $url;
 }
 ?>
 <div class="wide-container no-margin-auto profile__title--wide--background">

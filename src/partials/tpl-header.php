@@ -3,6 +3,7 @@
 <?php
 global $article;
 global $event;
+global $county;
 
 // determine URL structure since dev and production is different
 // dev = purdue.edu/extension
@@ -108,6 +109,9 @@ $description = 'See how Purdue Extension connects Indiana to Purdue University r
     <header class="header">
       <!-- TODO: svg of logo -->
       <a href="/"><img src="<?php echo $GLOBALS['SITE_PATH']; ?>/assets/images/logo.png" alt="Purdue Extension - Purdue University" class="header__logo" /></a>
+      <?php if(!empty($county)) : ?>
+        <h2><?php echo ucfirst($county); ?> County</h2>
+      <?php endif; ?>
       <form action="<?php echo $GLOBALS['SITE_PATH']; ?>/results/" method="get" class="form__search form__search--header">
         <input type="search" name="q" class="form__search-input" placeholder="Search people, articles, and more" aria-label="Search" aria-placeholder="Search people, articles, and more"/>
         <input type="image" value="Search" src="<?php echo $GLOBALS['SITE_PATH']; ?>/assets/images/icon--search.svg" class="form__search-submit"  alt="Search">
