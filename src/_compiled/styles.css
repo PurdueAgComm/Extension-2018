@@ -3840,6 +3840,14 @@ a.events--link {
   background-color: #f3f3f3;
 }
 
+/* will want to refactor this code after launch */
+
+.list-group-item {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border: none;
+}
+
 .profile:hover {
     text-decoration: none;
   }

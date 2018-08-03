@@ -32,7 +32,7 @@ global $county;
               <div class="dropdown-menu" aria-labelledby="<?php echo 'Dropdown-Link-' . $category->intCategoryID; ?>">
                 <?php foreach($category->listMenuSubCategories as $subCategory) : // Loop through each subcategory ?>
                   <div class="list-group nav nav-item">
-                    <a class="dropdown-item list-group-item lit-group-item-action nav nav-item" href="<?php echo !empty($county) ? '/' . $county : ''; ?>/subcat/<?php echo $subCategory->intSubCatID; ?>"><?php echo $subCategory->strSubCatText; ?></a>
+                    <a class="dropdown-item list-group-item list-group-item-action nav nav-item" href="<?php echo !empty($county) ? '/' . $county : ''; ?>/subcat/<?php echo $subCategory->intSubCatID; ?>"><?php echo $subCategory->strSubCatText; ?></a>
                     <!-- <p class="dropdown-header">Heading</p>
                     <?php foreach($subCategory->listMenuLinks as $subCategoryLink) : // For each link in the subcategory ?>
                       <a class="dropdown-item list-group-item lit-group-item-action nav nav-item" href="<?php echo $subCategoryLink->strNodeURL; ?>"><?php echo $subCategoryLink->strNodeText; ?></a>
@@ -43,7 +43,7 @@ global $county;
             </li>
           <?php endforeach; ?>
 
-          <form action="/results/" method="get" class="form__search form__search--mobile-nav">
+          <form action="<?php echo $county;?>/results/" method="get" class="form__search form__search--mobile-nav">
             <input type="search" name="q" class="form__search-input" placeholder="Search people, articles, and more" aria-label="Search" aria-placeholder="Search people, articles, and more"
             />
             <input type="image" value="Search" src="<?php echo $GLOBALS['SITE_PATH']; ?>/assets/images/icon--search.svg" class="form__search-submit" alt="Search">

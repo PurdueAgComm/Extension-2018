@@ -9,7 +9,7 @@
             <?php endif; ?>
             <p>&copy; <?php echo date("Y"); ?> Purdue University | <a href="http://www.purdue.edu/purdue/disclaimer.html">An equal access, equal opportunity university</a></p>
             <p>615 West State Street, West Lafayette, IN 47907-2053</p>
-            <p>If you have trouble accessing this page because of a disability, please email us at <a href="mailto:extension@purdue.edu?subject=ADA Request">extension@purdue.edu</a></p>
+            <p>If you have trouble accessing this page because of a disability, please email us at <a href="mailto:extension@purdue.edu?subject=<?php echo $county; ?> ADA Request">extension@purdue.edu</a>.</p>
           </div>
           <div class="col-md-2 col-sm-4 col-6 offset-sm-0 offset-3 ">
             <a href="https://purdue.edu"><img src="https://www.purdue.edu/purdue/images/logo.png" alt="Purdue University"></a>

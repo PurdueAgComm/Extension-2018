@@ -102,6 +102,7 @@ $description = 'See how Purdue Extension connects Indiana to Purdue University r
     <?php endif; ?>
     <meta property="og:image" content="<?php echo $image; ?>" />
   <?php endif; ?>
+
 </head>
 
 <body>
