@@ -126,20 +126,13 @@ if($event->blnNotRequired) : // the datetimes should be outputted seperately ?>
     $lastDate = end($dateList);
   ?>
   <br>
-      <h2><?php echo $firstDate . " - " . $lastDate . ", " . $eventYear; ?></h2>
+      <?php if (sizeof($dateList) > 1) : ?>
+        <h2><?php echo $firstDate . " - " . $lastDate . ", " . $eventYear; ?></h2>
+      <?php endif; ?>
+
       <?php if(sizeof($event->DateList) > 1 ) : ?>
         <br>
-        <div class="alert alert-info"><i class="fas fa-info-circle"></i> You are expected to attend all dates below.</div>
-
-        <div class="alert alert-success"><i class="fas fa-info-circle"></i> You are expected to attend all dates below.</div>
-
-        <div class="alert alert-warning"><i class="fas fa-info-circle"></i> You are expected to attend all dates below.</div>
-
-        <div class="alert alert-danger"><i class="fas fa-info-circle"></i> You are expected to attend all dates below.</div>
-
-        <div class="alert alert-primary"><i class="fas fa-info-circle"></i> You are expected to attend all dates below.</div>
-
-        <div class="alert alert-secondary"><i class="fas fa-info-circle"></i> You are expected to attend all dates below.</div>
+        <div class="alert alert-info"><i class="fas fa-info-circle"></i> Attendance is encouraged for each day of this event.</div>
       <?php endif; ?>
 
   <?php foreach ($event->DateList as $day) : ?>
