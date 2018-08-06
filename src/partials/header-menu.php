@@ -23,7 +23,14 @@ global $county;
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
           <a class="nav-item nav-link" href="<?php echo $county ? '/'.$county : ''; ?>/">Home</a>
-          <a class="nav-item nav-link" href="<?php echo $county ? '/'.$county : ''; ?>/about">About</a>
+          <li class="nav-item dropdown nav-link">
+            <a class="nav-item" href="<?php echo $county ? '/'.$county : ''; ?>/about">About</a>
+             <div class="dropdown-menu">
+              <div class="list-group nav nav-item">
+                <a class="dropdown-item list-group-item list-group-item-action nav nav nav-item" href="<?php echo $county ? '/'.$county : ''; ?>/administration">Meet Extension Administration</a>
+              </div>
+            </div>
+          </li>
           <?php foreach($navigation->listMenuCategories as $category) : // Loop through categories ?>
             <li class="nav-item dropdown nav-link">
               <a class="nav-item" href="<?php echo !empty($county) ? '/' . $county : ''; ?>/category/<?php echo $category->intCategoryID; ?>" id="<?php echo 'Dropdown-Link-' . $category->intCategoryID; ?>">
