@@ -3980,6 +3980,15 @@ a.events--link {
   }
     }
 
+.profile-meta {
+    border-left: 7px solid #ffd100;
+    padding: .5rem;
+  }
+
+.profile-row {
+    margin-top: 1rem;
+  }
+
 .resources {
   padding: 5rem 0 13rem;
   margin-top: 10rem;
