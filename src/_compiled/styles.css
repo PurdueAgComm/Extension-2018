@@ -4001,6 +4001,10 @@ a.events--link {
   }
     }
 
+.profile-admin {
+    margin-top: 2rem;
+  }
+
 .profile-meta {
     border-left: 7px solid #ffd100;
     padding: .5rem;
