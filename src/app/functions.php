@@ -155,7 +155,22 @@ function get_event_list($pagesize = 5, $pagecount = 0, $page = "home")
 function get_event_filter($pagesize = 10, $pagecount = 0)
 {
     global $ext;
-    $events = $ext->getEventsByFilter($pagesize, $pagecount);
+    $returnedEvents = $ext->getEventsByFilter($pagesize, $pagecount);
+    // Process return to make it fit the events layout
+    $events = array();
+    foreach ($returnedEvents as $returnList) {
+        foreach ($returnList->eventList as $event) {
+            $event->datStartDate = $event->DateList->datStartDate;
+            $event->datStartTime = $event->DateList->datStartTime;
+            array_push($events, $event);
+            if(!$event->blnNotRequired) {
+                break;
+            }
+        }
+    }
+    // $events = $returnedEvents;
+    // var_dump($events);
+    // die();
     include('../partials/feed-event.php');
 }
 function get_article($article_id)

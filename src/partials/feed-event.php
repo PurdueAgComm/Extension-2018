@@ -33,13 +33,13 @@
         $multiday = true;
       }
       $eventED = false;
-      if($page != "home"){
-        //the event filter call nests the event info into an eventList that appears to always be a count of 1
-        $event = $event->eventList[0];
-        if($event->DateList->intEventDateID){
-          $eventED = $event->DateList->intEventDateID;
-        }
-      }
+      // if($page != "home"){
+      //   //the event filter call nests the event info into an eventList that appears to always be a count of 1
+      //   $event = $event->eventList[0];
+      //   if($event->DateList->intEventDateID){
+      //     $eventED = $event->DateList->intEventDateID;
+      //   }
+      // }
     ?>
     <?php if($eventED): ?>
     <a class="events--link" href="<?php echo get_event_link($event->intEventID, $eventED); ?>">
