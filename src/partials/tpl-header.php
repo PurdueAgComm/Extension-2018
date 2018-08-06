@@ -115,7 +115,7 @@ $description = 'See how Purdue Extension connects Indiana to Purdue University r
         if($county == "stjoseph") : ?>
           <h2 class="header-county--title">St. Joseph County</h2>
         <?php else: ?>
-          <h2 class="header-county--title"><?php echo ucfirst($contact->strCountyName); ?> County</h2>
+          <h2 class="header-county--title"><?php echo ucfirst($county); ?> County</h2>
         <?php endif; ?>
       <?php endif; ?>
       <form action="<?php echo $GLOBALS['SITE_PATH']; ?>/results/" method="get" class="form__search form__search--header">

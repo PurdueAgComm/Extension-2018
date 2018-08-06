@@ -32,7 +32,7 @@ global $county;
               <div class="dropdown-menu" aria-labelledby="<?php echo 'Dropdown-Link-' . $category->intCategoryID; ?>">
                 <?php foreach($category->listMenuSubCategories as $subCategory) : // Loop through each subcategory ?>
                   <div class="list-group nav nav-item">
-                    <a class="dropdown-item list-group-item list-group-item-action nav nav-item" href="<?php echo !empty($county) ? '/' . $county : ''; ?>/subcat/<?php echo $subCategory->intSubCatID; ?>"><?php echo $subCategory->strSubCatText; ?></a>
+                    <a class="dropdown-item list-group-item list-group-item-action nav nav-item" href="<?php echo !empty($county) ? '/' . $county : ''; ?>/subcategory/<?php echo $subCategory->intSubCatID; ?>"><?php echo $subCategory->strSubCatText; ?></a>
                     <!-- <p class="dropdown-header">Heading</p>
                     <?php foreach($subCategory->listMenuLinks as $subCategoryLink) : // For each link in the subcategory ?>
                       <a class="dropdown-item list-group-item lit-group-item-action nav nav-item" href="<?php echo $subCategoryLink->strNodeURL; ?>"><?php echo $subCategoryLink->strNodeText; ?></a>
