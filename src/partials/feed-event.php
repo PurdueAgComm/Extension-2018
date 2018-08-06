@@ -58,6 +58,9 @@
           <div class="col">
             <div class="events__event-title">
               <h3><?php echo $event->strTitle; ?></h3>
+              <?php if ($multiday) : ?>
+                <p class="badge badge-secondary" data-toggle="tooltip" data-title="This event occurs over multiple days."><i class="fas fa-clone"></i> Multiday Event</p>
+              <?php endif; ?>
             </div>
           </div>
           <div class="col-lg-4">
