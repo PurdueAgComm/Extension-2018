@@ -21,7 +21,8 @@ function get_homepath()
         'article',
         'profile',
         'articles',
-        'results'
+        'results',
+        'administration'
     ];
     require_once('../lib/SFP/PurdueAg/src/ExtDCR.php');
     $path = trim($_SERVER['REQUEST_URI'], '/');
@@ -60,7 +61,8 @@ function get_template($county = false)
         '/articles',
         '/article',
         '/profile',
-        '/results'
+        '/results',
+        '/administration'
     ];
     foreach ($known_routes as $route) {
         if (strpos($_SERVER['REQUEST_URI'], $route) !== false) {
@@ -236,6 +238,10 @@ function get_4h_marketing()
 function get_resource_links()
 {
     include('../partials/tpl-resource-links.php');
+}
+function get_administration()
+{
+    include('../partials/page-administration.php');
 }
 function get_about($countyName)
 {

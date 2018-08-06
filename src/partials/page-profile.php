@@ -5,11 +5,23 @@
 
 // check to see if profile images exist, if they don't provide a ghost images
 $url = 'https://extension.purdue.edu/ProfileImages/' . $profile->strAlias . '.jpg';
-$headers = get_headers($url, 1);
-if ($headers[0] == 'HTTP/1.1 200 OK') {
-    $profile_image = $url;
-} else {
-    $profile_image = "https://extension.purdue.edu/ProfileImages/noImage.jpg";
+function is_url_exist($url){
+    $ch = curl_init($url);
+    curl_setopt($ch, CURLOPT_NOBODY, true);
+    curl_exec($ch);
+    $code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+
+    if($code == 200){
+       $status = true;
+    }else{
+      $status = false;
+    }
+    curl_close($ch);
+   return $status;
+}
+$profile_image = "https://extension.purdue.edu/ProfileImages/placeholder.jpg";
+if (is_url_exist($url)) {
+  $profile_image = $url;
 }
 ?>
 <div class="wide-container no-margin-auto profile__title--wide--background">

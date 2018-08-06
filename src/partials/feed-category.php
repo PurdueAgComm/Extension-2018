@@ -18,13 +18,18 @@
     <div class="stories-angled__story edge <?php echo $storyClassFlag; ?>">
       <div class="container">
         <div class="row">
-          <?php if(isset($article->thumb)): ?>
-            <div class="col-md-auto">
-              <a href="<?php echo $GLOBALS['SITE_PATH']; ?>/article/<?php echo $article->intItemID; ?>">
+          <div class="col-md-auto">
+            <a href="<?php echo get_article_link($article->intItemID); ?>">
+              <?php if($article->thumb->url != "") : ?>
                 <img src="<?php echo $article->thumb->url; ?>" class="stories-angled__story-image"  alt="<?php echo $article->thumb->alt; ?>" />
-              </a>
-            </div>
-          <?php endif; ?>
+              <?php else : ?>
+                <!-- alt tag is empty, but this is the correct way to display decorative images
+                  https://www.w3.org/WAI/tutorials/images/decorative/
+                -->
+                <img src="<?php echo $GLOBALS['SITE_PATH']; ?>/assets/images/placeholder.jpg" class="stories-angled__story-image"  alt="" role="presentation" />
+              <?php endif; ?>
+            </a>
+          </div>
           <div class="col">
             <p class="stories-angled__story-date">
               <?php echo date('F j, Y', strtotime($article->datModified)); ?>
@@ -39,7 +44,7 @@
       </div>
     </div>
     <?php endforeach; ?>
-    <div class="container">
+    <div class="container" style="margin-top: 5rem;">
       <div class="row">
         <?php
         if(isset($_GET['pc'])) :

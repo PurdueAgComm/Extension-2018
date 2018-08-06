@@ -26,7 +26,7 @@
                 <div class="resources__resource-circle resources__resource-circle--brown">
                   <i class="fas fa-industry fa-2x center-circle"></i>
                 </div>
-                <h3 class="resources__resource-title">Large Farmer</h3>
+                <h3 class="resources__resource-title">Commercial Producer</h3>
                 <ul>
                   <li>
                     <a href="https://ag.purdue.edu/commercialag/Pages/default.aspx">Center for Commercial Ag</a>

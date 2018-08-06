@@ -121,4 +121,17 @@
 
   }
 
+  &-admin {
+    margin-top: 2rem;
+  }
+
+  &-meta {
+    border-left: 7px solid $YellowWalk;
+    padding: .5rem;
+  }
+
+  &-row {
+    margin-top: 1rem;
+  }
+
 }

@@ -5,15 +5,6 @@
 <?php $contact = (object) $about['contact']; ?>
 
 <?php if ($contact->strCountyName == "") : ?>
-  <div class="wide-container no-margin-auto">
-    <iframe
-      width="100%"
-      height="450"
-      frameborder="0" style="border:0"
-      src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAsACDVQ0WOsJNxWBAKN-GAp45ILf88Lt8
-        &q=615 West State Street, Lafayette IN" allowfullscreen>
-    </iframe>
-  </div>
 
   <div class="container">
     <div class="row">
@@ -37,6 +28,17 @@
           <a href="tel:7654948491">765.494.8491</a><br>
           <a href="tel:8883984636">888.EXT.INFO (888.398.4636)</a><br>
         </address>
+
+        <div class="no-margin-auto">
+          <iframe
+            width="100%"
+            height="450"
+            frameborder="0" style="border:0"
+            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAsACDVQ0WOsJNxWBAKN-GAp45ILf88Lt8
+              &q=615 West State Street, Lafayette IN" allowfullscreen>
+          </iframe>
+        </div>
+
       </div>
     </div>
   </div>
@@ -153,32 +155,39 @@
   </div>
 
 <?php else : //county about page?>
-  <div class="wide-container no-margin-auto">
-    <iframe
-      width="100%"
-      height="450"
-      frameborder="0" style="border:0"
-      src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAsACDVQ0WOsJNxWBAKN-GAp45ILf88Lt8
-        &q=<?php echo $contact->Address->strAddress1; ?>,<?php echo $contact->Address->strCity; ?>+<?php echo $contact->Address->strStateID; ?>" allowfullscreen>
-    </iframe>
-  </div>
+
 
   <div class="container">
     <div class="row">
       <div class="col">
         <h1>About <?php echo $contact->strCountyName; ?> County <small>Purdue Extension</small></h1>
 
-        <h2>Contact Us</h2>
-        <address class="about__address">
-          <?php echo $contact->Address->strAddress1; ?><br>
-          <?php if (!empty($contact->Address->strAddress2)) : ?>
-            <?php echo $contact->Address->strAddress2; ?><br>
-          <?php endif; ?>
-          <?php echo $contact->Address->strCity; ?>, <?php echo $contact->Address->strStateID; ?> <?php echo $contact->Address->strZip; ?><br>
-          <?php if (!empty($contact->Address->strPhone)) : ?>
-            <?php echo $contact->Address->strPhone; ?><br>
-          <?php endif; ?>
-        </address>
+        <h2>Call or Visit Us</h2>
+        <div class="row">
+          <div class="col-4">
+            <address class="about__address">
+              <?php echo $contact->Address->strAddress1; ?><br>
+              <?php if (!empty($contact->Address->strAddress2)) : ?>
+                <?php echo $contact->Address->strAddress2; ?><br>
+              <?php endif; ?>
+              <?php echo $contact->Address->strCity; ?>, <?php echo $contact->Address->strStateID; ?> <?php echo $contact->Address->strZip; ?><br>
+              <?php if (!empty($contact->Address->strPhone)) : ?>
+                <a href="tel:<?php echo $contact->Address->strPhone; ?>"><?php echo $contact->Address->strPhone; ?></a><br>
+              <?php endif; ?>
+            </address>
+          </div>
+          <div class="col-8">
+            <div class="no-margin-auto">
+              <iframe
+                width="100%"
+                height="450"
+                frameborder="0" style="border:0"
+                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAsACDVQ0WOsJNxWBAKN-GAp45ILf88Lt8
+                  &q=<?php echo $contact->Address->strAddress1; ?>,<?php echo $contact->Address->strCity; ?>+<?php echo $contact->Address->strStateID; ?>" allowfullscreen>
+              </iframe>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>

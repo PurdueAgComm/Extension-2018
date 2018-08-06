@@ -7,7 +7,7 @@
   }
 
   &__search--header {
-    width: 28rem;
+    width: 30%;
     display: none;
 
     @media (min-width: $large) {
