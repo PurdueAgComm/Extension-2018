@@ -130,7 +130,6 @@ function get_subcategory_list($cat_id, $page_size = 7, $page_count = 0)
 {
     global $ext;
     $articles = $ext->getSubCategoryPage($cat_id, $page_size, $page_count);
-    print_r($articles);
     include('../partials/feed-category.php');
 }
 function get_category_name($cat_id)
