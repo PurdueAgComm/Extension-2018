@@ -110,8 +110,13 @@ $description = 'See how Purdue Extension connects Indiana to Purdue University r
     <header class="header">
       <!-- TODO: svg of logo -->
       <a href="/"><img src="<?php echo $GLOBALS['SITE_PATH']; ?>/assets/images/logo.png" alt="Purdue Extension - Purdue University" class="header__logo" /></a>
-      <?php if(!empty($county)) : ?>
-        <h2><?php echo ucfirst($county); ?> County</h2>
+      <?php if(!empty($county)) :
+        // exception for two word county
+        if($county == "stjoseph") :
+          $county = "St. Joseph";
+        endif;
+        ?>
+        <h2 class="header-county--title"><?php echo ucfirst($county); ?> County</h2>
       <?php endif; ?>
       <form action="<?php echo $GLOBALS['SITE_PATH']; ?>/results/" method="get" class="form__search form__search--header">
         <input type="search" name="q" class="form__search-input" placeholder="Search people, articles, and more" aria-label="Search" aria-placeholder="Search people, articles, and more"/>

@@ -3484,7 +3484,7 @@ a.events--link {
   }
 
 .form__search--header {
-    width: 28rem;
+    width: 30%;
     display: none;
   }
 
@@ -3621,6 +3621,27 @@ a.events--link {
 @media (min-width: 992px) {
 
 .header .navbar-toggler {
+      display: none
+  }
+    }
+
+@media (max-width: 768px) {
+
+.header-county--title {
+      font-size: 1rem
+  }
+    }
+
+@media (max-width: 576px) {
+
+.header-county--title {
+      margin-top: 1.2rem
+  }
+    }
+
+@media (max-width: 430px) {
+
+.header-county--title {
       display: none
   }
     }
