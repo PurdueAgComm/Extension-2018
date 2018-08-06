@@ -169,15 +169,36 @@ class ExtDCR
     }
 
     //todo: move this to the ExtCall Class
-    public function getSubCategoryPage()
+    public function getSubCategoryPage($cat_id, $page_size = 7, $page_count = 0)
     {
+
         //retrieve item blurb list
         $params = array(
-            't' => 'b',
-            'i' => 1
+            't' => 'bp',
+            'i' => $this->_getHomeID(),
+            'ps' => $page_size,
+            'pc' => $page_count,
+            'c' => -1,
+            's' => $cat_id
         );
-        $result = $this->call->post('Item.ashx', $params);
-        return $result;
+        $results = $this->call->post('Item.ashx', $params);
+
+        foreach ($results as &$result) {
+            $expandedDetails = $this->call->getExpandedItemDetails($result->intItemID);
+            $articleDetails = $this->call->getItemDetails($result->intItemID);
+            $result->datCreated = $articleDetails->datCreated;
+            $result->datModified = $articleDetails->datModified;
+            if (count($expandedDetails->Images)) {
+                //let's get the thumbnail
+                $imageUrl = $this->call->getImageLink($expandedDetails->Images[0]->intImageID);
+                $result->thumb = new stdClass();
+                $result->thumb->url = $imageUrl;
+                $result->thumb->alt = $expandedDetails->Images[0]->strAltText;
+            }
+        }
+
+        return $results;
+
     }
 
     public function getPageBanner()

@@ -126,6 +126,13 @@ function get_category_list($cat_id, $page_size = 7, $page_count = 0)
     $articles = $ext->getCategoryPage($cat_id, $page_size, $page_count);
     include('../partials/feed-category.php');
 }
+function get_subcategory_list($cat_id, $page_size = 7, $page_count = 0)
+{
+    global $ext;
+    $articles = $ext->getSubCategoryPage($cat_id, $page_size, $page_count);
+    print_r($articles);
+    include('../partials/feed-category.php');
+}
 function get_category_name($cat_id)
 {
     //I didn't see a better way to go about matching a category ID to a menu.  Perhaps at a different layer in the framework we can set this on the previous
