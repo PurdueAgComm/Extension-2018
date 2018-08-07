@@ -157,8 +157,15 @@ function get_event_filter($pagesize = 10, $pagecount = 0)
     $arrByDate = $ext->getEventsByFilter($pagesize, $pagecount);
     // Return is in an array of dates
     $events = array();
+    $excludeEventIDs = array();
     foreach ($arrByDate as $dayList) {
         foreach ($dayList->eventList as $objEvent) {
+            // If we are to skip this event, do so
+            if (in_array($objEvent->intEventID, $excludeEventIDs)) {
+                continue;
+            }
+
+
             /***************************************************************************************
             *  Filter API call is not correctly returning 'blnNotRequired'.  For this reason,
             *  an additional API call is being made to get the correct data.  This is a hack
@@ -176,7 +183,6 @@ function get_event_filter($pagesize = 10, $pagecount = 0)
                 $objEvent->blnMultiDay = false;
             }
             $objEvent->blnNotRequired = $event->blnNotRequired;
-
 
             // Template expects data in DateList attribute to be at root level of the object
             $arrDateList = (array) $objEvent->DateList;
