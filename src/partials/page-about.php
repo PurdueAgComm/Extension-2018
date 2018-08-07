@@ -199,7 +199,7 @@
     <?php foreach ($about['staff'] as $staff): ?>
         <?php if ($staff->strAlias != $profile->strAlias): ?>
             <div class="col-6">
-              <a class="about" href="profile/<?php echo $staff->strAlias; ?>">
+              <a class="about" href="<?php echo $county ? '/'.$county : ''; ?>/profile/<?php echo $staff->strAlias; ?>">
                 <div class="about__staff">
                   <h3 class="about__staff-name"><?php echo $staff->strFirstName . " " . $staff->strLastName . " " . $staff->strSuffix; ?></h3>
                   <p class="about__staff-title"><?php echo $staff->strPreferredTitle; ?></p>
