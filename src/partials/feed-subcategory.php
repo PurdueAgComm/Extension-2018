@@ -2,7 +2,7 @@
   <div class="stories-angled">
     <div class="container">
       <!-- TODO: get_subcategory_name() function create for human name -->
-      <h1 class="stories-angled__title">Subcategory: <?php //echo get_subcategory_name($cat_id); ?></h1>
+      <h1 class="stories-angled__title"><?php //echo get_subcategory_name($cat_id); ?></h1>
     </div>
     <?php
     // alternate classes for each article to tesselate
