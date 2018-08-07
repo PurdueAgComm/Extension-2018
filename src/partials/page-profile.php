@@ -2,7 +2,7 @@
 // Page to display profiles for Extension staff members
 // If users are on a county site, it will display other county staff members
 // $about['contact'] is available for county-location information, but is not currently used
-
+global $county;
 // check to see if profile images exist, if they don't provide a ghost images
 $url = 'https://extension.purdue.edu/ProfileImages/' . $profile->strAlias . '.jpg';
 function is_url_exist($url){
@@ -118,7 +118,7 @@ if (is_url_exist($url)) {
   <?php foreach ($about['staff'] as $staff): ?>
       <?php if ($staff->strAlias != $profile->strAlias): ?>
           <div class="col-6">
-            <a class="profile" href="profile/<?php echo $staff->strAlias;?>">
+            <a class="profile" href="<?php echo $county ? '/'.$county : ''; ?>/profile/<?php echo $staff->strAlias;?>">
               <div class="profile__staff">
                 <h3 class="profile__staff-name"><?php echo $staff->strFirstName . " " . $staff->strLastName . " " . $staff->strSuffix; ?></h3>
                 <p class="profile__staff-title"><?php echo $staff->strPreferredTitle; ?></p>

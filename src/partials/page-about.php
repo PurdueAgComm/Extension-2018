@@ -1,5 +1,6 @@
 <?php
 // Output about page contact information for state and counties
+global $county;
 ?>
 
 <?php $contact = (object) $about['contact']; ?>
