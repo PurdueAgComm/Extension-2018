@@ -27,7 +27,9 @@ global $county;
             <a class="nav-item" href="<?php echo $county ? '/'.$county : ''; ?>/about">About</a>
              <div class="dropdown-menu">
               <div class="list-group nav nav-item">
+                <a class="dropdown-item list-group-item list-group-item-action nav nav nav-item" href="<?php echo $county ? '/'.$county : ''; ?>/about">Contact Us</a>
                 <a class="dropdown-item list-group-item list-group-item-action nav nav nav-item" href="<?php echo $county ? '/'.$county : ''; ?>/administration">Meet Extension Administration</a>
+                <a class="dropdown-item list-group-item list-group-item-action nav nav nav-item" href="/about#counties">County Directory</a>
               </div>
             </div>
           </li>

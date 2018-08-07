@@ -69,7 +69,11 @@
                 <p class="events__event-canceled">Canceled</p>
               <?php endif; ?>
               <p class="events__event-location"><?php echo $event->strCity; ?></p>
-              <p class="events__event-time"><?php echo $eventTime; ?></p>
+              <?php if($eventTime != "12:00 AM") : ?>
+                <p class="events__event-time"><?php echo $eventTime; ?></p>
+              <?php else : ?>
+                <p class="events__event-time">All Day</p>
+              <?php endif; ?>
             </div>
           </div>
         </div>

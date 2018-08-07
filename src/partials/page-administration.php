@@ -41,7 +41,7 @@
   <div class="col-6 profile-admin">
     <div class="row">
       <div class="col-4">
-        <img src="https://extension.purdue.edu/ProfileImages/hender65.jpg" alt="Jason Henderson">
+        <img src="https://extension.purdue.edu/ProfileImages/ande1028.jpg" alt="Lisa Anderson">
       </div>
       <div class="col">
         <h3>Lisa Anderson</h3>
