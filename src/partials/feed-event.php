@@ -83,7 +83,6 @@
     <div class="container">
       <div class="row">
         <?php
-        echo $page;
         if($page != "home") : //don't show pagination on home page
           if(isset($_GET['pc']) ) :
             $page_count = (int) $_GET['pc'];
