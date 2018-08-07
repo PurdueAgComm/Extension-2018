@@ -157,22 +157,39 @@ function get_event_filter($pagesize = 10, $pagecount = 0)
     $arrByDate = $ext->getEventsByFilter($pagesize, $pagecount);
     // Return is in an array of dates
     $events = array();
-    $excludeEventIDs = array();
     foreach ($arrByDate as $dayList) {
         foreach ($dayList->eventList as $objEvent) {
-            if (!in_array($objEvent->intEventID, $excludeEventIDs)) {
-                // Template expects data in DateList attribute to be at root level of the object
-                $arrDateList = (array) $objEvent->DateList;
-                unset($objEvent->DateList);
-                $arrEvent = (array) $objEvent;
-                array_push($events, (object) array_merge($arrDateList, $arrEvent));
+            /***************************************************************************************
+            *  Filter API call is not correctly returning 'blnNotRequired'.  For this reason,
+            *  an additional API call is being made to get the correct data.  This is a hack
+            *  that should be replaced in future builds.
+            *
+            *  This call is also being used as an easy way to tell if there are multiple dates
+            *  for an event.
+            ***************************************************************************************/
+            // TODO: Remove this hack
+            $eventID = $objEvent->intEventID;
+            $event = $ext->getEventPage($eventID);
+            if(count($event->DateList) > 1) {
+                $objEvent->blnMultiDay = true;
+            } else {
+                $objEvent->blnMultiDay = false;
             }
+            $objEvent->blnNotRequired = $event->blnNotRequired;
+
+
+            // Template expects data in DateList attribute to be at root level of the object
+            $arrDateList = (array) $objEvent->DateList;
+            unset($objEvent->DateList);
+            $arrEvent = (array) $objEvent;
+            array_push($events, (object) array_merge($arrDateList, $arrEvent));
             if (!$objEvent->blnNotRequired) {
                 array_push($excludeEventIDs, $objEvent->intEventID);
             }
         }
     }
-    
+    // var_dump($events);
+    // die();
     include('../partials/feed-event.php');
 }
 function get_article($article_id)
