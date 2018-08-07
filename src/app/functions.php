@@ -151,7 +151,7 @@ function get_event_list($pagesize = 5, $pagecount = 0, $page = "home")
     $events = $ext->getEventList($pagesize, $pagecount, $page);
     include('../partials/feed-event.php');
 }
-function get_event_filter($pagesize = 10, $pagecount = 0)
+function get_event_filter($pagesize = 10, $pagecount = 0, $page = "home")
 {
     global $ext;
     $arrByDate = $ext->getEventsByFilter($pagesize, $pagecount);
@@ -180,10 +180,6 @@ function get_event_filter($pagesize = 10, $pagecount = 0)
             $objEvent->intEventDateCount = count($event->DateList);
             $objEvent->blnNotRequired = $event->blnNotRequired;
 
-            // DEBUG: TESTING
-            if (strpos($objEvent->strTitle, 'ArborMaster') !== false) {
-                $objEvent->blnNotRequired = true;
-            }
 
             // Template expects data in DateList attribute to be at root level of the object
             $arrDateList = (array) $objEvent->DateList;
