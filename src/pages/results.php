@@ -20,7 +20,7 @@ get_footer(); ?>
 
 <script>
   (function() {
-    var cx = '008827541188184757261:ae-edc-nryi';
+    var cx = '008827541188184757261:7q5kekajrye';
     var gcse = document.createElement('script');
     gcse.type = 'text/javascript';
     gcse.async = true;
