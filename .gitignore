@@ -33,7 +33,7 @@ dwsync.xml
 sftp-config.json
 deployment-config.json
 .ftpconfig
-/ProfileImages/
+src/ProfileImages/
 
 # SFP Random Files
 .vagrant
