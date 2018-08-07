@@ -177,12 +177,13 @@ function get_event_filter($pagesize = 10, $pagecount = 0)
             // TODO: Remove this hack
             $eventID = $objEvent->intEventID;
             $event = $ext->getEventPage($eventID);
-            if(count($event->DateList) > 1) {
-                $objEvent->blnMultiDay = true;
-            } else {
-                $objEvent->blnMultiDay = false;
-            }
+            $objEvent->intEventDateCount = count($event->DateList);
             $objEvent->blnNotRequired = $event->blnNotRequired;
+
+            // DEBUG: TESTING
+            if (strpos($objEvent->strTitle, 'ArborMaster') !== false) {
+                $objEvent->blnNotRequired = true;
+            }
 
             // Template expects data in DateList attribute to be at root level of the object
             $arrDateList = (array) $objEvent->DateList;
@@ -194,8 +195,6 @@ function get_event_filter($pagesize = 10, $pagecount = 0)
             }
         }
     }
-    // var_dump($events);
-    // die();
     include('../partials/feed-event.php');
 }
 function get_article($article_id)
