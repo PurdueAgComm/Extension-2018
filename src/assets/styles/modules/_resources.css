@@ -1,7 +1,7 @@
 .resources {
   padding: 5rem 0 13rem;
   margin-top: 10rem;
-  background: url(/extension/assets/images/triangles.png);
+  background: url(/assets/images/triangles.png);
   background-position: 0 0;
 
   &__resource {
