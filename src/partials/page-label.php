@@ -6,7 +6,7 @@
 <div class="container">
   <ul class="label__list">
   <?php foreach ($list as $article): ?>
-      <a class="label" href="/<?php global $county; echo $county; ?>/article/<?php echo $article->intItemID; ?>">
+      <a class="label" href="<?php echo $county ? '/'.$county : ''; ?>/article/<?php echo $article->intItemID; ?>">
         <li class="label__list-item">
           <h2><?php echo $article->strTitle; ?></h2>
           <p><?php echo $article->strShortBody; ?></p>
