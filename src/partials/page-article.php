@@ -24,7 +24,7 @@
     <?php echo $article->strBody; ?>
 
     <?php if(!empty($article->details->Files)) : ?>
-      <h3>Additional Files</h3>
+      <h3>Related Files</h3>
       <div class="container">
         <div class="row">
           <?php foreach ($article->details->Files as $file): ?>
