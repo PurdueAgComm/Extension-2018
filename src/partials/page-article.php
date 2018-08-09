@@ -1,4 +1,3 @@
-<?php $root = $navigation->currentHome->strPublicURLRoot; ?>
 <div class="wide-container no-margin-auto story__title--wide--background">
   <div class="container story__title--background">
     <h1 class="story__title reveal"><?php echo $article->strTitle; ?></h1>
