@@ -156,7 +156,7 @@ class ExtCall
 
     public function getDownloadLink($id)
     {
-        return $this->url.'File.ashx?f=i&i='.$id;
+        return $this->url.'File.ashx?t=f&i='.$id;
     }
 
     public function getImageLink($id)

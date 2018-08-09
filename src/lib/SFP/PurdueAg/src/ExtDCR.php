@@ -101,6 +101,15 @@ class ExtDCR
                 $image->strImageLink = $imageUrl;
             }
         }
+        if (count($expandedDetails->Files)) {
+            //let's get the file URLs
+            $i = 0;
+            foreach ($expandedDetails->Files as &$file) {
+                $fileUrl = $this->call->getDownloadLink($expandedDetails->Files[$i]->intFileID);
+                $file->strFileLink = $fileUrl;
+                $i++;
+            }
+        }
         $result->details = $expandedDetails;
         $article = $result;
         return $article;

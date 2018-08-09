@@ -23,6 +23,20 @@
         <img class="reveal float-right img-responsive story__body-image" src="<?php echo $image->strImageLink; ?>" title="<?php echo $image->strCaption; ?>" alt="<?php echo $image->strAltText; ?>" />
     <?php endforeach; ?>
     <?php echo $article->strBody; ?>
+
+    <?php if(!empty($article->details->Files)) : ?>
+      <h3>Additional Files</h3>
+      <div class="container">
+        <div class="row">
+          <?php foreach ($article->details->Files as $file): ?>
+            <?php if(!$file->blnArchive) : ?>
+              <a href="<?php echo $file->strFileLink; ?>" class="story__file"><i class="far fa-file-alt fa-fw"></i> <?php echo $file->strLinkText; ?></a>
+            <?php endif; ?>
+          <?php endforeach; ?>
+        </div>
+      </div>
+    <?php endif; ?>
+
   </article>
 </div>
 

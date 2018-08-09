@@ -4211,6 +4211,17 @@ a.events--link {
     border-bottom: 3px solid #ffd100;
   }
 
+.story__file {
+    border-left: 3px solid #ffd100;
+    padding: 1rem;
+    background: #fafafa;
+    margin: .5rem 1.5rem .5rem 0;
+  }
+
+.story__file:hover {
+      background-color: #eaeaea;
+    }
+
 .story__body {
     clear:both;
   }
