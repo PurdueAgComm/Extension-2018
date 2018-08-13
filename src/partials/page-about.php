@@ -97,7 +97,7 @@ global $county;
           <a href="http://extension.purdue.edu/Jennings"><li>Jennings</li></a>
           <a href="http://extension.purdue.edu/Johnson"><li>Johnson</li></a>
           <a href="http://extension.purdue.edu/Knox"><li>Knox</li></a>
-          <a href="http://extension.purdue.edu/Kosciusko"><li>Kosciusk</li></a>
+          <a href="http://extension.purdue.edu/Kosciusko"><li>Kosciusko</li></a>
           <a href="http://extension.purdue.edu/LaGrange"><li>LaGrange</li></a>
           <a href="http://extension.purdue.edu/Lake"><li>Lake</li></a>
           <a href="http://extension.purdue.edu/LaPorte"><li>LaPorte</li></a>
