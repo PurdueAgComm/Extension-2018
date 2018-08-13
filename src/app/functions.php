@@ -388,7 +388,7 @@ function validate_county($county)
         'Randolph',
         'Ripley',
         'Rush',
-        'Saint Joseph',
+        'St. Joseph',
         'Scott',
         'Shelby',
         'Spencer',

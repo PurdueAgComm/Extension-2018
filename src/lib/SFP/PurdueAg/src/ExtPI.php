@@ -29,10 +29,16 @@ class ExtPI
 
     public function getCountyAbout($countyName = '')
     {
+
         require_once(dirname(__FILE__).'/ExtPI/CountyService.php');
         $svc = new CountyService();
         $counties = $svc->getCountyList();
         foreach ($counties as $county) {
+            // st joseph is an exception in the API on how it's entered
+            if($countyName == "stjoseph") {
+                $countyName = "St. Joseph";
+            }
+
             if (strtolower($county->strCountyName) == strtolower($countyName)) {
                 $countyID = $county->intCountyID;
             }
