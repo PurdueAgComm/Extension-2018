@@ -47,11 +47,11 @@ global $county;
                 <?php if($category->strCategoryText == "Youth" && !empty($county)) : ?>
                   <div class="list-group nav nav-item">
                       <p class="dropdown-header">4-H Resources</p>
-                      <a class="dropdown-item list-group-item lit-group-item-action nav nav-item" href="<?php echo !empty($county) ? '/' . $county : ''; ?>/label/7">4-H County Club</a>
-                      <a class="dropdown-item list-group-item lit-group-item-action nav nav-item" href="<?php echo !empty($county) ? '/' . $county : ''; ?>/label/7">4-H County Forms</a>
+                      <a class="dropdown-item list-group-item lit-group-item-action nav nav-item" href="<?php echo !empty($county) ? '/' . $county : ''; ?>/label/8">4-H County Club</a>
+                      <a class="dropdown-item list-group-item lit-group-item-action nav nav-item" href="<?php echo !empty($county) ? '/' . $county : ''; ?>/label/9">4-H County Forms</a>
                       <a class="dropdown-item list-group-item lit-group-item-action nav nav-item" href="<?php echo !empty($county) ? '/' . $county : ''; ?>/label/7">4-H County Projects</a>
-                      <a class="dropdown-item list-group-item lit-group-item-action nav nav-item" href="<?php echo !empty($county) ? '/' . $county : ''; ?>/label/7">4-H County Trips</a>
-                      <a class="dropdown-item list-group-item lit-group-item-action nav nav-item" href="<?php echo !empty($county) ? '/' . $county : ''; ?>/label/7">4-H County Volunteers</a>
+                      <a class="dropdown-item list-group-item lit-group-item-action nav nav-item" href="<?php echo !empty($county) ? '/' . $county : ''; ?>/label/11">4-H County Trips</a>
+                      <a class="dropdown-item list-group-item lit-group-item-action nav nav-item" href="<?php echo !empty($county) ? '/' . $county : ''; ?>/label/16">4-H County Volunteers</a>
                   </div>
                 <?php endif; ?>
                 <?php $youthCount = 0; ?>
