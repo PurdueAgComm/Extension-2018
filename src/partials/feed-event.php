@@ -68,7 +68,9 @@
               <?php if($event->blnCancelEvent)  : ?>
                 <p class="events__event-canceled">Canceled</p>
               <?php endif; ?>
-              <p class="events__event-location"><?php echo $event->strCity; ?></p>
+              <?php if($event->strCity != "N/A") : ?>
+                <p class="events__event-location"><?php echo $event->strCity; ?></p>
+              <?php endif; ?>
               <?php if($eventTime != "12:00 AM") : ?>
                 <p class="events__event-time"><?php echo $eventTime; ?></p>
               <?php else : ?>
