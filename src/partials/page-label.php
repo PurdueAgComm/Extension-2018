@@ -6,7 +6,7 @@
 </div>
 <div class="container">
   <ul class="label__list">
-  <?php if(!isset($list)) : ?>
+  <?php if(count($list) > 1) : ?>
     <?php foreach ($list as $article): ?>
         <a class="label" href="<?php echo $county ? '/'.$county : ''; ?>/article/<?php echo $article->intItemID; ?>">
           <li class="label__list-item">
