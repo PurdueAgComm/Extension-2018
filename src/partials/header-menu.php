@@ -39,6 +39,22 @@ global $county;
                 <?php echo $category->strCategoryText; ?>
               </a>
               <div class="dropdown-menu" aria-labelledby="<?php echo 'Dropdown-Link-' . $category->intCategoryID; ?>">
+                <?php if($category->strCategoryText == "Garden" && !empty($county)) : ?>
+                  <div class="list-group nav nav-item">
+                      <a class="dropdown-item list-group-item lit-group-item-action nav nav-item" href="<?php echo !empty($county) ? '/' . $county : ''; ?>/label/12">Master Gardener</a>
+                  </div>
+                <?php endif; ?>
+                <?php if($category->strCategoryText == "Youth" && !empty($county)) : ?>
+                  <div class="list-group nav nav-item">
+                      <p class="dropdown-header">4-H Resources</p>
+                      <a class="dropdown-item list-group-item lit-group-item-action nav nav-item" href="<?php echo !empty($county) ? '/' . $county : ''; ?>/label/7">4-H County Club</a>
+                      <a class="dropdown-item list-group-item lit-group-item-action nav nav-item" href="<?php echo !empty($county) ? '/' . $county : ''; ?>/label/7">4-H County Forms</a>
+                      <a class="dropdown-item list-group-item lit-group-item-action nav nav-item" href="<?php echo !empty($county) ? '/' . $county : ''; ?>/label/7">4-H County Projects</a>
+                      <a class="dropdown-item list-group-item lit-group-item-action nav nav-item" href="<?php echo !empty($county) ? '/' . $county : ''; ?>/label/7">4-H County Trips</a>
+                      <a class="dropdown-item list-group-item lit-group-item-action nav nav-item" href="<?php echo !empty($county) ? '/' . $county : ''; ?>/label/7">4-H County Volunteers</a>
+                  </div>
+                <?php endif; ?>
+                <?php $youthCount = 0; ?>
                 <?php foreach($category->listMenuSubCategories as $subCategory) : // Loop through each subcategory ?>
                   <div class="list-group nav nav-item">
                     <a class="dropdown-item list-group-item list-group-item-action nav nav-item" href="<?php echo !empty($county) ? '/' . $county : ''; ?>/subcategory/<?php echo $subCategory->intSubCatID; ?>"><?php echo $subCategory->strSubCatText; ?></a>
@@ -47,11 +63,14 @@ global $county;
                       <a class="dropdown-item list-group-item lit-group-item-action nav nav-item" href="<?php echo $subCategoryLink->strNodeURL; ?>"><?php echo $subCategoryLink->strNodeText; ?></a>
                     <?php endforeach; ?> -->
                   </div>
+                  <?php if($subCategory->strSubCatText == "4-H Youth Development" && !empty($county)) : ?>
+                    <?php // add a heading to end AFTER 4-H Youth Development category ?>
+                    <p class="dropdown-header">PK-12 Resources</p>
+                  <?php endif; ?>
                 <?php endforeach; ?>
               </div>
             </li>
           <?php endforeach; ?>
-
           <form action="<?php echo $county;?>/results/" method="get" class="form__search form__search--mobile-nav">
             <input type="search" name="q" class="form__search-input" placeholder="Search people, articles, and more" aria-label="Search" aria-placeholder="Search people, articles, and more"
             />
@@ -62,55 +81,3 @@ global $county;
     </div>
   </nav>
 </div>
-
-
-<!-- TODO: delete -->
-
-<!-- REFERENCE
-<?php foreach($navigation->listMenuCategories as $category) : // Loop through categories ?>
-  <li class="nav-item dropdown nav-link">
-    <a class="nav-item" href="<?php echo !empty($county) ? '/' . $county : ''; ?>/category/<?php echo $category->intCategoryID; ?>" id="<?php echo 'Dropdown-Link-' . $category->intCategoryID; ?>">
-      <?php echo $category->strCategoryText; ?>
-    </a>
-    <div class="dropdown-menu" aria-labelledby="<?php echo 'Dropdown-Link-' . $category->intCategoryID; ?>">
-      <?php foreach($category->listMenuSubCategories as $subCategory) : // Loop through each subcategory ?>
-        <p class="dropdown-header"><?php echo $subCategory->strSubCatText; ?></p>
-        <div class="list-group nav nav-item">
-          <?php foreach($subCategory->listMenuLinks as $subCategoryLink) : // For each link in the subcategory ?>
-            <a class="dropdown-item list-group-item lit-group-item-action nav nav-item" href="<?php echo $subCategoryLink->strNodeURL; ?>"><?php echo $subCategoryLink->strNodeText; ?></a>
-          <?php endforeach; ?>
-        </div>
-      <?php endforeach; ?>
-    </div>
-  </li>
-<?php endforeach; ?>
--->
-
-<!-- <ul>
-    <li><a href="//<?php echo $root;?>pages/index.php">Home</a></li>
-    <li>
-        <a href="//<?php echo $root;?>pages/about.php">About</a>
-        <ul>
-            <li>I believe this menu is hardcoded in the current site's template.  Use var $root; to set relative path on links.</li>
-        </ul>
-    </li>
-    <?php foreach($navigation->listMenuCategories as $category):?>
-        <li>
-            <a href="//<?php echo $root;?>pages/category.php?hid=<?php echo $hid;?>&cat=<?php echo $category->intCategoryID;?>"><?php echo $category->strCategoryText;?></a>
-            <ul>
-                <?php foreach($category->listMenuSubCategories as $subcat):?>
-                    <li>
-                        <a href="//<?php echo $root;?>pages/subcategory.php?hid=<?php echo $hid;?>&subcat=<?php echo $subcat->intSubCatID;?>"><?php echo $subcat->strSubCatText;?></a>
-                        <ul>
-                            <?php foreach($subcat->listMenuLinks as $link):?>
-                                <li>
-                                    <a href="<?php echo $link->strNodeURL; ?>"<?php if($link->blnNewWindow){ echo ' target="_blank"';} ?>><?php echo $link->strNodeText; ?></a>
-                                </li>
-                            <?php endforeach; ?>
-                        </ul>
-                    </li>
-                <?php endforeach; ?>
-            </ul>
-        </li>
-    <?php endforeach; ?>
-</ul> -->
