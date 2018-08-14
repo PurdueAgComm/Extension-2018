@@ -26,6 +26,8 @@ $description = 'See how Purdue Extension connects Indiana to Purdue University r
   <title><?php echo get_county_name(); ?> - Purdue Extension</title>
   <link rel="stylesheet" href="<?php echo $GLOBALS['SITE_PATH']; ?>/_compiled/styles.css">
   <meta name="description" content="<?php echo $description; ?>" />
+  <link rel="shortcut icon" type="image/png" href="/assets/images/favicon.png" />
+  <link rel="apple-touch-icon" href="/assets/images/apple-touch-ipad-retina.png" />
   <!-- Twitter Card data -->
   <meta name="twitter:card" value="summary">
   <!-- Open Graph data -->

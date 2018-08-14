@@ -262,20 +262,6 @@
   <div class="col-6 profile-admin">
     <div class="row">
       <div class="col-4">
-        <img src="https://extension.purdue.edu/ProfileImages/jellett.jpg" alt="Jodee Ellett">
-      </div>
-      <div class="col">
-        <h3>Jodee Ellett</h3>
-        <p class="profile-meta"> Local Foods Program Coordinator<br />
-          <i class="fas fa-mobile-alt fa-fw"></i><a href="tel:7654940349">765-494-0349</a><br />
-          <i class="fas fa-envelope fa-fw"></i><a href="mailto:jellett@purdue.edu">jellett@purdue.edu</a></p>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-6 profile-admin">
-    <div class="row">
-      <div class="col-4">
         <img src="https://extension.purdue.edu/ProfileImages/jsmonroe.jpg" alt="James Scott Monroe">
       </div>
       <div class="col">
