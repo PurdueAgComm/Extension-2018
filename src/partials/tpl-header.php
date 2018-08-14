@@ -111,7 +111,7 @@ $description = 'See how Purdue Extension connects Indiana to Purdue University r
   <div class="container">
     <header class="header">
       <!-- TODO: svg of logo -->
-      <a href="/"><img src="<?php echo $GLOBALS['SITE_PATH']; ?>/assets/images/logo.png" alt="Purdue Extension - Purdue University" class="header__logo" /></a>
+      <a href="/"><img src="<?php echo $GLOBALS['SITE_PATH']; ?>/assets/images/logo.svg" alt="Purdue Extension - Purdue University" class="header__logo" /></a>
       <?php if(!empty($county)) : ?>
         <h2 class="header-county--title"><?php echo get_county_name(); ?></h2>
       <?php endif; ?>
