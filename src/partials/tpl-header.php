@@ -115,9 +115,9 @@ $description = 'See how Purdue Extension connects Indiana to Purdue University r
       <?php if(!empty($county)) : ?>
         <h2 class="header-county--title"><?php echo get_county_name(); ?></h2>
       <?php endif; ?>
-      <form action="<?php echo $GLOBALS['SITE_PATH']; ?>/results/" method="get" class="form__search form__search--header">
+      <form action="<?php echo $county ? '/'.$county : ''; ?>/results/" method="get" class="form__search form__search--header">
         <input type="search" name="q" class="form__search-input" placeholder="Search people, articles, and more" aria-label="Search" aria-placeholder="Search people, articles, and more"/>
-        <input type="image" value="Search" src="<?php echo $GLOBALS['SITE_PATH']; ?>/assets/images/icon--search.svg" class="form__search-submit"  alt="Search">
+        <input type="image" value="Search" src="/assets/images/icon--search.svg" class="form__search-submit"  alt="Search">
       </form>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
         aria-expanded="false" aria-label="Toggle navigation">
