@@ -21,6 +21,7 @@ $image = "https://extension.purdue.edu/annualreport/images/cover.jpg";
 $description = 'See how Purdue Extension connects Indiana to Purdue University research and programs in agriculture, communities, families, health, and youth development.';
 ?>
 <head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title><?php echo get_county_name(); ?> - Purdue Extension</title>
