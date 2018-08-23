@@ -156,6 +156,120 @@ global $county;
     </div> <!-- /.row -->
   </div>
 
+<br>
+
+  <div class="container">
+    <a name="district"></a>
+    <h2>District Offices</h2>
+    <br>
+    <div class="row">
+
+      <!-- DISTRICT -->
+      <div class="col-sm-6">
+        <div class="about__district">
+          <h3>Central District</h3>
+          <div class="about__district-contact">
+            <address class="about__district-address">
+              <i class="fas fa-envelope fa-fw"></i> 5250 E US Hwy 36, Suite 760 <br>
+              Avon, IN  46123-7825 <br>
+            </address>
+            <i class="fas fa-phone fa-fw"></i> 317-386-8919
+          </div>
+          <h4>People</h4>
+          <div class="about__district-people">
+            <a href="mailto:juliegray@purdue.edu"><strong>Julie Gray</strong></a>, Director <br>
+            <a href="mailto:martinlj@purdue.edu"><strong>Linda Martin</strong></a>, Secretary
+          </div>
+        </div>
+      </div>
+      <!-- END DISTRICT -->
+
+      <!-- DISTRICT -->
+      <div class="col-sm-6">
+        <div class="about__district">
+          <h3>East District</h3>
+          <div class="about__district-contact">
+            <address class="about__district-address">
+              <i class="fas fa-envelope fa-fw"></i> P.O. Box 680 / 427 N. Matilda Street <br>
+              Warren, IN 46792 <br>
+            </address>
+            <i class="fas fa-phone fa-fw"></i> 260-375-4440
+          </div>
+          <h4>People</h4>
+          <div class="about__district-people">
+            <a href="mailto:pmarcellino@purdue.edu"><strong>Paul Marcellino</strong></a>, Director <br>
+            <a href="mailto:lludlow@purdue.edu"><strong>Lara Ludlow</strong></a>, Secretary
+          </div>
+        </div>
+      </div>
+      <!-- END DISTRICT -->
+
+      <!-- DISTRICT -->
+      <div class="col-sm-6">
+        <div class="about__district">
+          <h3>Southeast District</h3>
+          <div class="about__district-contact">
+            <address class="about__district-address">
+              <i class="fas fa-envelope fa-fw"></i> P.O. Box 179 / 320 N Sugar <br>
+              Brownstown, IN 47220 <br>
+            </address>
+            <i class="fas fa-phone fa-fw"></i> 812-358-3887
+          </div>
+          <h4>People</h4>
+          <div class="about__district-people">
+            <a href="mailto:niermana@purdue.edu"><strong>Amy Nierman</strong></a>, Director <br>
+            <a href="mailto:phawes@purdue.edu"><strong>Pam Hawes</strong></a>, Secretary
+          </div>
+        </div>
+      </div>
+      <!-- END DISTRICT -->
+
+      <!-- DISTRICT -->
+      <div class="col-sm-6">
+        <div class="about__district">
+          <h3>Southwest District</h3>
+          <div class="about__district-contact">
+            <address class="about__district-address">
+              <i class="fas fa-envelope fa-fw"></i> 403 Wabash Avenue <br>
+              Terre Haute, IN 47807 <br>
+            </address>
+            <i class="fas fa-phone fa-fw"></i> 812-232-4643
+          </div>
+          <h4>People</h4>
+          <div class="about__district-people">
+            <a href="mailto:hartja@purdue.edu"><strong>Julie Hart</strong></a>, Director <br>
+            <a href="mailto:ledge@purdue.edu"><strong>Lisa Edge</strong></a>, Secretary
+          </div>
+        </div>
+      </div>
+      <!-- END DISTRICT -->
+
+      <!-- DISTRICT -->
+      <div class="col-sm-6">
+        <div class="about__district">
+          <h3>Northwest District</h3>
+          <div class="about__district-contact">
+            <address class="about__district-address">
+              <i class="fas fa-envelope fa-fw"></i> P.O. Box 426 / 107 E. Market Street <br>
+              Nappanee, IN 46550 <br>
+            </address>
+            <i class="fas fa-phone fa-fw"></i> 574-773-0267
+          </div>
+          <h4>People</h4>
+          <div class="about__district-people">
+            <a href="mailto:ande1028@purdue.edu"><strong>Lisa Anderson</strong></a>, Director <br>
+            <a href="mailto:lorenzk@purdue.edu"><strong>Kelly Lorenz</strong></a>, Secretary
+          </div>
+        </div>
+      </div>
+      <!-- END DISTRICT -->
+
+
+      </div> <!-- /.row -->
+    </div>
+  </div>
+
+
 <?php else : //county about page?>
 
 

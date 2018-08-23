@@ -2765,6 +2765,27 @@ a:hover {
         background-color: #ededed;
       }
 
+.about__district {
+    background-color: #fafafa;
+    border-left: 7px solid #ffd100;
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+
+.about__district-contact {
+    background-color: #fafafa;
+    border-left: 3px solid #bababa;
+    padding: .5rem;
+    margin-bottom: .5rem;
+  }
+
+.about__district-people {
+    background-color: #fafafa;
+    border-left: 3px solid #bababa;
+    padding: .5rem;
+    margin-bottom: .5rem;
+  }
+
 /* override FormStack styling */
 
 .fsBody, .fsForm {

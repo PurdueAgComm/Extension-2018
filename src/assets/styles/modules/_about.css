@@ -62,6 +62,27 @@
 
   }
 
+  &__district {
+    background-color: #fafafa;
+    border-left: 7px solid $YellowWalk;
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  &__district-contact {
+    background-color: #fafafa;
+    border-left: 3px solid #bababa;
+    padding: .5rem;
+    margin-bottom: .5rem;
+  }
+
+  &__district-people {
+    background-color: #fafafa;
+    border-left: 3px solid #bababa;
+    padding: .5rem;
+    margin-bottom: .5rem;
+  }
+
 }
 
 /* override FormStack styling */
