@@ -72,6 +72,12 @@ global $county;
               </div>
             </li>
           <?php endforeach; ?>
+          <?php if($county == "tippecanoe") : ?>
+            <a class="nav-item nav-link" href="https://extension.purdue.edu/Tippecanoe/Lists/Fairgrounds%20Calendar/calendar.aspx">Fairgrounds</a>
+          <?php elseif ($county == "carroll") : ?>
+            <a class="nav-item nav-link" href="https://extension.purdue.edu/Carroll/Pages/cfc.aspx ">Fairgrounds</a>
+          <?php endif; ?>
+
           <form action="<?php echo $county;?>/results/" method="get" class="form__search form__search--mobile-nav">
             <input type="search" name="q" class="form__search-input" placeholder="Search people, articles, and more" aria-label="Search" aria-placeholder="Search people, articles, and more"
             />
