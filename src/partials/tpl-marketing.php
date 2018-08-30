@@ -14,6 +14,7 @@
           <h3 class="color-blocks__title">A message to move</h3>
           <p class="color-blocks__text">Sometimes the hardest part of getting fit is taking that first step. Purdue Extension motivates adults to Get WalkIN’ through email coaching. And it’s working!</p>
           <a href="https://extension.purdue.edu/annualreport/walking/" class="cta cta__secondary cta__secondary--white">Learn More</a>
+          <a href="https://www.purdue.edu/hhs/extension/" class="cta cta__secondary cta__secondary--white">Visit Health and Human Sciences</a>
         </div>
       </div>
     </div>
@@ -31,6 +32,7 @@
           <h3 class="color-blocks__title">Revitalizing small towns</h3>
           <p class="color-blocks__text">Purdue Extension partners with the Hometown Collaboration Initiative, helping small towns capitalize on their potential to flourish.</p>
           <a href="https://extension.purdue.edu/annualreport/hci/" class="cta cta__secondary cta__secondary--white">Learn More</a>
+          <a href="https://www.cdext.purdue.edu/" class="cta cta__secondary cta__secondary--white">Visit Community Development</a>
         </div>
       </div>
     </div>
@@ -65,6 +67,7 @@
           <h3 class="color-blocks__title">Encouraging Indiana’s future entrepreneurs</h3>
           <p class="color-blocks__text">Indiana 4-H Youth Development has always grown the next generation of leaders. Today, that also means entrepreneurship. Purdue Extension and the Indiana 4-H Entrepreneurship Academy create opportunities for youth to dream big.</p>
           <a href="https://extension.purdue.edu/annualreport/entrepreneurs/" class="cta cta__secondary cta__secondary--white">Learn More</a>
+          <a href="https://extension.purdue.edu/4h" class="cta cta__secondary cta__secondary--white">Visit 4-H</a>
         </div>
       </div>
     </div>
