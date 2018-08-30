@@ -40,9 +40,19 @@ global $county;
                 <?php echo $category->strCategoryText; ?>
               </a>
               <div class="dropdown-menu" aria-labelledby="<?php echo 'Dropdown-Link-' . $category->intCategoryID; ?>">
+                <?php
+                //
+                // Start county-specific label pages for the category they need to be in
+                //
+                ?>
                 <?php if($category->strCategoryText == "Garden" && !empty($county)) : ?>
                   <div class="list-group nav nav-item">
                       <a class="dropdown-item list-group-item lit-group-item-action nav nav-item" href="<?php echo !empty($county) ? '/' . $county : ''; ?>/label/12">Master Gardener</a>
+                  </div>
+                <?php endif; ?>
+                <?php if($category->strCategoryText == "Family" && !empty($county)) : ?>
+                  <div class="list-group nav nav-item">
+                      <a class="dropdown-item list-group-item lit-group-item-action nav nav-item" href="<?php echo !empty($county) ? '/' . $county : ''; ?>/label/14">Extension Homemakers</a>
                   </div>
                 <?php endif; ?>
                 <?php if($category->strCategoryText == "Youth" && !empty($county)) : ?>
