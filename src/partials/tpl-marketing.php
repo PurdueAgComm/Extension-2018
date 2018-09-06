@@ -7,7 +7,7 @@
             <source srcset="<?php echo $GLOBALS['SITE_PATH']; ?>/assets/images/hhs.png" media="(min-width: 1200px)">
             <source srcset="<?php echo $GLOBALS['SITE_PATH']; ?>/assets/images/hhs--small.png" media="(min-width: 992px)">
             <source srcset="<?php echo $GLOBALS['SITE_PATH']; ?>/assets/images/hhs.png" media="(min-width: 576px)">
-            <img srcset="<?php echo $GLOBALS['SITE_PATH']; ?>/assets/images/hhs.png" alt="Photo of shoes running down path">
+            <img srcset="<?php echo $GLOBALS['SITE_PATH']; ?>/assets/images/hhs.png" alt="Pills dumped out of a pill bottle">
           </picture>
         </div>
         <div class="col-lg-6 color-blocks__content justify-content-center">
