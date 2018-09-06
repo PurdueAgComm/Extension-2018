@@ -82,9 +82,9 @@ global $county;
               </div>
             </li>
           <?php endforeach; ?>
-          <?php if($county == "tippecanoe") : ?>
+          <?php if(strtolower($county) == "tippecanoe") : ?>
             <a class="nav-item nav-link" href="https://extension.purdue.edu/Tippecanoe/Lists/Fairgrounds%20Calendar/calendar.aspx">Fairgrounds</a>
-          <?php elseif ($county == "carroll") : ?>
+          <?php elseif (strtolower($county) == "carroll") : ?>
             <a class="nav-item nav-link" href="https://extension.purdue.edu/Carroll/Pages/cfc.aspx ">Fairgrounds</a>
           <?php endif; ?>
 
@@ -98,7 +98,3 @@ global $county;
     </div>
   </nav>
 </div>
-
-
-<!-- MESSAGE FOR DEVELOPMENT API ENABLED -->
-<div class="alert alert-danger" style="margin: auto; text-align: center;"><i class="fas fa-exclamation-triangle fa-fw"></i> <strong>Development API is in use. Do not deploy.</strong></div>
