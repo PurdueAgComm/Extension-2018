@@ -21,7 +21,10 @@ class ExtDCR
 {
     private $call;
     private $pi;
-    private $api = 'https://api.ag.purdue.edu/api/DepotWS/';
+    // production api
+    //private $api = 'https://api.ag.purdue.edu/api/DepotWS/';
+    // development api
+    private $api = 'https://dev.ag.purdue.edu/api/depotws/';
     private $homeId = 0;
     private $countyUrl;
     private $countyCode = '';

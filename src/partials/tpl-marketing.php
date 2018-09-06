@@ -11,9 +11,9 @@
           </picture>
         </div>
         <div class="col-lg-6 color-blocks__content justify-content-center">
-          <h3 class="color-blocks__title">A message to move</h3>
-          <p class="color-blocks__text">Sometimes the hardest part of getting fit is taking that first step. Purdue Extension motivates adults to Get WalkIN’ through email coaching. And it’s working!</p>
-          <a href="https://extension.purdue.edu/annualreport/walking/" class="cta cta__secondary cta__secondary--white">Learn More</a>
+          <h3 class="color-blocks__title">Addressing the Opioid Crisis</h3>
+          <p class="color-blocks__text">The opioid crisis has hit Indiana hard and is a complex problem for communities. Purdue Extension is addressing this issue with community-based prevention education.</p>
+          <a href="https://extension.purdue.edu/opioids/" class="cta cta__secondary cta__secondary--white">Learn More</a>
           <a href="https://www.purdue.edu/hhs/extension/" class="cta cta__secondary cta__secondary--white">Visit Health and Human Sciences</a>
         </div>
       </div>

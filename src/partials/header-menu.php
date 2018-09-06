@@ -98,3 +98,7 @@ global $county;
     </div>
   </nav>
 </div>
+
+
+<!-- MESSAGE FOR DEVELOPMENT API ENABLED -->
+<div class="alert alert-danger" style="margin: auto; text-align: center;"><i class="fas fa-exclamation-triangle fa-fw"></i> <strong>Development API is in use. Do not deploy.</strong></div>
