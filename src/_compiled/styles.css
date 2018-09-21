@@ -3870,6 +3870,7 @@ a.events--link {
   border: none;
   border-top: 3px solid #ffd100;
   background-color: #fafafa;
+  margin: 0 !important;
 }
 
 @media (max-width: 576px) {

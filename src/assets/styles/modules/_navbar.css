@@ -55,6 +55,7 @@
   border: none;
   border-top: 3px solid $YellowWalk;
   background-color: #fafafa;
+  margin: 0 !important;
 
   @media (max-width: $small) {
     border-top: none;
