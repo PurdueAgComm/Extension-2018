@@ -109,6 +109,7 @@ $description = 'See how Purdue Extension connects Indiana to Purdue University r
 </head>
 
 <body>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-46266883-1"></script>
   <div class="container">
     <header class="header">
       <!-- TODO: svg of logo -->
